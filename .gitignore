@@ -21,3 +21,7 @@ dist/
 /.react-router/
 
 docker-compose.yml
+
+.env*
+
+tsconfig.tsbuildinfo
