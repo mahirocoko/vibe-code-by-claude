@@ -13,4 +13,11 @@ dist/
 # IDE
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/react.code-snippets.json
 .idea
+
+/build
+/.react-router/
+
+docker-compose.yml
