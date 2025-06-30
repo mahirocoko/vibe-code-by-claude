@@ -1,5 +1,5 @@
 {
-  "name": "vibe-by-gemini",
+  "name": "vibe-by-gemini-n-claude",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -13,6 +13,7 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-slot": "1.2.3",
     "@react-router/express": "7.4.1",
     "@react-router/node": "7.4.1",

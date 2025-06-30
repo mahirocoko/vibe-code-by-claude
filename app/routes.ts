@@ -1,7 +1,8 @@
 import { index, layout, type RouteConfig, route } from '@react-router/dev/routes'
 
 export default [
-  layout('routes/landing/layout.tsx', [
+  // Landing
+  layout('routes/landing/layout/index.tsx', [
     // Index route for the home page
     index('routes/landing/index.tsx'),
 
@@ -13,5 +14,12 @@ export default [
 
     // Pricing page
     route('pricing', 'routes/landing/pricing.tsx'),
+  ]),
+
+  // Console
+  route('console', 'routes/console/layout.tsx', [
+    index('routes/console/index.tsx'),
+    route('users', 'routes/console/users.tsx'),
+    route('settings', 'routes/console/settings.tsx'),
   ]),
 ] satisfies RouteConfig
