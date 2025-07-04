@@ -1,14 +1,16 @@
 import { Rocket, Shield, Zap } from 'lucide-react'
 import { Link } from 'react-router'
+import { Container } from '@/components/container'
+import { PricingSection } from '@/components/pricing-section'
 import { Button } from '@/components/ui/button'
 import type { Route } from './+types'
 
 export function meta(_: Route.MetaArgs) {
-  return [{ title: 'Vibe by Gemini' }, { name: 'description', content: 'Build your next big idea with Vibe by Gemini' }]
+  return [{ title: 'Vibe by Claude' }, { name: 'description', content: 'Build your next big idea with Vibe by Claude' }]
 }
 
 export function loader({ context }: Route.LoaderArgs) {
-  return { message: 'Welcome to Vibe by Gemini' }
+  return { message: 'Welcome to Vibe by Claude' }
 }
 
 export default function LandingIndex({ loaderData }: Route.ComponentProps) {
@@ -16,7 +18,7 @@ export default function LandingIndex({ loaderData }: Route.ComponentProps) {
     <>
       {/* Hero Section */}
       <section className="w-full flex items-center py-12 md:py-24 lg:py-32 xl:py-48">
-        <div className="container mx-auto flex flex-col items-center space-y-4 px-4 text-center md:px-6">
+        <Container className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               Build Your Next Big Idea with Vibe
@@ -33,12 +35,12 @@ export default function LandingIndex({ loaderData }: Route.ComponentProps) {
               <Link to="/about">Learn More</Link>
             </Button>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Features Section */}
       <section id="features" className="w-full flex items-center bg-muted py-12 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 md:px-6">
+        <Container>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Key Features</div>
@@ -72,12 +74,15 @@ export default function LandingIndex({ loaderData }: Route.ComponentProps) {
               </p>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* Call to Action Section */}
       <section className="w-full flex items-center py-12 md:py-24 lg:py-32">
-        <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
+        <Container className="grid items-center justify-center gap-4 text-center">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Ready to Start Your Project?</h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -89,7 +94,7 @@ export default function LandingIndex({ loaderData }: Route.ComponentProps) {
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
-        </div>
+        </Container>
       </section>
     </>
   )

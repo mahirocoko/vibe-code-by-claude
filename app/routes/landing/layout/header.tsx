@@ -15,7 +15,7 @@ export function Header() {
       <Container className="flex h-14 items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">Vibe by Gemini</span>
+            <span className="font-bold">Vibe by Claude</span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm md:flex">
             <Link to="/#features" className="text-muted-foreground/60 transition-colors hover:text-muted-foreground/80">
@@ -48,7 +48,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <Link to="/" onClick={closeSheet} className="flex items-center">
-                <span className="font-bold">Vibe by Gemini</span>
+                <span className="font-bold">Vibe by Claude</span>
               </Link>
               <div className="grid gap-2 py-6">
                 <Link

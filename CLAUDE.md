@@ -1,4 +1,4 @@
-# Project Memory - Vibe by Gemini & Claude
+# Project Memory - Vibe by Claude
 
 ## Core Technologies
 - **Framework**: React 19.1.0 & TypeScript 5.8.3
@@ -46,14 +46,16 @@ Console Layout (/console)
 ## Current Component Structure
 ```
 app/components/
-├── container.tsx          # Layout container
+├── container.tsx          # Layout container (reusable wrapper with responsive padding)
+├── pricing-section.tsx    # Pricing section component
 └── ui/
     ├── button.tsx        # shadcn Button with variants
     └── sheet.tsx         # shadcn Sheet/Dialog
 
 app/routes/
 ├── landing/
-│   ├── index.tsx         # Landing page
+│   ├── index.tsx         # Landing page (refactored to use Container component)
+│   ├── pricing.tsx       # Pricing page - NEEDS IMPLEMENTATION
 │   └── layout/
 │       ├── index.tsx     # Main landing layout
 │       ├── header.tsx    # Landing header - NEEDS IMPLEMENTATION
@@ -77,9 +79,17 @@ app/routes/
 - Always run type checking before commits
 - Use shadcn/ui components for consistency
 - Biome handles both linting and formatting
+- Use Container component for consistent layout wrapping (includes responsive padding)
+- Container component automatically applies `container mx-auto px-4 lg:px-8` classes
+
+## Recent Changes (2025-07-04)
+- Refactored landing page to use Container component for consistent layout
+- Removed manual container classes in favor of reusable Container component
+- Fixed import ordering with Biome auto-fix
 
 ## Immediate TODOs
 - Implement missing route components (About, Contact, Pricing)
 - Complete header/footer components for landing layout
 - Add actual functionality to console area
 - Locate or create tailwind.config.ts file
+- Consider refactoring PricingSection component to use Container
