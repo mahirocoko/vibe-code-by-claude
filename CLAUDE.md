@@ -13,6 +13,8 @@
 ## Design Principles
 - **Theme**: Modern and minimal design with light/dark theme support
 - **Colors**: Use `oklch` color system with comprehensive CSS variables
+- **Primary Color**: Blue (oklch based)
+- **Semantic Colors**: Info (blue), Warning (yellow), Success (green), Error/Destructive (red)
 - **Component Structure**: Avoid unnecessary nesting, keep components flat and clean
 - **shadcn/ui**: New York style configuration
 
@@ -118,7 +120,7 @@ pnpm biome check --fix .
 ## Git Commit Standards
 ### Commit Message Format
 ```
-<type>: <subject>
+<emoji> <type>: <subject>
 
 <body>
 
@@ -128,14 +130,14 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
 ### Types
-- **feat**: New feature
-- **fix**: Bug fix
-- **chore**: Maintenance, dependency updates, configuration
-- **docs**: Documentation changes
-- **style**: Code style changes (formatting, missing semicolons, etc)
-- **refactor**: Code refactoring without changing functionality
-- **test**: Adding or updating tests
-- **perf**: Performance improvements
+- **feat**: ✨ New feature
+- **fix**: 🐛 Bug fix
+- **chore**: 🔧 Maintenance, dependency updates, configuration
+- **docs**: 📝 Documentation changes
+- **style**: 💄 Code style changes (formatting, missing semicolons, etc)
+- **refactor**: ♻️ Code refactoring without changing functionality
+- **test**: ✅ Adding or updating tests
+- **perf**: ⚡ Performance improvements
 
 ### Subject Rules
 - Use imperative mood ("add" not "added" or "adds")
@@ -151,7 +153,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 
 ### Example from this project:
 ```
-feat: enhance landing page UI and downgrade Biome to v1.9.4
+✨ feat: enhance landing page UI and downgrade Biome to v1.9.4
 
 - Downgrade Biome from 2.0.6 to 1.9.4 for compatibility
 - Update biome.json configuration to match v1.9.4 API
