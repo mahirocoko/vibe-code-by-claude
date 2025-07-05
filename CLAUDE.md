@@ -161,14 +161,24 @@ feat: enhance landing page UI and downgrade Biome to v1.9.4
 
 ## Custom Slash Commands
 ### Git Commands
-- `/commit` - Stage all changes and create a properly formatted commit
-- `/push` - Push commits to remote repository
-- `/commit-push` - Commit and push in one command
-- `/commit-amend` - Amend the last commit
-- `/commit-undo` - Undo last commit (keep changes)
+Project-specific commands in `.claude/commands/`:
+- `/project:commit` - Stage all changes and create a properly formatted commit
+- `/project:push` - Push commits to remote repository
+- `/project:commit-push` - Commit and push in one command
+- `/project:commit-amend` - Amend the last commit
+- `/project:commit-undo` - Undo last commit (keep changes)
 
 ### Usage
-These commands are defined in `.claude_slash_commands.json` and follow the project's commit standards automatically.
+Commands are defined as markdown files in `.claude/commands/` directory. Each command:
+- Has YAML frontmatter defining allowed tools and description
+- Includes context with bash command execution (`!`) 
+- References project files with `@` syntax
+- Follows the project's commit standards automatically
+
+### Command Format
+```
+/project:[command-name] [optional arguments]
+```
 
 ## Memory Log
 - Memorized to understand project context
