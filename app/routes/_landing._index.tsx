@@ -19,7 +19,7 @@ export default function LandingIndex() {
       <Container asChild>
         <section className="py-16 flex flex-col items-center space-y-6 text-center">
           <div className="space-y-4">
-            <Typography variant="h1" className="md:text-5xl lg:text-6xl">
+            <Typography variant="h1">
               Build Your Next Big Idea with Vibe
             </Typography>
             <Typography variant="lead" className="max-w-2xl mx-auto">
@@ -46,10 +46,10 @@ export default function LandingIndex() {
                 <Sparkles className="h-3.5 w-3.5" />
                 Features
               </div>
-              <Typography variant="h2" className="sm:text-5xl bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <Typography variant="h2" className="bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Everything you need to succeed
               </Typography>
-              <Typography variant="large" className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <Typography variant="large" className="max-w-[900px] text-muted-foreground">
                 Build faster with our comprehensive suite of tools designed for modern web development
               </Typography>
             </div>
@@ -61,8 +61,8 @@ export default function LandingIndex() {
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <Rocket className="h-6 w-6" />
               </div>
-              <Typography variant="h3" className="mb-2 text-xl font-semibold">Lightning Performance</Typography>
-              <Typography variant="small" className="text-muted-foreground leading-relaxed">
+              <Typography variant="h3" className="mb-2">Lightning Performance</Typography>
+              <Typography variant="small">
                 Built on cutting-edge technology for blazing fast load times and optimal runtime performance
               </Typography>
             </div>
@@ -71,8 +71,8 @@ export default function LandingIndex() {
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <Code2 className="h-6 w-6" />
               </div>
-              <Typography variant="h3" className="mb-2 text-xl font-semibold">Developer Experience</Typography>
-              <Typography variant="small" className="text-muted-foreground leading-relaxed">
+              <Typography variant="h3" className="mb-2">Developer Experience</Typography>
+              <Typography variant="small">
                 Modern tooling, hot reload, and TypeScript support for a delightful development workflow
               </Typography>
             </div>
@@ -81,8 +81,8 @@ export default function LandingIndex() {
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <Shield className="h-6 w-6" />
               </div>
-              <Typography variant="h3" className="mb-2 text-xl font-semibold">Enterprise Ready</Typography>
-              <Typography variant="small" className="text-muted-foreground leading-relaxed">
+              <Typography variant="h3" className="mb-2">Enterprise Ready</Typography>
+              <Typography variant="small">
                 Battle-tested security, scalability, and reliability for mission-critical applications
               </Typography>
             </div>
@@ -187,11 +187,11 @@ export default function LandingIndex() {
               Start Building Today
             </div>
 
-            <Typography variant="h2" className="text-white sm:text-5xl md:text-6xl">
+            <Typography variant="h2" className="text-white">
               Ready to Start Your Project?
             </Typography>
 
-            <Typography variant="large" className="mt-6 text-white/90 md:text-xl">
+            <Typography variant="large" className="mt-6 text-white/90">
               Join thousands of developers who are already building amazing applications with Vibe. Get started in
               minutes with our comprehensive documentation and world-class support.
             </Typography>

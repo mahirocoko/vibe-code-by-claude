@@ -94,10 +94,10 @@ export default function PricingPage() {
       <Container asChild>
         <section className="py-16 text-center space-y-6">
           <div className="space-y-4">
-            <Typography variant="h1" className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            <Typography variant="h1">
               Simple, Transparent Pricing
             </Typography>
-            <Typography variant="lead" className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <Typography variant="lead" className="max-w-2xl mx-auto">
               Choose the perfect plan for your needs. Always flexible to scale up or down.
             </Typography>
           </div>
@@ -133,12 +133,12 @@ export default function PricingPage() {
 
                 <div className="space-y-6">
                   <div>
-                    <Typography variant="h3" className="text-2xl font-bold">{plan.name}</Typography>
-                    <Typography className="mt-2 text-muted-foreground">{plan.description}</Typography>
+                    <Typography variant="h3">{plan.name}</Typography>
+                    <Typography variant="muted" className="mt-2">{plan.description}</Typography>
                   </div>
 
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold">{plan.price}</span>
+                    <span className="font-bold">{plan.price}</span>
                     {plan.price !== 'Custom' && <span className="ml-1 text-muted-foreground">/month</span>}
                   </div>
 
@@ -147,7 +147,7 @@ export default function PricingPage() {
                   </Button>
 
                   <div className="space-y-4">
-                    <Typography variant="h4" className="text-sm font-semibold">What's included:</Typography>
+                    <Typography variant="h4">What's included:</Typography>
                     <ul className="space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature.name} className="flex items-start gap-3">
@@ -176,8 +176,8 @@ export default function PricingPage() {
       <section className="py-16 bg-muted/30">
         <Container size="md">
           <div className="text-center space-y-4 mb-12">
-            <Typography variant="h2" className="text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</Typography>
-            <Typography className="text-muted-foreground md:text-lg">
+            <Typography variant="h2">Frequently Asked Questions</Typography>
+            <Typography variant="muted">
               Got questions? We've got answers. If you can't find what you're looking for, feel free to contact us.
             </Typography>
           </div>
@@ -185,14 +185,14 @@ export default function PricingPage() {
           <div className="grid gap-6 md:grid-cols-2">
             {faqs.map((faq, index) => (
               <div key={index} className="space-y-2">
-                <Typography variant="h3" className="font-semibold">{faq.question}</Typography>
-                <Typography variant="small" className="text-sm text-muted-foreground">{faq.answer}</Typography>
+                <Typography variant="h3">{faq.question}</Typography>
+                <Typography variant="small">{faq.answer}</Typography>
               </div>
             ))}
           </div>
 
           <div className="mt-12 text-center">
-            <Typography className="text-muted-foreground mb-4">Still have questions?</Typography>
+            <Typography variant="muted" className="mb-4">Still have questions?</Typography>
             <Button asChild variant="outline">
               <Link to="/contact">Contact Support</Link>
             </Button>
@@ -204,8 +204,8 @@ export default function PricingPage() {
       <Container asChild>
         <section className="py-16 text-center space-y-6">
           <div className="space-y-4">
-            <Typography variant="h2" className="text-3xl font-bold tracking-tight md:text-4xl">Ready to Get Started?</Typography>
-            <Typography variant="lead" className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <Typography variant="h2">Ready to Get Started?</Typography>
+            <Typography variant="lead" className="max-w-2xl mx-auto">
               Join thousands of satisfied customers using Vibe to power their applications.
             </Typography>
           </div>

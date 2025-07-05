@@ -17,6 +17,7 @@ pnpm check        # Fix code issues
 - Tailwind CSS 4.1.11 (config-free), shadcn/ui components
 - Radix UI (Slot, Dialog), class-variance-authority 0.7.1
 - Biome 1.9.4 for linting/formatting
+- Lucide React 0.525.0 for icons
 
 ## Current TODOs
 - Console pages typography updated with Typography component, still need other design system components (currently using basic HTML/CSS for layouts and cards)
@@ -26,6 +27,8 @@ pnpm check        # Fix code issues
 
 ## Recently Completed
 - ✅ Typography component implemented across entire project with comprehensive variant system
+- ✅ Cleaned up all Typography components: removed redundant font-size, line-height, color, and font-weight classes
+- ✅ Typography components now use built-in variant styling (no className overrides for size/weight/color)
 - ✅ Migrated to Tailwind CSS v4 (removed tailwind.config.js)
 - ✅ Installed and configured shadcn/ui Alert component
 - ✅ Enhanced design system colors page with comprehensive examples
@@ -52,6 +55,9 @@ pnpm check        # Fix code issues
   - Comprehensive variants: h1-h6, lead, large, body, small, muted, subtle, code, pre, blockquote, list, ordered-list, list-item
   - React 19 ComponentProps pattern (no forwardRef needed)
   - Usage: `<Typography variant="h1">Heading</Typography>` or `<Typography variant="body">Text</Typography>`
+  - **IMPORTANT**: Never override built-in variant styles (font-size, font-weight, line-height, color)
+  - Only use className for spacing, custom colors, or layout-specific styling
+  - Use semantic variants (muted, subtle) instead of manual color overrides
 - Run typecheck before commits
 - Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
