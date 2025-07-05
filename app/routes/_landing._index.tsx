@@ -1,5 +1,5 @@
-import { Container } from '@/components/container'
-import { PricingSection } from '@/components/pricing-section'
+import { Container } from '@/components/ui/container'
+import { PricingSection } from '@/components/modules/home/pricing-section'
 import { Button } from '@/components/ui/button'
 import { BarChart3, Code2, Globe, Lock, Rocket, Shield, Sparkles, Users, Zap } from 'lucide-react'
 import { Link } from 'react-router'
@@ -204,7 +204,7 @@ export default function LandingIndex() {
                   <Rocket className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-white/20 text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" asChild>
                 <Link to="/pricing">View Pricing</Link>
               </Button>
             </div>

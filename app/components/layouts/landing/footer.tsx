@@ -1,4 +1,4 @@
-import { Container } from '@/components/container'
+import { Container } from '@/components/ui/container'
 import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
 import { Link } from 'react-router'
 

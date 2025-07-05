@@ -18,18 +18,34 @@ pnpm check        # Fix code issues
 - Biome 1.9.4 for linting/formatting
 
 ## Current TODOs
-- Enhance console functionality (users, settings pages exist)
-- Implement console dashboard features
+- Migrate console pages to use design system components (currently using basic HTML/CSS)
+- Enhance console dashboard with interactive charts and real-time data
 - Add authentication system
+- Implement console navigation and layout consistency
 
 ## Development Notes
 - Import alias: `@/*` → `app/*`
 - Use Container component for layouts
 - Run typecheck before commits
-- Design system at `/design-system`
+- Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
 - File-based routing: `_landing.*` for landing pages, `console.*` for console
 - Use React Router v7 CLI commands (not Vite)
+- Component organization: `layouts/` (page layouts), `modules/` (feature components), `ui/` (reusable components)
+- Console pages exist but need migration to design system components
+- Smooth scroll behavior enabled globally
+- Primary color system uses oklch(0.5 0.28 269.85) for better perceptual uniformity
+
+## Architecture Patterns
+- **Component Structure**: 
+  - `app/components/ui/` - Reusable UI components (Button, Container, Alert, etc.)
+  - `app/components/layouts/` - Page layout components (Header, Footer)
+  - `app/components/modules/` - Feature-specific components (PricingSection, etc.)
+- **Design System**: Fully implemented with comprehensive components
+  - Foundation: Colors (oklch), Typography
+  - Components: Buttons, Forms, Alerts, Cards
+  - Semantic color system: info, warning, success, error states
+- **Console Structure**: Dashboard, Users, Settings pages exist but need design system integration
 
 ---
 
