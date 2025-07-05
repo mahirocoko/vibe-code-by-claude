@@ -2,9 +2,7 @@ import { Container } from '@/components/container'
 import { Button } from '@/components/ui/button'
 import { Check, X } from 'lucide-react'
 import { Link } from 'react-router'
-import type { Route } from './+types/pricing'
-
-export function meta(_: Route.MetaArgs) {
+export function meta() {
   return [
     { title: 'Pricing - Vibe by Claude' },
     { name: 'description', content: 'Choose the perfect plan for your needs. Start free and scale as you grow.' },

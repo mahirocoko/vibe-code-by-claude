@@ -7,6 +7,7 @@
 
 ## Build & Development
 - **Vite**: 6.3.5 - Fast build tool (migrated from Rsbuild)
+- **React Router fs-routes**: 7.6.3 - File-based routing conventions
 - **React Router Plugin**: For SSR and routing
 - **ESM Support**: Experimental VM modules
 
@@ -29,6 +30,8 @@
 
 ## Important Notes
 - React Router v7 syntax (not react-router-dom)
+- File-based routing: Use `_layout.*` pattern for pathless layouts
+- Route naming: `_landing.*` for landing pages, `console.*` for console
 - Tailwind CSS 4.x requires new configuration approach
 - Biome 1.9.4 has different config than 2.0.x
 - Always run type checking before commits

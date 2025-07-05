@@ -1,41 +1,50 @@
 ---
 shortcode: project:update-memory
-description: Update Claude's memory in CLAUDE.md
+description: Analyze and update Claude's memory in CLAUDE.md
 ---
 
-Read the current CLAUDE.md file and update it with new information provided by the user. This command helps maintain Claude's context about the project and ensures consistency with @doc files.
+Analyze the current project state and automatically update CLAUDE.md with relevant changes. This command performs intelligent analysis to keep Claude's memory synchronized with the actual project state.
 
-## What to update:
-- **Current TODOs**: Add/remove/update TODO items based on progress
-- **Tech Stack**: Update dependencies, versions, or new tools
-- **Development Notes**: Add important patterns, conventions, or decisions
-- **Quick Start**: Update commands if they change
+## What gets analyzed and updated:
+- **Current TODOs**: Check completed/new features and update TODO list
+- **Tech Stack**: Scan package.json for new dependencies or version changes
+- **Development Notes**: Identify new patterns, conventions, or decisions
+- **Quick Start**: Verify commands still work and update if needed
+- **Project Structure**: Check for significant file/folder changes
 
-## What NOT to update:
-- Additional Resources section (update individual @doc files instead)
-- Core project info unless explicitly asked
+## How it works:
+1. **Analyze current state**: 
+   - Read package.json for tech stack changes
+   - Check project structure for new files/folders
+   - Scan recent commits for completed TODOs
+   - Verify commands still work
 
-## Usage:
+2. **Check @doc consistency**:
+   - Compare findings with @doc files
+   - Identify discrepancies or outdated info
+
+3. **Update intelligently**:
+   - Update CLAUDE.md with findings
+   - Update corresponding @doc files if needed
+   - Show diff of all changes before applying
+
+## Manual override usage:
 ```
-/project:update-memory "Remove TODO: Implement About page - completed"
-/project:update-memory "Add TODO: Implement dark mode toggle"
-/project:update-memory "Add Development Note: Use Tanstack Query for data fetching"
-/project:update-memory "Update tech stack: Add React Query"
-/project:update-memory "Add Development Note: Install packages with fixed versions"
+/project:update-memory "Force add TODO: Implement dark mode toggle"
+/project:update-memory "Force remove TODO: About page - completed"
+/project:update-memory "Force add note: Use React Query for data fetching"
 ```
 
-## Process:
-1. Read current CLAUDE.md
-2. Check relevant @doc files for consistency
-3. Parse the update request
-4. Modify the appropriate section in CLAUDE.md
-5. Update corresponding @doc files if needed
-6. Show diff of changes before applying
-7. Preserve existing structure and formatting
+## Analysis targets:
+- **package.json**: Dependencies, scripts, versions
+- **File structure**: New components, routes, configs
+- **Git commits**: Recently completed features
+- **@doc files**: Consistency with current state
+- **Config files**: Build tools, linting, formatting
 
-## @doc Files to Check:
-- **@doc/tech-stack.md**: When updating tech stack or dependencies
-- **@doc/project-structure.md**: When updating project structure or file organization
-- **@doc/commands.md**: When updating commands or scripts
-- **@doc/design-system.md**: When updating UI components or styling
-- **@doc/commit-guide.md**: When updating development processes
+## Smart updates:
+- Automatically remove TODOs for implemented features
+- Add new dependencies to tech stack
+- Update version numbers when changed
+- Sync development notes with actual practices
+- Keep @doc files consistent with CLAUDE.md

@@ -10,13 +10,14 @@ pnpm typecheck    # Type checking
 ## Tech Stack
 - React 19.1.0, TypeScript, React Router v7
 - Vite 6.3.5 (migrated from Rsbuild)
+- React Router fs-routes 7.6.3 for file-based routing
 - Tailwind CSS 4.1.11, shadcn/ui
 - Biome 1.9.4 for linting/formatting
 
 ## Current TODOs
-- Implement About, Contact, Pricing pages
-- Complete landing header/footer components
-- Add console functionality
+- Enhance console functionality (users, settings pages exist)
+- Implement console dashboard features
+- Add authentication system
 
 ## Development Notes
 - Import alias: `@/*` → `app/*`
@@ -24,6 +25,7 @@ pnpm typecheck    # Type checking
 - Run typecheck before commits
 - Design system at `/design-system`
 - Install packages with fixed versions (no ^ or ~)
+- File-based routing: `_landing.*` for landing pages, `console.*` for console
 
 ---
 

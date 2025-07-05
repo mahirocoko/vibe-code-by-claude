@@ -3,17 +3,15 @@ import { PricingSection } from '@/components/pricing-section'
 import { Button } from '@/components/ui/button'
 import { BarChart3, Code2, Globe, Lock, Rocket, Shield, Sparkles, Users, Zap } from 'lucide-react'
 import { Link } from 'react-router'
-import type { Route } from './+types'
-
-export function meta(_: Route.MetaArgs) {
+export function meta() {
   return [{ title: 'Vibe by Claude' }, { name: 'description', content: 'Build your next big idea with Vibe by Claude' }]
 }
 
-export function loader({ context }: Route.LoaderArgs) {
+export function loader() {
   return { message: 'Welcome to Vibe by Claude' }
 }
 
-export default function LandingIndex({ loaderData }: Route.ComponentProps) {
+export default function LandingIndex() {
   return (
     <>
       {/* Hero Section */}
