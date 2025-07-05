@@ -18,6 +18,7 @@ Project-specific commands in `.claude/commands/`:
 - `/project:commit-push` - Commit and push in one command
 - `/project:commit-amend` - Amend the last commit
 - `/project:commit-undo` - Undo last commit (keep changes)
+- `/project:update-memory` - Update Claude's memory in CLAUDE.md
 
 ## Command Usage
 ```bash
