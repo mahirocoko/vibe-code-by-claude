@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
+import { Typography } from '@/components/ui/typography'
 import { Check, X } from 'lucide-react'
 import { Link } from 'react-router'
 export function meta() {
@@ -93,12 +94,12 @@ export default function PricingPage() {
       <Container asChild>
         <section className="py-16 text-center space-y-6">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            <Typography variant="h1" className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               Simple, Transparent Pricing
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            </Typography>
+            <Typography variant="lead" className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Choose the perfect plan for your needs. Always flexible to scale up or down.
-            </p>
+            </Typography>
           </div>
           <div className="inline-flex items-center rounded-lg bg-muted p-1 text-muted-foreground">
             <button className="rounded-md px-3 py-1.5 text-sm font-medium transition-colors hover:text-foreground">
@@ -132,8 +133,8 @@ export default function PricingPage() {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold">{plan.name}</h3>
-                    <p className="mt-2 text-muted-foreground">{plan.description}</p>
+                    <Typography variant="h3" className="text-2xl font-bold">{plan.name}</Typography>
+                    <Typography className="mt-2 text-muted-foreground">{plan.description}</Typography>
                   </div>
 
                   <div className="flex items-baseline">
@@ -146,7 +147,7 @@ export default function PricingPage() {
                   </Button>
 
                   <div className="space-y-4">
-                    <h4 className="text-sm font-semibold">What's included:</h4>
+                    <Typography variant="h4" className="text-sm font-semibold">What's included:</Typography>
                     <ul className="space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature.name} className="flex items-start gap-3">
@@ -175,23 +176,23 @@ export default function PricingPage() {
       <section className="py-16 bg-muted/30">
         <Container size="md">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</h2>
-            <p className="text-muted-foreground md:text-lg">
+            <Typography variant="h2" className="text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</Typography>
+            <Typography className="text-muted-foreground md:text-lg">
               Got questions? We've got answers. If you can't find what you're looking for, feel free to contact us.
-            </p>
+            </Typography>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {faqs.map((faq, index) => (
               <div key={index} className="space-y-2">
-                <h3 className="font-semibold">{faq.question}</h3>
-                <p className="text-sm text-muted-foreground">{faq.answer}</p>
+                <Typography variant="h3" className="font-semibold">{faq.question}</Typography>
+                <Typography variant="small" className="text-sm text-muted-foreground">{faq.answer}</Typography>
               </div>
             ))}
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-muted-foreground mb-4">Still have questions?</p>
+            <Typography className="text-muted-foreground mb-4">Still have questions?</Typography>
             <Button asChild variant="outline">
               <Link to="/contact">Contact Support</Link>
             </Button>
@@ -203,10 +204,10 @@ export default function PricingPage() {
       <Container asChild>
         <section className="py-16 text-center space-y-6">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Ready to Get Started?</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <Typography variant="h2" className="text-3xl font-bold tracking-tight md:text-4xl">Ready to Get Started?</Typography>
+            <Typography variant="lead" className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Join thousands of satisfied customers using Vibe to power their applications.
-            </p>
+            </Typography>
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button asChild size="lg">

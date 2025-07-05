@@ -1,10 +1,12 @@
+import { Typography } from '@/components/ui/typography'
+
 export default function ConsoleSettings() {
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6">Settings</h1>
+      <Typography variant="h1" className="text-3xl font-bold mb-6">Settings</Typography>
       <div className="space-y-6">
         <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-4">General Settings</h2>
+          <Typography variant="h2" className="text-xl font-semibold mb-4">General Settings</Typography>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Site Name</label>
@@ -26,7 +28,7 @@ export default function ConsoleSettings() {
         </div>
 
         <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-4">Security Settings</h2>
+          <Typography variant="h2" className="text-xl font-semibold mb-4">Security Settings</Typography>
           <div className="space-y-4">
             <div className="flex items-center">
               <input
@@ -53,7 +55,7 @@ export default function ConsoleSettings() {
         </div>
 
         <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-4">Notification Settings</h2>
+          <Typography variant="h2" className="text-xl font-semibold mb-4">Notification Settings</Typography>
           <div className="space-y-4">
             <div className="flex items-center">
               <input

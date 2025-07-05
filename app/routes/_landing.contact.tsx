@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
+import { Typography } from '@/components/ui/typography'
 
 export default function Contact() {
   return (
@@ -7,10 +8,10 @@ export default function Contact() {
       {/* Hero Section */}
       <Container asChild>
         <section className="py-16 text-center">
-          <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl text-muted-foreground">
+          <Typography variant="h1" className="text-4xl font-bold mb-6">Contact Us</Typography>
+          <Typography variant="lead" className="text-xl text-muted-foreground">
             We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-          </p>
+          </Typography>
         </section>
       </Container>
 
@@ -19,7 +20,7 @@ export default function Contact() {
         <section className="py-16">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
+              <Typography variant="h2" className="text-2xl font-semibold mb-6">Get in Touch</Typography>
               <form className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -89,7 +90,7 @@ export default function Contact() {
 
             <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+              <Typography variant="h2" className="text-2xl font-semibold mb-6">Contact Information</Typography>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center shrink-0">
@@ -98,9 +99,9 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">hello@vibe.ai</p>
-                    <p className="text-muted-foreground">support@vibe.ai</p>
+                    <Typography variant="h3" className="font-semibold">Email</Typography>
+                    <Typography className="text-muted-foreground">hello@vibe.ai</Typography>
+                    <Typography className="text-muted-foreground">support@vibe.ai</Typography>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -110,9 +111,9 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-muted-foreground text-sm">Mon-Fri, 9AM-5PM PST</p>
+                    <Typography variant="h3" className="font-semibold">Phone</Typography>
+                    <Typography className="text-muted-foreground">+1 (555) 123-4567</Typography>
+                    <Typography variant="small" className="text-muted-foreground text-sm">Mon-Fri, 9AM-5PM PST</Typography>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -123,19 +124,19 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Address</h3>
-                    <p className="text-muted-foreground">
+                    <Typography variant="h3" className="font-semibold">Address</Typography>
+                    <Typography className="text-muted-foreground">
                       123 AI Innovation Drive<br />
                       San Francisco, CA 94107<br />
                       United States
-                    </p>
+                    </Typography>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+              <Typography variant="h3" className="text-lg font-semibold mb-4">Follow Us</Typography>
               <div className="flex gap-4">
                 <a href="#" className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -161,10 +162,10 @@ export default function Contact() {
             </div>
 
             <div className="bg-muted/30 rounded-lg p-6">
-              <h3 className="font-semibold mb-2">Need Quick Help?</h3>
-              <p className="text-muted-foreground text-sm mb-4">
+              <Typography variant="h3" className="font-semibold mb-2">Need Quick Help?</Typography>
+              <Typography variant="small" className="text-muted-foreground text-sm mb-4">
                 Check out our documentation and FAQ section for instant answers to common questions.
-              </p>
+              </Typography>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm">Documentation</Button>
                 <Button variant="outline" size="sm">FAQ</Button>

@@ -1,10 +1,12 @@
+import { Typography } from '@/components/ui/typography'
+
 export default function ConsoleUsers() {
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6">User Management</h1>
+      <Typography variant="h1" className="text-3xl font-bold mb-6">User Management</Typography>
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <div className="px-6 py-4 border-b border-gray-200">
-          <h2 className="text-lg font-semibold">All Users</h2>
+          <Typography variant="h2" className="text-lg font-semibold">All Users</Typography>
         </div>
         <div className="p-6">
           <div className="overflow-x-auto">

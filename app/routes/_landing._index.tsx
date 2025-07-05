@@ -1,4 +1,5 @@
 import { Container } from '@/components/ui/container'
+import { Typography } from '@/components/ui/typography'
 import { PricingSection } from '@/components/modules/home/pricing-section'
 import { Button } from '@/components/ui/button'
 import { BarChart3, Code2, Globe, Lock, Rocket, Shield, Sparkles, Users, Zap } from 'lucide-react'
@@ -18,12 +19,12 @@ export default function LandingIndex() {
       <Container asChild>
         <section className="py-16 flex flex-col items-center space-y-6 text-center">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            <Typography variant="h1" className="md:text-5xl lg:text-6xl">
               Build Your Next Big Idea with Vibe
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            </Typography>
+            <Typography variant="lead" className="max-w-2xl mx-auto">
               A modern, fast, and scalable foundation for your web applications.
-            </p>
+            </Typography>
           </div>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button asChild size="lg">
@@ -45,12 +46,12 @@ export default function LandingIndex() {
                 <Sparkles className="h-3.5 w-3.5" />
                 Features
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <Typography variant="h2" className="sm:text-5xl bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Everything you need to succeed
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              </Typography>
+              <Typography variant="large" className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Build faster with our comprehensive suite of tools designed for modern web development
-              </p>
+              </Typography>
             </div>
           </div>
 
@@ -60,30 +61,30 @@ export default function LandingIndex() {
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <Rocket className="h-6 w-6" />
               </div>
-              <h3 className="mb-2 text-xl font-semibold">Lightning Performance</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <Typography variant="h3" className="mb-2 text-xl font-semibold">Lightning Performance</Typography>
+              <Typography variant="small" className="text-muted-foreground leading-relaxed">
                 Built on cutting-edge technology for blazing fast load times and optimal runtime performance
-              </p>
+              </Typography>
             </div>
 
             <div className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <Code2 className="h-6 w-6" />
               </div>
-              <h3 className="mb-2 text-xl font-semibold">Developer Experience</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <Typography variant="h3" className="mb-2 text-xl font-semibold">Developer Experience</Typography>
+              <Typography variant="small" className="text-muted-foreground leading-relaxed">
                 Modern tooling, hot reload, and TypeScript support for a delightful development workflow
-              </p>
+              </Typography>
             </div>
 
             <div className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <Shield className="h-6 w-6" />
               </div>
-              <h3 className="mb-2 text-xl font-semibold">Enterprise Ready</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <Typography variant="h3" className="mb-2 text-xl font-semibold">Enterprise Ready</Typography>
+              <Typography variant="small" className="text-muted-foreground leading-relaxed">
                 Battle-tested security, scalability, and reliability for mission-critical applications
-              </p>
+              </Typography>
             </div>
           </div>
 
@@ -94,10 +95,10 @@ export default function LandingIndex() {
                 <Users className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <h4 className="font-medium">Team Collaboration</h4>
-                <p className="mt-1 text-sm text-muted-foreground">
+                <Typography variant="h4" className="font-medium">Team Collaboration</Typography>
+                <Typography variant="small" className="mt-1 text-muted-foreground">
                   Built-in tools for seamless team collaboration and code reviews
-                </p>
+                </Typography>
               </div>
             </div>
 
@@ -106,10 +107,10 @@ export default function LandingIndex() {
                 <BarChart3 className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <h4 className="font-medium">Analytics Built-in</h4>
-                <p className="mt-1 text-sm text-muted-foreground">
+                <Typography variant="h4" className="font-medium">Analytics Built-in</Typography>
+                <Typography variant="small" className="mt-1 text-muted-foreground">
                   Real-time analytics and performance monitoring out of the box
-                </p>
+                </Typography>
               </div>
             </div>
 
@@ -118,10 +119,10 @@ export default function LandingIndex() {
                 <Lock className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <h4 className="font-medium">Secure by Default</h4>
-                <p className="mt-1 text-sm text-muted-foreground">
+                <Typography variant="h4" className="font-medium">Secure by Default</Typography>
+                <Typography variant="small" className="mt-1 text-muted-foreground">
                   Industry-standard security practices and regular updates
-                </p>
+                </Typography>
               </div>
             </div>
 
@@ -130,10 +131,10 @@ export default function LandingIndex() {
                 <Globe className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <h4 className="font-medium">Global CDN</h4>
-                <p className="mt-1 text-sm text-muted-foreground">
+                <Typography variant="h4" className="font-medium">Global CDN</Typography>
+                <Typography variant="small" className="mt-1 text-muted-foreground">
                   Deploy to edge locations worldwide for minimal latency
-                </p>
+                </Typography>
               </div>
             </div>
 
@@ -142,8 +143,8 @@ export default function LandingIndex() {
                 <Zap className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <h4 className="font-medium">API First</h4>
-                <p className="mt-1 text-sm text-muted-foreground">RESTful and GraphQL APIs ready for any integration</p>
+                <Typography variant="h4" className="font-medium">API First</Typography>
+                <Typography variant="small" className="mt-1 text-muted-foreground">RESTful and GraphQL APIs ready for any integration</Typography>
               </div>
             </div>
 
@@ -152,10 +153,10 @@ export default function LandingIndex() {
                 <Sparkles className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <h4 className="font-medium">AI Powered</h4>
-                <p className="mt-1 text-sm text-muted-foreground">
+                <Typography variant="h4" className="font-medium">AI Powered</Typography>
+                <Typography variant="small" className="mt-1 text-muted-foreground">
                   Leverage AI for smarter development and user experiences
-                </p>
+                </Typography>
               </div>
             </div>
           </div>
@@ -186,14 +187,14 @@ export default function LandingIndex() {
               Start Building Today
             </div>
 
-            <h2 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl">
+            <Typography variant="h2" className="text-white sm:text-5xl md:text-6xl">
               Ready to Start Your Project?
-            </h2>
+            </Typography>
 
-            <p className="mt-6 text-lg text-white/90 md:text-xl">
+            <Typography variant="large" className="mt-6 text-white/90 md:text-xl">
               Join thousands of developers who are already building amazing applications with Vibe. Get started in
               minutes with our comprehensive documentation and world-class support.
-            </p>
+            </Typography>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button size="lg" variant="secondary" asChild className="group">
@@ -217,9 +218,9 @@ export default function LandingIndex() {
                   />
                 ))}
               </div>
-              <p className="text-sm text-white/80">
-                Trusted by <span className="font-semibold text-white">10,000+</span> developers worldwide
-              </p>
+              <Typography variant="small" className="text-white/80">
+                Trusted by <Typography variant="small" asChild><span className="font-semibold text-white">10,000+</span></Typography> developers worldwide
+              </Typography>
             </div>
           </div>
         </Container>

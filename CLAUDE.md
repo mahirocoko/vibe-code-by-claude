@@ -14,23 +14,28 @@ pnpm check        # Fix code issues
 - React 19.1.0, TypeScript, React Router v7
 - React Router CLI for build/dev (migrated from Vite)
 - React Router fs-routes 7.6.3 for file-based routing
-- Tailwind CSS 4.1.11, shadcn/ui
+- Tailwind CSS 4.1.11 (config-free), shadcn/ui components
+- Radix UI (Slot, Dialog), class-variance-authority 0.7.1
 - Biome 1.9.4 for linting/formatting
 
 ## Current TODOs
-- Migrate console pages to use design system components (currently using basic HTML/CSS)
+- Console pages typography updated with Typography component, still need other design system components (currently using basic HTML/CSS for layouts and cards)
 - Enhance console dashboard with interactive charts and real-time data
 - Add authentication system
 - Implement console navigation and layout consistency
 
 ## Recently Completed
+- ✅ Typography component implemented across entire project with comprehensive variant system
+- ✅ Migrated to Tailwind CSS v4 (removed tailwind.config.js)
+- ✅ Installed and configured shadcn/ui Alert component
+- ✅ Enhanced design system colors page with comprehensive examples
+- ✅ Fixed design system alerts page with proper shadcn/ui component usage
 - ✅ All landing pages refactored with consistent semantic HTML structure
 - ✅ Container component enhanced with size variants and asChild prop (default: xl)
 - ✅ Applied unified patterns across Home, About, Contact, Pricing pages
 - ✅ Fixed Contact page functionality and JSX structure issues
-- ✅ TailwindCSS IntelliSense configuration improved for VS Code
 - ✅ Consistent spacing and typography patterns (py-16, tracking-tight)
-- ✅ Design system components fully implemented (Button, Container, Alert, etc.)
+- ✅ Design system components fully implemented (Button, Container, Alert, Typography, etc.)
 
 ## Development Notes
 - Import alias: `@/*` → `app/*`
@@ -40,6 +45,13 @@ pnpm check        # Fix code issues
   - Use max-width instead of container class for better control
   - For sections with backgrounds: `<section><Container>content</Container></section>`
   - For sections without backgrounds: `<Container asChild><section>content</section></Container>`
+- **Typography component patterns**:
+  - Single component for all text elements (h1-h6, p, code, pre, blockquote, lists)
+  - Uses asChild prop for flexible rendering with Radix UI Slot
+  - Automatic element mapping: variants determine the HTML element (h1 → <h1>, body → <p>, etc.)
+  - Comprehensive variants: h1-h6, lead, large, body, small, muted, subtle, code, pre, blockquote, list, ordered-list, list-item
+  - React 19 ComponentProps pattern (no forwardRef needed)
+  - Usage: `<Typography variant="h1">Heading</Typography>` or `<Typography variant="body">Text</Typography>`
 - Run typecheck before commits
 - Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
@@ -55,11 +67,16 @@ pnpm check        # Fix code issues
   - Consistent spacing: `py-16` for sections
   - Typography: `tracking-tight` for headlines
 - **Semantic HTML best practices**: Section backgrounds at section level, Container inside for content width
-- **TailwindCSS IntelliSense**: Configured for VS Code with tailwind.config.js
+- **Tailwind CSS v4**: No config file needed, CSS-first configuration in globals.css
+- **shadcn/ui Integration**: 
+  - Primary base for design system components
+  - Components: Alert, Button, Container, Sheet
+  - Configuration in components.json (baseColor: neutral, cssVariables: true)
+  - Install new components: `npx shadcn@latest add [component]`
 
 ## Architecture Patterns
 - **Component Structure**: 
-  - `app/components/ui/` - Reusable UI components (Button, Container, Alert, etc.)
+  - `app/components/ui/` - Reusable UI components (Button, Container, Alert, Typography, etc.)
   - `app/components/layouts/` - Page layout components (Header, Footer)
   - `app/components/modules/` - Feature-specific components (PricingSection, etc.)
 - **Container Component**: Enhanced with class-variance-authority
@@ -67,10 +84,12 @@ pnpm check        # Fix code issues
   - asChild prop for semantic HTML rendering
   - Replaced Tailwind container class with custom max-width system
   - Two usage patterns: `Container asChild` and `<section><Container>`
-- **Design System**: Fully implemented with comprehensive components
-  - Foundation: Colors (oklch), Typography
-  - Components: Buttons, Forms, Alerts, Cards
+- **Design System**: Built on shadcn/ui foundation with custom enhancements
+  - Foundation: Colors (oklch), Typography (comprehensive variant system)
+  - Components: shadcn/ui base (Alert, Button) + custom (Container, Typography, Sheet)
   - Semantic color system: info, warning, success, error states
+  - Typography: Single component with 14 variants covering all text needs
+  - Comprehensive documentation at /design-system route
 - **Console Structure**: Dashboard, Users, Settings pages exist but need design system integration
 
 ---

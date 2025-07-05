@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
+import { Typography } from '@/components/ui/typography'
 import { Check } from 'lucide-react'
 import { Link } from 'react-router'
 
@@ -48,10 +49,10 @@ export function PricingSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Pricing</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Choose Your Plan</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <Typography variant="h2" className="text-3xl font-bold tracking-tighter sm:text-5xl">Choose Your Plan</Typography>
+            <Typography className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Start free and scale as you grow. No hidden fees, cancel anytime.
-            </p>
+            </Typography>
           </div>
         </div>
 
@@ -73,8 +74,8 @@ export function PricingSection() {
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-semibold">{plan.name}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{plan.description}</p>
+                  <Typography variant="h3" className="text-xl font-semibold">{plan.name}</Typography>
+                  <Typography variant="small" className="mt-2 text-sm text-muted-foreground">{plan.description}</Typography>
                 </div>
 
                 <div className="flex items-baseline">
