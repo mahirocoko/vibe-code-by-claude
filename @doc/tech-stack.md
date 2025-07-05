@@ -6,7 +6,7 @@
 - **React Router**: v7.4.1 - Full ecosystem (Express, Node, Serve, Dev)
 
 ## Build & Development
-- **Rsbuild**: 1.4.1 - Fast Rust-based bundler
+- **Vite**: 6.3.5 - Fast build tool (migrated from Rsbuild)
 - **React Router Plugin**: For SSR and routing
 - **ESM Support**: Experimental VM modules
 
@@ -32,3 +32,4 @@
 - Tailwind CSS 4.x requires new configuration approach
 - Biome 1.9.4 has different config than 2.0.x
 - Always run type checking before commits
+- Install packages with fixed versions (no ^ or ~) for consistency

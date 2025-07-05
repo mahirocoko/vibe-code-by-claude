@@ -37,7 +37,7 @@ app/
 ```
 
 ## Key Files
-- `rsbuild.config.ts` - Build configuration
+- `vite.config.ts` - Build configuration
 - `biome.json` - Linting & formatting rules
 - `components.json` - shadcn/ui configuration
 - `CLAUDE.md` - Project memory for Claude Code
