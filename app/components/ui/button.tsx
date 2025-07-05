@@ -18,9 +18,12 @@ const buttonVariants = cva(
         ghost: 'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
         info: 'bg-info text-info-foreground shadow-xs hover:bg-info/90 focus-visible:ring-info/20 dark:focus-visible:ring-info/40',
-        warning: 'bg-warning text-warning-foreground shadow-xs hover:bg-warning/90 focus-visible:ring-warning/20 dark:focus-visible:ring-warning/40',
-        success: 'bg-success text-success-foreground shadow-xs hover:bg-success/90 focus-visible:ring-success/20 dark:focus-visible:ring-success/40',
-        error: 'bg-error text-error-foreground shadow-xs hover:bg-error/90 focus-visible:ring-error/20 dark:focus-visible:ring-error/40',
+        warning:
+          'bg-warning text-warning-foreground shadow-xs hover:bg-warning/90 focus-visible:ring-warning/20 dark:focus-visible:ring-warning/40',
+        success:
+          'bg-success text-success-foreground shadow-xs hover:bg-success/90 focus-visible:ring-success/20 dark:focus-visible:ring-success/40',
+        error:
+          'bg-error text-error-foreground shadow-xs hover:bg-error/90 focus-visible:ring-error/20 dark:focus-visible:ring-error/40',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',

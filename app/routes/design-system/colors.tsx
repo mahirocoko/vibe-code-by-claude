@@ -60,9 +60,9 @@ export default function ColorsShowcase() {
             <div key={color.variable} className="space-y-2">
               <div
                 className={`h-24 rounded-lg border`}
-                style={{ 
+                style={{
                   backgroundColor: `oklch(var(--${color.variable}))`,
-                  borderColor: color.variable.includes('border') ? undefined : 'oklch(var(--border))'
+                  borderColor: color.variable.includes('border') ? undefined : 'oklch(var(--border))',
                 }}
               />
               <div>
@@ -115,18 +115,10 @@ border-primary, border-secondary, border-info, border-success, border-warning, b
         <h2 className="text-xl font-semibold mb-4">Examples</h2>
         <div className="space-y-4">
           <div className="flex gap-4">
-            <div className="rounded-lg bg-info text-info-foreground p-4">
-              Info Message
-            </div>
-            <div className="rounded-lg bg-success text-success-foreground p-4">
-              Success Message
-            </div>
-            <div className="rounded-lg bg-warning text-warning-foreground p-4">
-              Warning Message
-            </div>
-            <div className="rounded-lg bg-error text-error-foreground p-4">
-              Error Message
-            </div>
+            <div className="rounded-lg bg-info text-info-foreground p-4">Info Message</div>
+            <div className="rounded-lg bg-success text-success-foreground p-4">Success Message</div>
+            <div className="rounded-lg bg-warning text-warning-foreground p-4">Warning Message</div>
+            <div className="rounded-lg bg-error text-error-foreground p-4">Error Message</div>
           </div>
         </div>
       </section>

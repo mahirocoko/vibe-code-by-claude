@@ -173,7 +173,7 @@ export default function LandingIndex({ loaderData }: Route.ComponentProps) {
       <section className="relative w-full flex items-center py-24 md:py-32 lg:py-40 overflow-hidden">
         {/* Background image with overlay */}
         <div className="absolute inset-0">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -189,14 +189,14 @@ export default function LandingIndex({ loaderData }: Route.ComponentProps) {
               <Sparkles className="h-3.5 w-3.5" />
               Start Building Today
             </div>
-            
+
             <h2 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl">
               Ready to Start Your Project?
             </h2>
-            
+
             <p className="mt-6 text-lg text-white/90 md:text-xl">
-              Join thousands of developers who are already building amazing applications with Vibe. 
-              Get started in minutes with our comprehensive documentation and world-class support.
+              Join thousands of developers who are already building amazing applications with Vibe. Get started in
+              minutes with our comprehensive documentation and world-class support.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -207,9 +207,7 @@ export default function LandingIndex({ loaderData }: Route.ComponentProps) {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="border-white/20 text-white hover:bg-white/10">
-                <Link to="/pricing">
-                  View Pricing
-                </Link>
+                <Link to="/pricing">View Pricing</Link>
               </Button>
             </div>
 

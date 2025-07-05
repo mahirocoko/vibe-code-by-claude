@@ -28,6 +28,7 @@ export default [
     index('routes/design-system/index.tsx'),
     route('foundation/colors', 'routes/design-system/colors.tsx'),
     route('foundation/typography', 'routes/design-system/typography.tsx'),
+    route('components/alerts', 'routes/design-system/components/alerts.tsx'),
     route('components/buttons', 'routes/design-system/components/buttons.tsx'),
     route('components/forms', 'routes/design-system/components/forms.tsx'),
     route('components/cards', 'routes/design-system/components/cards.tsx'),
