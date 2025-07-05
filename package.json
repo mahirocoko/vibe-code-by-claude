@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite dev",
-    "start:esm": "react-router-serve ./build/server/static/js/app.js",
-    "start:cjs": "react-router-serve ./cjs-serve-patch.cjs",
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
+    "routes": "react-router routes",
     "check": "biome check --write",
     "format": "biome format --write"
   },

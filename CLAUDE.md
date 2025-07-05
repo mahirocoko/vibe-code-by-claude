@@ -2,14 +2,17 @@
 
 ## Quick Start
 ```bash
-pnpm dev          # Start development
-pnpm check        # Fix code issues
+pnpm dev          # Start development (React Router v7)
+pnpm build        # Build for production
+pnpm start        # Start production server
+pnpm routes       # View route structure
 pnpm typecheck    # Type checking
+pnpm check        # Fix code issues
 ```
 
 ## Tech Stack
 - React 19.1.0, TypeScript, React Router v7
-- Vite 6.3.5 (migrated from Rsbuild)
+- React Router CLI for build/dev (migrated from Vite)
 - React Router fs-routes 7.6.3 for file-based routing
 - Tailwind CSS 4.1.11, shadcn/ui
 - Biome 1.9.4 for linting/formatting
@@ -26,6 +29,7 @@ pnpm typecheck    # Type checking
 - Design system at `/design-system`
 - Install packages with fixed versions (no ^ or ~)
 - File-based routing: `_landing.*` for landing pages, `console.*` for console
+- Use React Router v7 CLI commands (not Vite)
 
 ---
 
