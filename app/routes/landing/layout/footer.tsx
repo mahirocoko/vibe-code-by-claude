@@ -1,6 +1,6 @@
+import { Container } from '@/components/container'
 import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
 import { Link } from 'react-router'
-import { Container } from '@/components/container'
 
 export function Footer() {
   return (

@@ -1,7 +1,7 @@
-import { Check } from 'lucide-react'
-import { Link } from 'react-router'
 import { Container } from '@/components/container'
 import { Button } from '@/components/ui/button'
+import { Check } from 'lucide-react'
+import { Link } from 'react-router'
 
 const plans = [
   {

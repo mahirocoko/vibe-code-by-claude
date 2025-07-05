@@ -1,7 +1,7 @@
-import { Check, X } from 'lucide-react'
-import { Link } from 'react-router'
 import { Container } from '@/components/container'
 import { Button } from '@/components/ui/button'
+import { Check, X } from 'lucide-react'
+import { Link } from 'react-router'
 import type { Route } from './+types/pricing'
 
 export function meta(_: Route.MetaArgs) {

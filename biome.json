@@ -6,15 +6,10 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
-    "lineWidth": 120,
-    "attributePosition": "auto"
+    "lineWidth": 120
   },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on"
-      }
-    }
+  "organizeImports": {
+    "enabled": true
   },
   "linter": {
     "enabled": true,
@@ -42,8 +37,7 @@
         "noParameterAssign": "off",
         "useAsConstAssertion": "error",
         "useBlockStatements": "off",
-        "useImportType": "warn",
-        "useExportType": "warn"
+        "useImportType": "warn"
       },
       "suspicious": {
         "noEmptyInterface": "off",
@@ -51,18 +45,12 @@
         "noExtraNonNullAssertion": "error",
         "noMisleadingInstantiator": "error",
         "noUnsafeDeclarationMerging": "error",
-        "noConsole": {
-          "level": "off",
-          "options": {
-            "allow": ["log"]
-          }
-        }
+        "noConsoleLog": "off"
       },
       "performance": {
         "recommended": true
       }
-    },
-    "includes": ["**", "!**/node_modules/"]
+    }
   },
   "javascript": {
     "formatter": {
@@ -73,13 +61,12 @@
       "arrowParentheses": "always",
       "bracketSpacing": true,
       "bracketSameLine": false,
-      "quoteStyle": "single",
-      "attributePosition": "auto"
+      "quoteStyle": "single"
     }
   },
   "overrides": [
     {
-      "includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+      "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
       "linter": {
         "enabled": true,
         "rules": {
@@ -105,26 +92,18 @@
             "noRedeclare": "off",
             "noUnsafeNegation": "off",
             "useGetterReturn": "off",
-            "noVar": "error"
+            "noGlobalAssign": "error"
           },
           "complexity": {
-            "noArguments": "error"
+            "noForEach": "off"
           }
         }
       }
     }
   ],
   "files": {
-    "includes": [
-      "**/*.js",
-      "**/*.mjs",
-      "**/*.cjs",
-      "**/*.ts",
-      "**/*.tsx",
-      "!**/node_modules/**",
-      "!**/build/**",
-      "!**/.react-router/**"
-    ],
+    "include": ["**/*.js", "**/*.mjs", "**/*.cjs", "**/*.ts", "**/*.tsx"],
+    "ignore": ["**/node_modules/**", "**/build/**", "**/.react-router/**"],
     "ignoreUnknown": true
   }
 }

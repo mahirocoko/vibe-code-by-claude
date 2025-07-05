@@ -5,7 +5,7 @@
 - **Routing**: React Router v7.4.1 (full ecosystem with Express, Node, Serve, Dev)
 - **Build System**: Rsbuild 1.4.1 with React Router plugin
 - **Styling**: Tailwind CSS 4.1.11 with PostCSS plugin
-- **Code Quality**: Biome 2.0.6 (linting & formatting)
+- **Code Quality**: Biome 1.9.4 (linting & formatting) - Downgraded from 2.0.6
 - **UI Components**: shadcn/ui with Radix UI primitives
 - **Icons**: Lucide React
 - **Utilities**: class-variance-authority, tailwind-merge, clsx, tw-animate-css
@@ -93,3 +93,28 @@ app/routes/
 - Add actual functionality to console area
 - Locate or create tailwind.config.ts file
 - Consider refactoring PricingSection component to use Container
+
+## Biome Configuration (v1.9.4)
+### Key Differences from v2.0.6:
+- Use `include` instead of `includes` in files/overrides sections
+- Use `noGlobalAssign` instead of `noVar`
+- Use `noForEach` instead of `noArguments`
+- Use `noConsoleLog` instead of `noConsole` with options
+- Remove `attributePosition` from formatter config
+- Remove `assist` section (not supported in 1.9.4)
+- Separate negation patterns into `ignore` array (e.g., `**/node_modules/**`)
+
+### Migration Commands:
+```bash
+pnpm remove @biomejs/biome && pnpm add -D @biomejs/biome@1.9.4
+pnpm biome check --fix .
+```
+
+## Recent Changes (2025-07-05)
+- Downgraded Biome from 2.0.6 to 1.9.4 for compatibility
+- Updated biome.json configuration to match v1.9.4 API
+- Fixed all configuration errors and applied safe fixes
+
+## Memory Log
+- Memorized to understand project context
+- Downgraded Biome and updated configuration (2025-07-05)
