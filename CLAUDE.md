@@ -115,6 +115,63 @@ pnpm biome check --fix .
 - Updated biome.json configuration to match v1.9.4 API
 - Fixed all configuration errors and applied safe fixes
 
+## Git Commit Standards
+### Commit Message Format
+```
+<type>: <subject>
+
+<body>
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+### Types
+- **feat**: New feature
+- **fix**: Bug fix
+- **chore**: Maintenance, dependency updates, configuration
+- **docs**: Documentation changes
+- **style**: Code style changes (formatting, missing semicolons, etc)
+- **refactor**: Code refactoring without changing functionality
+- **test**: Adding or updating tests
+- **perf**: Performance improvements
+
+### Subject Rules
+- Use imperative mood ("add" not "added" or "adds")
+- Don't capitalize first letter
+- No period at the end
+- Max 50 characters
+
+### Body Rules
+- Use bullet points for multiple changes
+- Explain what and why, not how
+- Wrap at 72 characters
+- Separate subject from body with blank line
+
+### Example from this project:
+```
+feat: enhance landing page UI and downgrade Biome to v1.9.4
+
+- Downgrade Biome from 2.0.6 to 1.9.4 for compatibility
+- Update biome.json configuration to match v1.9.4 API
+- Enhance features section with modern card design and animations
+- Add gradient backgrounds and hover effects
+```
+
+## Custom Slash Commands
+### Git Commands
+- `/commit` - Stage all changes and create a properly formatted commit
+- `/push` - Push commits to remote repository
+- `/commit-push` - Commit and push in one command
+- `/commit-amend` - Amend the last commit
+- `/commit-undo` - Undo last commit (keep changes)
+
+### Usage
+These commands are defined in `.claude_slash_commands.json` and follow the project's commit standards automatically.
+
 ## Memory Log
 - Memorized to understand project context
 - Downgraded Biome and updated configuration (2025-07-05)
+- Added commit standards to ensure consistent git history (2025-07-05)
+- Created custom slash commands for git operations (2025-07-05)
