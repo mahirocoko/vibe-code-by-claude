@@ -1,5 +1,5 @@
-import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
 import { Check, X } from 'lucide-react'
 import { Link } from 'react-router'
 export function meta() {
@@ -88,35 +88,33 @@ const faqs = [
 
 export default function PricingPage() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <Container>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Simple, Transparent Pricing
-              </h1>
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Choose the perfect plan for your needs. Always flexible to scale up or down.
-              </p>
-            </div>
-            <div className="inline-flex items-center rounded-lg bg-muted p-1 text-muted-foreground">
-              <button className="rounded-md px-3 py-1.5 text-sm font-medium transition-colors hover:text-foreground">
-                Monthly
-              </button>
-              <button className="rounded-md bg-background px-3 py-1.5 text-sm font-medium text-foreground shadow-sm">
-                Yearly (Save 20%)
-              </button>
-            </div>
+      <Container asChild>
+        <section className="py-16 text-center space-y-6">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+              Simple, Transparent Pricing
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Choose the perfect plan for your needs. Always flexible to scale up or down.
+            </p>
           </div>
-        </Container>
-      </section>
+          <div className="inline-flex items-center rounded-lg bg-muted p-1 text-muted-foreground">
+            <button className="rounded-md px-3 py-1.5 text-sm font-medium transition-colors hover:text-foreground">
+              Monthly
+            </button>
+            <button className="rounded-md bg-background px-3 py-1.5 text-sm font-medium text-foreground shadow-sm">
+              Yearly (Save 20%)
+            </button>
+          </div>
+        </section>
+      </Container>
 
       {/* Pricing Cards */}
-      <section className="w-full py-12">
-        <Container>
-          <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3 lg:gap-8">
+      <Container asChild>
+        <section className="py-16">
+          <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
             {plans.map((plan) => (
               <div
                 key={plan.name}
@@ -170,60 +168,56 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
-        </Container>
-      </section>
+        </section>
+      </Container>
 
       {/* FAQ Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-        <Container>
-          <div className="mx-auto max-w-4xl">
-            <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Frequently Asked Questions</h2>
-              <p className="text-muted-foreground md:text-lg">
-                Got questions? We've got answers. If you can't find what you're looking for, feel free to contact us.
-              </p>
-            </div>
+      <section className="py-16 bg-muted/30">
+        <Container size="md">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</h2>
+            <p className="text-muted-foreground md:text-lg">
+              Got questions? We've got answers. If you can't find what you're looking for, feel free to contact us.
+            </p>
+          </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              {faqs.map((faq, index) => (
-                <div key={index} className="space-y-2">
-                  <h3 className="font-semibold">{faq.question}</h3>
-                  <p className="text-sm text-muted-foreground">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {faqs.map((faq, index) => (
+              <div key={index} className="space-y-2">
+                <h3 className="font-semibold">{faq.question}</h3>
+                <p className="text-sm text-muted-foreground">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
 
-            <div className="mt-12 text-center">
-              <p className="text-muted-foreground mb-4">Still have questions?</p>
-              <Button asChild variant="outline">
-                <Link to="/contact">Contact Support</Link>
-              </Button>
-            </div>
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground mb-4">Still have questions?</p>
+            <Button asChild variant="outline">
+              <Link to="/contact">Contact Support</Link>
+            </Button>
           </div>
         </Container>
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <Container>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Ready to Get Started?</h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
-                Join thousands of satisfied customers using Vibe to power their applications.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button asChild size="lg">
-                <Link to="/contact">Start Free Trial</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link to="/contact">Talk to Sales</Link>
-              </Button>
-            </div>
+      <Container asChild>
+        <section className="py-16 text-center space-y-6">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Ready to Get Started?</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Join thousands of satisfied customers using Vibe to power their applications.
+            </p>
           </div>
-        </Container>
-      </section>
-    </>
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <Button asChild size="lg">
+              <Link to="/contact">Start Free Trial</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link to="/contact">Talk to Sales</Link>
+            </Button>
+          </div>
+        </section>
+      </Container>
+    </main>
   )
 }

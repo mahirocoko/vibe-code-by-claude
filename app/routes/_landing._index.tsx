@@ -13,34 +13,32 @@ export function loader() {
 
 export default function LandingIndex() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
-      <section className="w-full flex items-center py-12 md:py-24 lg:py-32 xl:py-48">
-        <Container className="flex flex-col items-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+      <Container asChild>
+        <section className="py-16 flex flex-col items-center space-y-6 text-center">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               Build Your Next Big Idea with Vibe
             </h1>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A modern, fast, and scalable foundation for your web applications.
             </p>
           </div>
-          <div className="space-x-4">
-            <Button asChild>
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <Button asChild size="lg">
               <Link to="/contact">Get Started</Link>
             </Button>
-            <Button asChild variant="secondary">
+            <Button asChild variant="outline" size="lg">
               <Link to="/about">Learn More</Link>
             </Button>
           </div>
-        </Container>
-      </section>
+        </section>
+      </Container>
 
       {/* Features Section */}
-      <section id="features" className="relative w-full flex items-center py-12 md:py-24 lg:py-32 overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
-        <Container className="relative">
+      <section id="features" className="relative py-16 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5">
+        <Container>
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
@@ -226,6 +224,6 @@ export default function LandingIndex() {
           </div>
         </Container>
       </section>
-    </>
+    </main>
   )
 }

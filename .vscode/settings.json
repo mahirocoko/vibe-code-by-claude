@@ -6,9 +6,10 @@
   ],
   "tailwindCSS.classFunctions": [
     "cn",
-    "tv"
+    "tv",
+    "cva"
   ],
-  "tailwindCSS.experimental.configFile": "app/styles/global.css",
+  "tailwindCSS.experimental.configFile": null,
   "todohighlight.keywords": [
     {
       "text": "NOTE:",
