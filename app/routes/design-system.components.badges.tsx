@@ -205,7 +205,7 @@ export default function BadgesShowcase() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-center gap-4">
-              <Badge className="text-xs px-2 py-0.5">Small</Badge>
+              <Badge className="text-xs">Small</Badge>
               <Badge>Default</Badge>
               <Badge className="text-sm px-3 py-1">Large</Badge>
             </div>

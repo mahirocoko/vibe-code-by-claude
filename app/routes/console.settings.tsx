@@ -3,12 +3,12 @@ import { Typography } from '@/components/ui/typography'
 export default function ConsoleSettings() {
   return (
     <div>
-      <Typography variant="h1" className="text-3xl font-bold mb-6">
+      <Typography variant="h1" className="mb-6">
         Settings
       </Typography>
       <div className="space-y-6">
         <div className="bg-white rounded-lg shadow p-6">
-          <Typography variant="h2" className="text-xl font-semibold mb-4">
+          <Typography variant="h2" className="mb-4">
             General Settings
           </Typography>
           <div className="space-y-4">

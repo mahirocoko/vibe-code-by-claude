@@ -28,6 +28,9 @@ pnpm check        # Fix code issues
 - Update console pages to use new shadcn/ui components
 
 ## Recently Completed
+- ✅ Component structure refactoring: Extracted landing page sections into modular components (FeaturesSection, CtaSection)
+- ✅ Code quality improvements: Cleaned redundant className usage across Typography, Badge, and Card components
+- ✅ Landing page optimization: Achieved clear 4-section structure (Hero, Features, Pricing, CTA) with proper separation
 - ✅ Hero section navigation: Added React Router Links to console (/console) and design system (/design-system)
 - ✅ Code formatting workflow: Established mandatory `pnpm check` for all implementations (34 files auto-fixed)
 - ✅ Animated hero section: Motion library integration with rotating text animation in landing page
@@ -53,7 +56,9 @@ pnpm check        # Fix code issues
   - For sections without backgrounds: `<Container asChild><section>content</section></Container>`
 - **Typography component**: Single component with 14 variants (h1-h6, body, muted, etc.), asChild prop, automatic element mapping. Never override built-in styles, use semantic variants
 - **Code Formatting Standards**: MANDATORY `pnpm check` for all implementations - Biome auto-fixes imports, spacing, quotes
+- **Component Cleanup Patterns**: Remove redundant className props that duplicate variant styles (e.g., don't add `text-3xl font-bold` to Typography h1 variant)
 - **Development Workflow**: 1) Write code → 2) `pnpm check` (mandatory) → 3) `pnpm typecheck` → 4) Optional: `pnpm build`
+- **Documentation Structure**: Use `@doc/` folder for detailed docs, reference with `@doc/filename.md`
 - Run typecheck before commits
 - Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
@@ -85,7 +90,7 @@ pnpm check        # Fix code issues
 - **Component Structure**: 
   - `app/components/ui/` - Reusable UI components (Button, Container, Alert, Typography, etc.)
   - `app/components/layouts/` - Page layout components (Header, Footer)
-  - `app/components/modules/` - Feature-specific components (HeroSection, PricingSection)
+  - `app/components/modules/home/` - Landing page sections (HeroSection, FeaturesSection, PricingSection, CtaSection)
 - **Container Component**: Enhanced with class-variance-authority
   - Variants: sm/md/lg/xl/full for different max-widths (default: xl)
   - asChild prop for semantic HTML rendering
@@ -103,8 +108,8 @@ pnpm check        # Fix code issues
 ---
 
 ## Additional Resources (Reference when needed)
-- 📝 [@doc/commit-guide.md](/@doc/commit-guide.md) - Git commit standards
-- 🎨 [@doc/design-system.md](/@doc/design-system.md) - Colors & components
-- 🛠️ [@doc/commands.md](/@doc/commands.md) - All commands & slash commands
-- 📁 [@doc/project-structure.md](/@doc/project-structure.md) - Detailed file structure
-- 💻 [@doc/tech-stack.md](/@doc/tech-stack.md) - Full tech stack details
+- 📝 [@doc/commit-guide.md](@doc/commit-guide.md) - Git commit standards
+- 🎨 [@doc/design-system.md](@doc/design-system.md) - Colors & components
+- 🛠️ [@doc/commands.md](@doc/commands.md) - All commands & slash commands
+- 📁 [@doc/project-structure.md](@doc/project-structure.md) - Detailed file structure
+- 💻 [@doc/tech-stack.md](@doc/tech-stack.md) - Full tech stack details

@@ -273,7 +273,7 @@ export default function Contact() {
               </div>
 
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="py-6">
                   <Typography variant="h3" className="mb-2">
                     Need Quick Help?
                   </Typography>
