@@ -46,12 +46,12 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 - `--success`, `--success-foreground`
 - `--error`, `--error-foreground`
 
-## Available Components (15)
+## Available Components (16)
 **Core Components:**
 - Alert, Button, Container, Typography, Sheet, BentoGrid
 
 **Form Components:** 
-- Input, Textarea, Label, Select, Toggle
+- Input, Textarea, Label, Select, Toggle, Switch
 
 **Display Components:**
 - Card, Badge, Avatar, Accordion

@@ -2,21 +2,26 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Container } from '@/components/ui/container'
+import { Switch } from '@/components/ui/switch'
 import { Typography } from '@/components/ui/typography'
+import { cn } from '@/lib/utils'
 import { Check } from 'lucide-react'
+import { useState } from 'react'
 import { Link } from 'react-router'
 
 const plans = [
   {
     name: 'Starter',
-    price: '$19',
+    monthlyPrice: 19,
+    yearlyPrice: 15,
     description: 'Perfect for individuals and small projects',
     features: ['Up to 5 projects', '2GB storage', 'Basic support', 'API access'],
     popular: false,
   },
   {
     name: 'Professional',
-    price: '$49',
+    monthlyPrice: 49,
+    yearlyPrice: 39,
     description: 'Great for growing teams and businesses',
     features: [
       'Unlimited projects',
@@ -30,7 +35,8 @@ const plans = [
   },
   {
     name: 'Enterprise',
-    price: 'Custom',
+    monthlyPrice: null,
+    yearlyPrice: null,
     description: 'Tailored solutions for large organizations',
     features: [
       'Everything in Pro',
@@ -45,16 +51,33 @@ const plans = [
 ]
 
 export function PricingSection() {
+  const [isYearly, setIsYearly] = useState(false)
+
   return (
-    <section id="pricing" className="w-full py-12 md:py-24 lg:py-32">
-      <Container>
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <Badge variant="secondary">Pricing</Badge>
-            <Typography variant="h2">Choose Your Plan</Typography>
-            <Typography className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Start free and scale as you grow. No hidden fees, cancel anytime.
+    <Container asChild>
+      <section id="pricing" className="py-12 md:py-24 lg:py-32">
+        <div className="text-center mb-12 lg:mb-16">
+          <Badge variant="secondary" className="mb-6">
+            Pricing
+          </Badge>
+
+          <Typography variant="h2" className="mb-6 max-w-3xl mx-auto tracking-tight">
+            Choose the <span className="text-primary">perfect plan</span> for your needs
+          </Typography>
+
+          <Typography variant="lead" className="max-w-2xl mx-auto text-muted-foreground">
+            Start free and scale as you grow. No hidden fees, cancel anytime.
+          </Typography>
+
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <Typography variant="small" className={!isYearly ? 'font-semibold' : 'text-muted-foreground'}>
+              Monthly
             </Typography>
+            <Switch checked={isYearly} onCheckedChange={setIsYearly} />
+            <Typography variant="small" className={isYearly ? 'font-semibold' : 'text-muted-foreground'}>
+              Yearly
+            </Typography>
+            <Badge variant="secondary">Save 20%</Badge>
           </div>
         </div>
 
@@ -62,38 +85,66 @@ export function PricingSection() {
           {plans.map((plan) => (
             <Card
               key={plan.name}
-              className={`relative flex flex-col transition-all hover:shadow-md ${plan.popular ? 'border-primary shadow-md' : ''}`}
+              className={cn(
+                'relative flex flex-col transition-all duration-200 hover:shadow-lg hover:scale-105',
+                plan.popular ? 'border-primary shadow-lg ring-2 ring-primary/20' : 'hover:border-primary/50',
+              )}
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <Badge>Most Popular</Badge>
+                  <Badge className="bg-gradient-to-r from-primary to-primary/80 text-white px-4 py-1 shadow-lg">
+                    Most Popular
+                  </Badge>
                 </div>
               )}
 
-              <CardHeader>
+              <CardHeader className="pb-8">
                 <CardTitle>{plan.name}</CardTitle>
                 <CardDescription>{plan.description}</CardDescription>
               </CardHeader>
 
               <CardContent className="flex-1">
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  {plan.price !== 'Custom' && <span className="ml-1 text-muted-foreground">/month</span>}
+                <div className="flex items-baseline mb-6">
+                  {plan.monthlyPrice ? (
+                    <>
+                      <Typography variant="h1">${isYearly ? plan.yearlyPrice : plan.monthlyPrice}</Typography>
+                      <Typography variant="muted" className="ml-2">
+                        /{isYearly ? 'year' : 'month'}
+                      </Typography>
+                      {isYearly && (
+                        <Typography variant="small" className="ml-2 text-success font-medium">
+                          Save ${(plan.monthlyPrice - plan.yearlyPrice) * 12}/year
+                        </Typography>
+                      )}
+                    </>
+                  ) : (
+                    <Typography variant="h1">Custom</Typography>
+                  )}
                 </div>
 
-                <ul className="mt-4 space-y-2 text-sm">
+                <ul className="space-y-3">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span className="text-muted-foreground">{feature}</span>
+                    <li key={feature} className="flex items-center gap-3">
+                      <div className="flex-shrink-0">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <Typography variant="small">{feature}</Typography>
                     </li>
                   ))}
                 </ul>
               </CardContent>
 
-              <CardFooter>
-                <Button className="w-full" variant={plan.popular ? 'default' : 'outline'}>
-                  {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
+              <CardFooter className="pt-8">
+                <Button
+                  className={cn(
+                    'w-full',
+                    plan.popular &&
+                      'bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70',
+                  )}
+                  variant={plan.popular ? 'default' : 'outline'}
+                  size="lg"
+                >
+                  {plan.monthlyPrice ? 'Get Started' : 'Contact Sales'}
                 </Button>
               </CardFooter>
             </Card>
@@ -101,11 +152,11 @@ export function PricingSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <Link to="/pricing" className="text-sm text-primary hover:underline">
-            View detailed pricing and compare all features →
+          <Link to="/pricing" className="text-primary hover:underline">
+            <Typography variant="small">View detailed pricing and compare all features →</Typography>
           </Link>
         </div>
-      </Container>
-    </section>
+      </section>
+    </Container>
   )
 }

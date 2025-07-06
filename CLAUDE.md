@@ -50,7 +50,7 @@ pnpm check        # Fix code issues
   - `/project:design-system-audit [--fix]` - Project-wide compliance audit
   - `/project:design-system-workflow [--auto-fix]` - End-to-end improvement workflow
 - Run typecheck before commits
-- Design system at `/design-system` (fully implemented with comprehensive components)
+- Design system at `/design-system` (fully implemented with 16 comprehensive components including Switch)
 - Install packages with fixed versions (no ^ or ~)
 - File-based routing: `_landing.*` for landing pages, `console.*` for console
 - Use React Router v7 CLI commands (not Vite)
