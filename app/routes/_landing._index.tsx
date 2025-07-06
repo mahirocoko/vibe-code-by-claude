@@ -17,7 +17,7 @@ export function loader() {
 
 export default function LandingIndex() {
   return (
-    <main>
+    <>
       {/* Hero Section */}
       <Container asChild>
         <section className="py-16 flex flex-col items-center space-y-6 text-center">
@@ -234,6 +234,6 @@ export default function LandingIndex() {
           </div>
         </Container>
       </section>
-    </main>
+    </>
   )
 }

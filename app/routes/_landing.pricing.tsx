@@ -94,7 +94,7 @@ const faqs = [
 
 export default function PricingPage() {
   return (
-    <main>
+    <>
       {/* Hero Section */}
       <Container asChild>
         <section className="py-16 text-center space-y-6">
@@ -227,6 +227,6 @@ export default function PricingPage() {
           </div>
         </section>
       </Container>
-    </main>
+    </>
   )
 }

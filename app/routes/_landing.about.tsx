@@ -4,7 +4,7 @@ import { Typography } from '@/components/ui/typography'
 
 export default function About() {
   return (
-    <main>
+    <>
       {/* Hero Section */}
       <Container asChild>
         <section className="py-16 text-center">
@@ -121,6 +121,6 @@ export default function About() {
           </div>
         </section>
       </Container>
-    </main>
+    </>
   )
 }

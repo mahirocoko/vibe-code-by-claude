@@ -27,6 +27,7 @@ pnpm check        # Fix code issues
 - Update console pages to use new shadcn/ui components
 
 ## Recently Completed
+- ✅ Fixed HTML semantic structure: Removed duplicate `<main>` tags from landing pages for SEO compliance
 - ✅ Typography component system with comprehensive variants and asChild pattern
 - ✅ All landing pages refactored with semantic HTML and unified patterns
 - ✅ Container component enhanced with size variants (sm/md/lg/xl/full)
@@ -57,7 +58,7 @@ pnpm check        # Fix code issues
 - Smooth scroll behavior enabled globally
 - Primary color system uses oklch(0.5 0.28 269.85) for better perceptual uniformity
 - **Landing pages structure**: All pages (Home, About, Contact, Pricing) use consistent patterns:
-  - `<main>` wrapper for entire page
+  - Single `<main>` wrapper from layout (no duplicate main tags in pages)
   - Semantic `<section>` elements for content areas
   - Consistent spacing: `py-16` for sections
   - Typography: `tracking-tight` for headlines
