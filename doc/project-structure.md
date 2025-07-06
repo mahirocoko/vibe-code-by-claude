@@ -73,7 +73,7 @@ app/
 - `components.json` - shadcn/ui configuration (baseColor: neutral)
 - `tailwind.config.js` - Tailwind CSS v4 configuration (config-free)
 - `CLAUDE.md` - Project memory for Claude Code
-- `@doc/` - Detailed documentation files
+- `doc/` - Detailed documentation files
 
 ## Component Architecture
 

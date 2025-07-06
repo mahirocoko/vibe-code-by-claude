@@ -28,78 +28,33 @@ pnpm check        # Fix code issues
 - Update console pages to use new shadcn/ui components
 
 ## Recently Completed
-- ✅ **Bento Grid Features Section**: Complete redesign with modern Bento grid layout
-  - New BentoCard and BentoGrid components with responsive 3-column layout
-  - Background images with gradient fade overlays for visual appeal
-  - Interactive hover animations with content/button transitions
-  - Mobile-optimized: content always visible, animations desktop-only
-  - White icon backgrounds with primary color for high contrast
-  - Image positioning: 50% height with gradient fade to ensure content readability
-- ✅ Component structure refactoring: Extracted landing page sections into modular components (FeaturesSection, CtaSection)
-- ✅ Code quality improvements: Cleaned redundant className usage across Typography, Badge, and Card components
-- ✅ Landing page optimization: Achieved clear 4-section structure (Hero, Features, Pricing, CTA) with proper separation
-- ✅ Hero section navigation: Added React Router Links to console (/console) and design system (/design-system)
-- ✅ Code formatting workflow: Established mandatory `pnpm check` for all implementations (34 files auto-fixed)
-- ✅ Animated hero section: Motion library integration with rotating text animation in landing page
-- ✅ Motion package migration: Upgraded from framer-motion to motion@12.22.0 for better performance
-- ✅ HTML semantic improvements: Hero section uses proper Container, Typography, and Badge components
-- ✅ Component reusability: Hero section follows design system patterns with semantic HTML structure
-- ✅ Fixed HTML semantic structure: Removed duplicate `<main>` tags from landing pages for SEO compliance
-- ✅ Typography component system with comprehensive variants and asChild pattern
-- ✅ All landing pages refactored with semantic HTML and unified patterns
-- ✅ Container component enhanced with size variants (sm/md/lg/xl/full)
-- ✅ Migrated to Tailwind CSS v4 (config-free) and React Router v7 CLI
-- ✅ Comprehensive shadcn/ui integration: 15 UI components (Button, Container, Alert, Typography, Card, Badge, Input, Textarea, Label, Select, Toggle, Accordion, Avatar, Sheet, BentoGrid)
-- ✅ Landing pages fully updated: Contact forms, feature cards, pricing cards, FAQ accordion
-- ✅ Design system documentation: 9 pages covering all components with comprehensive examples
+- ✅ **Bento Grid System**: Modern grid layout with responsive design and background images
+- ✅ **shadcn/ui Integration**: 15 components with comprehensive design system
+- ✅ **Landing Pages**: 4-section structure with semantic HTML and Motion animations
+- ✅ **Code Quality**: Mandatory `pnpm check` workflow and component cleanup
+- ✅ **Documentation**: Memory format optimization and resource consolidation
 
 ## Development Notes
 - Import alias: `@/*` → `app/*`
-- **Bento Grid System**: 
-  - BentoGrid and BentoCard components for modern grid layouts
-  - Responsive: 1 column mobile, 3 columns desktop with `md:grid-cols-3`
-  - Image integration: 50% height containers with gradient overlays
-  - Mobile-first: content always visible, hover animations desktop-only
-  - Icon styling: white backgrounds (`bg-white/90`) with primary color icons
-  - Gradient system: `from-background via-background/70 to-transparent` for mobile readability
-- **Container component patterns**: 
-  - Supports asChild prop for semantic HTML (Container becomes the element)
-  - Size variants: sm (2xl), md (4xl), lg (6xl), xl (7xl), full (default: xl)
-  - Use max-width instead of container class for better control
-  - For sections with backgrounds: `<section><Container>content</Container></section>`
-  - For sections without backgrounds: `<Container asChild><section>content</section></Container>`
-- **Typography component**: Single component with 14 variants (h1-h6, body, muted, etc.), asChild prop, automatic element mapping. Never override built-in styles, use semantic variants
-- **Code Formatting Standards**: MANDATORY `pnpm check` for all implementations - Biome auto-fixes imports, spacing, quotes
-- **Component Cleanup Patterns**: Remove redundant className props that duplicate variant styles (e.g., don't add `text-3xl font-bold` to Typography h1 variant)
-- **Development Workflow**: 1) Write code → 2) `pnpm check` (mandatory) → 3) `pnpm typecheck` → 4) Optional: `pnpm build`
-- **Documentation Structure**: Use `@doc/` folder for detailed docs, reference with `@doc/filename.md`
-- **Memory Update Workflow**: When using `/update-memory`, ALWAYS update both CLAUDE.md AND corresponding @doc files for consistency
+- **Bento Grid**: Responsive 3-column layout with image backgrounds and gradient overlays
+- **Container**: Size variants (sm/md/lg/xl/full) with asChild for semantic HTML
+- **Typography**: 14 variants with asChild and automatic element mapping
+- **Code Standards**: MANDATORY `pnpm check` → `pnpm typecheck` → `pnpm build`
+- **Documentation Structure**: Use `doc/` folder for detailed docs, reference with `@doc/filename.md` format
+- **Memory Update Workflow**: When using `/update-memory`, ALWAYS update both CLAUDE.md AND corresponding doc files for consistency
+- **Resource Format**: Use compact pipe-separated format: `@doc/file1.md | @doc/file2.md | @doc/file3.md`
 - Run typecheck before commits
 - Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
 - File-based routing: `_landing.*` for landing pages, `console.*` for console
 - Use React Router v7 CLI commands (not Vite)
 - Component organization: `layouts/` (page layouts), `modules/` (feature components), `ui/` (reusable components)
-- **Motion animations**: Use `motion` package with `import { motion } from "motion/react"` for performance-optimized animations
-- **Navigation patterns**: Use Button with `asChild` + Link for consistent routing (e.g., hero section CTAs)
+- **Motion**: Use `motion/react` for animations with Button + Link patterns
 - Console pages exist but need migration to design system components
 - Smooth scroll behavior enabled globally
 - Primary color system uses oklch(0.5 0.28 269.85) for better perceptual uniformity
-- **Landing pages structure**: All pages (Home, About, Contact, Pricing) use consistent patterns:
-  - Single `<main>` wrapper from layout (no duplicate main tags in pages)
-  - Semantic `<section>` elements for content areas
-  - Consistent spacing: `py-16` for sections
-  - Typography: `tracking-tight` for headlines
-- **Semantic HTML best practices**: Section backgrounds at section level, Container inside for content width
-- **Tailwind CSS v4**: No config file needed, CSS-first configuration in globals.css
-- **shadcn/ui Integration**: 
-  - Complete design system foundation with 15 components
-  - Core: Alert, Button, Container, Typography, Sheet, BentoGrid
-  - Forms: Input, Textarea, Label, Select, Toggle
-  - Display: Card, Badge, Avatar, Accordion
-  - Configuration: baseColor: neutral, cssVariables: true
-  - All components documented at `/design-system` with interactive examples
-  - Install: `npx shadcn@latest add [component]`
+- **Landing Structure**: Semantic HTML with single `<main>` and consistent `py-16` spacing
+- **shadcn/ui**: 15 components (baseColor: neutral) with `/design-system` documentation
 
 ## Architecture Patterns
 - **Component Structure**: 
@@ -129,11 +84,7 @@ pnpm check        # Fix code issues
 
 ---
 
-## Additional Resources (Reference when needed)
-- 📝 [@doc/commit-guide.md](@doc/commit-guide.md) - Git commit standards
-- 🎨 [@doc/design-system.md](@doc/design-system.md) - Colors & components
-- 🛠️ [@doc/commands.md](@doc/commands.md) - All commands & slash commands
-- 📁 [@doc/project-structure.md](@doc/project-structure.md) - Detailed file structure
-- 💻 [@doc/tech-stack.md](@doc/tech-stack.md) - Full tech stack details
+## Resources
+@doc/commit-guide.md | @doc/design-system.md | @doc/commands.md | @doc/project-structure.md | @doc/tech-stack.md
 
-**IMPORTANT**: When using `/update-memory`, ALWAYS check and update @doc files to maintain consistency between CLAUDE.md and detailed documentation. Changes to architecture, tech stack, or development patterns must be reflected in both locations.
+**IMPORTANT**: When using `/update-memory`, ALWAYS check and update doc files to maintain consistency between CLAUDE.md and detailed documentation. Changes to architecture, tech stack, or development patterns must be reflected in both locations.
