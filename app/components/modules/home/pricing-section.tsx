@@ -62,7 +62,7 @@ export function PricingSection() {
           {plans.map((plan) => (
             <Card
               key={plan.name}
-              className={`relative transition-all hover:shadow-md ${plan.popular ? 'border-primary shadow-md' : ''}`}
+              className={`relative flex flex-col transition-all hover:shadow-md ${plan.popular ? 'border-primary shadow-md' : ''}`}
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -75,7 +75,7 @@ export function PricingSection() {
                 <CardDescription>{plan.description}</CardDescription>
               </CardHeader>
 
-              <CardContent>
+              <CardContent className="flex-1">
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold">{plan.price}</span>
                   {plan.price !== 'Custom' && <span className="ml-1 text-muted-foreground">/month</span>}

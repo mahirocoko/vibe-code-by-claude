@@ -28,10 +28,11 @@ pnpm check        # Fix code issues
 - Update console pages to use new shadcn/ui components
 
 ## Recently Completed
+- ✅ **Component Refactoring System**: 4 slash commands for design system management
+- ✅ **PricingSection Migration**: Refactored to use shadcn/ui Card, Badge, Typography components
+- ✅ **Command Organization**: Structured .claude/commands/ with git/, components/, docs/ folders
 - ✅ **Bento Grid System**: Modern grid layout with responsive design and background images
 - ✅ **shadcn/ui Integration**: 15 components with comprehensive design system
-- ✅ **Landing Pages**: 4-section structure with semantic HTML and Motion animations
-- ✅ **Code Quality**: Mandatory `pnpm check` workflow and component cleanup
 - ✅ **Documentation**: Memory format optimization and resource consolidation
 
 ## Development Notes
@@ -43,6 +44,11 @@ pnpm check        # Fix code issues
 - **Documentation Structure**: Use `doc/` folder for detailed docs, reference with `@doc/filename.md` format
 - **Memory Update Workflow**: When using `/update-memory`, ALWAYS update both CLAUDE.md AND corresponding doc files for consistency
 - **Resource Format**: Use compact pipe-separated format: `@doc/file1.md | @doc/file2.md | @doc/file3.md`
+- **Slash Commands**: 4 component refactoring commands with Claude Code YAML format
+  - `/project:refactor-component <file>` - Single component shadcn/ui migration
+  - `/project:analyze-components [pattern]` - Design system violation analysis  
+  - `/project:design-system-audit [--fix]` - Project-wide compliance audit
+  - `/project:design-system-workflow [--auto-fix]` - End-to-end improvement workflow
 - Run typecheck before commits
 - Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
