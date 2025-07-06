@@ -26,19 +26,12 @@ pnpm check        # Fix code issues
 - Implement console navigation and layout consistency
 
 ## Recently Completed
-- ✅ Typography component implemented across entire project with comprehensive variant system
-- ✅ Cleaned up all Typography components: removed redundant font-size, line-height, color, and font-weight classes
-- ✅ Typography components now use built-in variant styling (no className overrides for size/weight/color)
-- ✅ Migrated to Tailwind CSS v4 (removed tailwind.config.js)
-- ✅ Installed and configured shadcn/ui Alert component
-- ✅ Enhanced design system colors page with comprehensive examples
-- ✅ Fixed design system alerts page with proper shadcn/ui component usage
-- ✅ All landing pages refactored with consistent semantic HTML structure
-- ✅ Container component enhanced with size variants and asChild prop (default: xl)
-- ✅ Applied unified patterns across Home, About, Contact, Pricing pages
-- ✅ Fixed Contact page functionality and JSX structure issues
-- ✅ Consistent spacing and typography patterns (py-16, tracking-tight)
-- ✅ Design system components fully implemented (Button, Container, Alert, Typography, etc.)
+- ✅ Typography component system with comprehensive variants and asChild pattern
+- ✅ All landing pages refactored with semantic HTML and unified patterns
+- ✅ Container component enhanced with size variants (sm/md/lg/xl/full)
+- ✅ Migrated to Tailwind CSS v4 (config-free) and React Router v7 CLI
+- ✅ Design system fully implemented (Button, Container, Alert, Typography)
+- ✅ shadcn/ui integration with Alert component and consistent spacing patterns
 
 ## Development Notes
 - Import alias: `@/*` → `app/*`
@@ -48,16 +41,7 @@ pnpm check        # Fix code issues
   - Use max-width instead of container class for better control
   - For sections with backgrounds: `<section><Container>content</Container></section>`
   - For sections without backgrounds: `<Container asChild><section>content</section></Container>`
-- **Typography component patterns**:
-  - Single component for all text elements (h1-h6, p, code, pre, blockquote, lists)
-  - Uses asChild prop for flexible rendering with Radix UI Slot
-  - Automatic element mapping: variants determine the HTML element (h1 → <h1>, body → <p>, etc.)
-  - Comprehensive variants: h1-h6, lead, large, body, small, muted, subtle, code, pre, blockquote, list, ordered-list, list-item
-  - React 19 ComponentProps pattern (no forwardRef needed)
-  - Usage: `<Typography variant="h1">Heading</Typography>` or `<Typography variant="body">Text</Typography>`
-  - **IMPORTANT**: Never override built-in variant styles (font-size, font-weight, line-height, color)
-  - Only use className for spacing, custom colors, or layout-specific styling
-  - Use semantic variants (muted, subtle) instead of manual color overrides
+- **Typography component**: Single component with 14 variants (h1-h6, body, muted, etc.), asChild prop, automatic element mapping. Never override built-in styles, use semantic variants
 - Run typecheck before commits
 - Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
