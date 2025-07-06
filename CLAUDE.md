@@ -59,6 +59,7 @@ pnpm check        # Fix code issues
 - **Component Cleanup Patterns**: Remove redundant className props that duplicate variant styles (e.g., don't add `text-3xl font-bold` to Typography h1 variant)
 - **Development Workflow**: 1) Write code → 2) `pnpm check` (mandatory) → 3) `pnpm typecheck` → 4) Optional: `pnpm build`
 - **Documentation Structure**: Use `@doc/` folder for detailed docs, reference with `@doc/filename.md`
+- **Memory Update Workflow**: When using `/update-memory`, ALWAYS update both CLAUDE.md AND corresponding @doc files for consistency
 - Run typecheck before commits
 - Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
@@ -113,3 +114,5 @@ pnpm check        # Fix code issues
 - 🛠️ [@doc/commands.md](@doc/commands.md) - All commands & slash commands
 - 📁 [@doc/project-structure.md](@doc/project-structure.md) - Detailed file structure
 - 💻 [@doc/tech-stack.md](@doc/tech-stack.md) - Full tech stack details
+
+**IMPORTANT**: When using `/update-memory`, ALWAYS check and update @doc files to maintain consistency between CLAUDE.md and detailed documentation. Changes to architecture, tech stack, or development patterns must be reflected in both locations.

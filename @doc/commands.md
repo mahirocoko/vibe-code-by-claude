@@ -37,7 +37,36 @@ pnpm typecheck
 ```
 
 ## Pre-commit Checklist
-1. Run `pnpm typecheck` to ensure no type errors
-2. Run `pnpm check` to fix formatting/linting
+1. Run `pnpm check` to fix formatting/linting (MANDATORY)
+2. Run `pnpm typecheck` to ensure no type errors
 3. Review changes with `git diff`
-4. Use `/project:commit` for consistent commit format
+4. Check for redundant className props in components
+5. Use `/project:commit` for consistent commit format
+
+## Component Development Guidelines
+1. **Typography**: Use semantic variants, don't add redundant text styling
+   ```tsx
+   // ❌ Redundant
+   <Typography variant="h1" className="text-4xl font-bold">Title</Typography>
+   
+   // ✅ Clean
+   <Typography variant="h1">Title</Typography>
+   ```
+
+2. **Badge/Card**: Don't duplicate default styling
+   ```tsx
+   // ❌ Redundant
+   <Badge className="px-2 py-0.5">Label</Badge>
+   
+   // ✅ Clean
+   <Badge>Label</Badge>
+   ```
+
+3. **Container**: Use size variants and asChild for semantic HTML
+   ```tsx
+   // For semantic sections
+   <Container asChild><section>content</section></Container>
+   
+   // For styled containers
+   <section><Container>content</Container></section>
+   ```

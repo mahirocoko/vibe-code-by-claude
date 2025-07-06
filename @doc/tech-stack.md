@@ -22,9 +22,10 @@
 - **TypeScript ESLint**: Via React Router typegen
 
 ## UI Components
-- **shadcn/ui**: Component library foundation
-- **Radix UI**: Accessible primitives (@radix-ui/react-slot, @radix-ui/react-dialog)
+- **shadcn/ui**: Component library foundation with 14 implemented components
+- **Radix UI**: Accessible primitives (Slot, Dialog, Accordion, Avatar, Label, Select, Toggle)
 - **Lucide React**: 0.525.0 - Icon library
+- **Motion**: 12.22.0 - Animation library (migrated from framer-motion for performance)
 - **class-variance-authority**: 0.7.1 - Component variants
 - **tailwind-merge**: 3.3.1 - Class merging
 - **clsx**: 2.1.1 - Conditional classes
@@ -41,6 +42,9 @@
 - **Semantic HTML patterns**: 
   - `<section><Container>content</Container></section>` for backgrounds
   - `<Container asChild><section>content</section></Container>` for no backgrounds
-- **Landing pages**: All pages refactored with consistent structure and spacing (py-16)
+- **Landing pages**: Modular architecture with 4 distinct sections (Hero, Features, Pricing, CTA)
+- **Component modules**: Landing sections extracted to `app/components/modules/home/` for reusability
+- **Motion animations**: Use `import { motion } from "motion/react"` for performance-optimized animations
+- **Code quality**: Mandatory `pnpm check` workflow and removal of redundant className props
 - **TailwindCSS**: IntelliSense configured with tailwind.config.js for VS Code support
 - Replaced Tailwind container class with custom max-width system for better control
