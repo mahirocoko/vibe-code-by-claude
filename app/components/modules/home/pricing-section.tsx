@@ -1,4 +1,6 @@
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Container } from '@/components/ui/container'
 import { Typography } from '@/components/ui/typography'
 import { Check } from 'lucide-react'
@@ -48,10 +50,8 @@ export function PricingSection() {
       <Container>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Pricing</div>
-            <Typography variant="h2" className="sm:text-5xl">
-              Choose Your Plan
-            </Typography>
+            <Badge variant="secondary">Pricing</Badge>
+            <Typography variant="h2">Choose Your Plan</Typography>
             <Typography className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Start free and scale as you grow. No hidden fees, cancel anytime.
             </Typography>
@@ -60,36 +60,28 @@ export function PricingSection() {
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-3 lg:gap-8">
           {plans.map((plan) => (
-            <div
+            <Card
               key={plan.name}
-              className={`relative flex flex-col rounded-lg border p-6 shadow-sm transition-all hover:shadow-md ${
-                plan.popular ? 'border-primary shadow-md' : 'border-border'
-              }`}
+              className={`relative transition-all hover:shadow-md ${plan.popular ? 'border-primary shadow-md' : ''}`}
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
-                    Most Popular
-                  </span>
+                  <Badge>Most Popular</Badge>
                 </div>
               )}
 
-              <div className="space-y-4">
-                <div>
-                  <Typography variant="h3" className="text-xl font-semibold">
-                    {plan.name}
-                  </Typography>
-                  <Typography variant="small" className="mt-2 text-sm text-muted-foreground">
-                    {plan.description}
-                  </Typography>
-                </div>
+              <CardHeader>
+                <CardTitle>{plan.name}</CardTitle>
+                <CardDescription>{plan.description}</CardDescription>
+              </CardHeader>
 
+              <CardContent>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold">{plan.price}</span>
                   {plan.price !== 'Custom' && <span className="ml-1 text-muted-foreground">/month</span>}
                 </div>
 
-                <ul className="space-y-2 text-sm">
+                <ul className="mt-4 space-y-2 text-sm">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-primary" />
@@ -97,14 +89,14 @@ export function PricingSection() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </CardContent>
 
-              <div className="mt-6">
+              <CardFooter>
                 <Button className="w-full" variant={plan.popular ? 'default' : 'outline'}>
                   {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
                 </Button>
-              </div>
-            </div>
+              </CardFooter>
+            </Card>
           ))}
         </div>
 

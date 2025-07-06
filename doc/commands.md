@@ -11,14 +11,21 @@ pnpm start:esm    # Start ESM server
 ```
 
 ## Custom Slash Commands
-Project-specific commands in `.claude/commands/`:
+Project-specific commands organized in `.claude/commands/`:
 
-- `/project:commit` - Stage all changes and create a properly formatted commit
-- `/project:push` - Push commits to remote repository
-- `/project:commit-push` - Commit and push in one command
-- `/project:commit-amend` - Amend the last commit
-- `/project:commit-undo` - Undo last commit (keep changes)
-- `/project:update-memory` - Update Claude's memory in CLAUDE.md
+### **📁 Git Commands** (`git/`)
+- `/project:commit [message]` - Stage all changes and create properly formatted commit
+- `/project:push [branch]` - Push commits to remote repository
+- `/project:commit-push [message]` - Commit and push in single workflow
+
+### **🧩 Component Commands** (`components/`)
+- `/project:refactor-component <file>` - Refactor single component to use shadcn/ui
+- `/project:analyze-components [pattern]` - Analyze components for design system violations
+- `/project:design-system-audit [--fix]` - Comprehensive project-wide design system audit
+- `/project:design-system-workflow [--auto-fix]` - **End-to-end design system improvement workflow**
+
+### **📚 Documentation Commands** (`docs/`)
+- `/project:update-memory [--optimize]` - Update Claude's memory and documentation
 
 ## Command Usage
 ```bash
@@ -34,6 +41,14 @@ pnpm typecheck
 # Use custom commands
 /project:commit "feat: add new feature"
 /project:commit-push
+
+# Component refactoring workflow (recommended)
+/project:design-system-workflow --auto-fix
+
+# Individual component operations
+/project:refactor-component app/components/modules/home/pricing-section.tsx
+/project:analyze-components app/components/modules/**
+/project:design-system-audit --fix
 ```
 
 ## Pre-commit Checklist
