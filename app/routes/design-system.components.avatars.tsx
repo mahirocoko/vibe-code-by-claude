@@ -1,15 +1,17 @@
-import { Typography } from '@/components/ui/typography'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { User, Camera, Settings, Crown, Star, Shield } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Typography } from '@/components/ui/typography'
+import { Camera, Crown, Settings, Shield, Star, User } from 'lucide-react'
 
 export default function AvatarsShowcase() {
   return (
     <div className="space-y-8">
       <div>
-        <Typography variant="h1" className="text-3xl font-bold mb-2">Avatar Components</Typography>
+        <Typography variant="h1" className="text-3xl font-bold mb-2">
+          Avatar Components
+        </Typography>
         <Typography className="text-muted-foreground">User profile images with fallback support</Typography>
       </div>
 
@@ -60,7 +62,9 @@ export default function AvatarsShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Image Avatars</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Image Avatars
+                </Typography>
                 <div className="flex items-center gap-4">
                   <Avatar>
                     <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -78,7 +82,9 @@ export default function AvatarsShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Fallback Initials</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Fallback Initials
+                </Typography>
                 <div className="flex items-center gap-4">
                   <Avatar>
                     <AvatarImage src="/broken-image.jpg" alt="John Doe" />
@@ -100,7 +106,9 @@ export default function AvatarsShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Icon Fallbacks</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Icon Fallbacks
+                </Typography>
                 <div className="flex items-center gap-4">
                   <Avatar>
                     <AvatarImage src="/broken-image.jpg" alt="Guest" />
@@ -134,7 +142,9 @@ export default function AvatarsShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Online Status</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Online Status
+                </Typography>
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <Avatar>
@@ -173,7 +183,9 @@ export default function AvatarsShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Notification Badges</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Notification Badges
+                </Typography>
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <Avatar>
@@ -189,7 +201,10 @@ export default function AvatarsShowcase() {
                       <AvatarImage src="https://github.com/vercel.png" alt="User with many notifications" />
                       <AvatarFallback>U2</AvatarFallback>
                     </Avatar>
-                    <Badge variant="destructive" className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs">
+                    <Badge
+                      variant="destructive"
+                      className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs"
+                    >
                       9+
                     </Badge>
                   </div>
@@ -203,7 +218,9 @@ export default function AvatarsShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Role Indicators</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Role Indicators
+                </Typography>
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <Avatar>
@@ -249,7 +266,9 @@ export default function AvatarsShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Stacked Avatars</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Stacked Avatars
+                </Typography>
                 <div className="flex -space-x-2">
                   <Avatar className="border-2 border-background">
                     <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
@@ -273,7 +292,9 @@ export default function AvatarsShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Team Members</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Team Members
+                </Typography>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Avatar>
@@ -282,7 +303,9 @@ export default function AvatarsShowcase() {
                     </Avatar>
                     <div className="flex-1">
                       <Typography variant="h4">John Doe</Typography>
-                      <Typography variant="small" className="text-muted-foreground">Product Manager</Typography>
+                      <Typography variant="small" className="text-muted-foreground">
+                        Product Manager
+                      </Typography>
                     </div>
                     <Badge>Admin</Badge>
                   </div>
@@ -293,7 +316,9 @@ export default function AvatarsShowcase() {
                     </Avatar>
                     <div className="flex-1">
                       <Typography variant="h4">Jane Smith</Typography>
-                      <Typography variant="small" className="text-muted-foreground">Lead Developer</Typography>
+                      <Typography variant="small" className="text-muted-foreground">
+                        Lead Developer
+                      </Typography>
                     </div>
                     <Badge variant="secondary">Member</Badge>
                   </div>
@@ -303,7 +328,9 @@ export default function AvatarsShowcase() {
                     </Avatar>
                     <div className="flex-1">
                       <Typography variant="h4">Alex Johnson</Typography>
-                      <Typography variant="small" className="text-muted-foreground">UI/UX Designer</Typography>
+                      <Typography variant="small" className="text-muted-foreground">
+                        UI/UX Designer
+                      </Typography>
                     </div>
                     <Badge variant="outline">Guest</Badge>
                   </div>
@@ -321,7 +348,9 @@ export default function AvatarsShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Clickable Avatars</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Clickable Avatars
+                </Typography>
                 <div className="flex items-center gap-4">
                   <div className="group relative">
                     <Avatar className="cursor-pointer transition-transform group-hover:scale-105">
@@ -343,7 +372,9 @@ export default function AvatarsShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Avatar with Actions</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Avatar with Actions
+                </Typography>
                 <div className="flex items-center gap-4">
                   <div className="relative group">
                     <Avatar className="w-16 h-16">
@@ -384,7 +415,9 @@ export default function AvatarsShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Gradient Borders</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Gradient Borders
+                </Typography>
                 <div className="flex items-center gap-4">
                   <div className="p-0.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500">
                     <Avatar className="border-2 border-background">
@@ -406,7 +439,9 @@ export default function AvatarsShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Squared Avatars</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Squared Avatars
+                </Typography>
                 <div className="flex items-center gap-4">
                   <Avatar className="rounded-lg">
                     <AvatarImage src="https://github.com/shadcn.png" alt="Square avatar" />
@@ -422,7 +457,9 @@ export default function AvatarsShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Colored Backgrounds</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Colored Backgrounds
+                </Typography>
                 <div className="flex items-center gap-4">
                   <Avatar className="bg-red-500">
                     <AvatarFallback className="text-white">R</AvatarFallback>

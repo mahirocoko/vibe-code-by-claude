@@ -1,9 +1,10 @@
-import { Container } from '@/components/ui/container'
-import { Typography } from '@/components/ui/typography'
+import { HeroSection } from '@/components/modules/home/hero-section'
 import { PricingSection } from '@/components/modules/home/pricing-section'
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Container } from '@/components/ui/container'
+import { Typography } from '@/components/ui/typography'
 import { BarChart3, Code2, Globe, Lock, Rocket, Shield, Sparkles, Users, Zap } from 'lucide-react'
 import { Link } from 'react-router'
 
@@ -18,27 +19,8 @@ export function loader() {
 export default function LandingIndex() {
   return (
     <>
-      {/* Hero Section */}
-      <Container asChild>
-        <section className="py-16 flex flex-col items-center space-y-6 text-center">
-          <div className="space-y-4">
-            <Typography variant="h1">
-              Build Your Next Big Idea with Vibe
-            </Typography>
-            <Typography variant="lead" className="max-w-2xl mx-auto">
-              A modern, fast, and scalable foundation for your web applications.
-            </Typography>
-          </div>
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <Button asChild size="lg">
-              <Link to="/contact">Get Started</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/about">Learn More</Link>
-            </Button>
-          </div>
-        </section>
-      </Container>
+      {/* Animated Hero Section */}
+      <HeroSection />
 
       {/* Features Section */}
       <section id="features" className="relative py-16 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5">
@@ -49,7 +31,10 @@ export default function LandingIndex() {
                 <Sparkles className="h-3.5 w-3.5" />
                 Features
               </Badge>
-              <Typography variant="h2" className="bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <Typography
+                variant="h2"
+                className="bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent"
+              >
                 Everything you need to succeed
               </Typography>
               <Typography variant="large" className="max-w-[900px] text-muted-foreground">
@@ -65,7 +50,9 @@ export default function LandingIndex() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                   <Rocket className="h-6 w-6" />
                 </div>
-                <Typography variant="h3" className="mb-2">Lightning Performance</Typography>
+                <Typography variant="h3" className="mb-2">
+                  Lightning Performance
+                </Typography>
                 <Typography variant="small">
                   Built on cutting-edge technology for blazing fast load times and optimal runtime performance
                 </Typography>
@@ -77,7 +64,9 @@ export default function LandingIndex() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                   <Code2 className="h-6 w-6" />
                 </div>
-                <Typography variant="h3" className="mb-2">Developer Experience</Typography>
+                <Typography variant="h3" className="mb-2">
+                  Developer Experience
+                </Typography>
                 <Typography variant="small">
                   Modern tooling, hot reload, and TypeScript support for a delightful development workflow
                 </Typography>
@@ -89,7 +78,9 @@ export default function LandingIndex() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                   <Shield className="h-6 w-6" />
                 </div>
-                <Typography variant="h3" className="mb-2">Enterprise Ready</Typography>
+                <Typography variant="h3" className="mb-2">
+                  Enterprise Ready
+                </Typography>
                 <Typography variant="small">
                   Battle-tested security, scalability, and reliability for mission-critical applications
                 </Typography>
@@ -104,7 +95,9 @@ export default function LandingIndex() {
                 <Users className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <Typography variant="h4" className="font-medium">Team Collaboration</Typography>
+                <Typography variant="h4" className="font-medium">
+                  Team Collaboration
+                </Typography>
                 <Typography variant="small" className="mt-1 text-muted-foreground">
                   Built-in tools for seamless team collaboration and code reviews
                 </Typography>
@@ -116,7 +109,9 @@ export default function LandingIndex() {
                 <BarChart3 className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <Typography variant="h4" className="font-medium">Analytics Built-in</Typography>
+                <Typography variant="h4" className="font-medium">
+                  Analytics Built-in
+                </Typography>
                 <Typography variant="small" className="mt-1 text-muted-foreground">
                   Real-time analytics and performance monitoring out of the box
                 </Typography>
@@ -128,7 +123,9 @@ export default function LandingIndex() {
                 <Lock className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <Typography variant="h4" className="font-medium">Secure by Default</Typography>
+                <Typography variant="h4" className="font-medium">
+                  Secure by Default
+                </Typography>
                 <Typography variant="small" className="mt-1 text-muted-foreground">
                   Industry-standard security practices and regular updates
                 </Typography>
@@ -140,7 +137,9 @@ export default function LandingIndex() {
                 <Globe className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <Typography variant="h4" className="font-medium">Global CDN</Typography>
+                <Typography variant="h4" className="font-medium">
+                  Global CDN
+                </Typography>
                 <Typography variant="small" className="mt-1 text-muted-foreground">
                   Deploy to edge locations worldwide for minimal latency
                 </Typography>
@@ -152,8 +151,12 @@ export default function LandingIndex() {
                 <Zap className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <Typography variant="h4" className="font-medium">API First</Typography>
-                <Typography variant="small" className="mt-1 text-muted-foreground">RESTful and GraphQL APIs ready for any integration</Typography>
+                <Typography variant="h4" className="font-medium">
+                  API First
+                </Typography>
+                <Typography variant="small" className="mt-1 text-muted-foreground">
+                  RESTful and GraphQL APIs ready for any integration
+                </Typography>
               </div>
             </div>
 
@@ -162,7 +165,9 @@ export default function LandingIndex() {
                 <Sparkles className="h-5 w-5 text-muted-foreground" />
               </div>
               <div>
-                <Typography variant="h4" className="font-medium">AI Powered</Typography>
+                <Typography variant="h4" className="font-medium">
+                  AI Powered
+                </Typography>
                 <Typography variant="small" className="mt-1 text-muted-foreground">
                   Leverage AI for smarter development and user experiences
                 </Typography>
@@ -228,7 +233,11 @@ export default function LandingIndex() {
                 ))}
               </div>
               <Typography variant="small" className="text-white/80">
-                Trusted by <Typography variant="small" asChild><span className="font-semibold text-white">10,000+</span></Typography> developers worldwide
+                Trusted by{' '}
+                <Typography variant="small" asChild>
+                  <span className="font-semibold text-white">10,000+</span>
+                </Typography>{' '}
+                developers worldwide
               </Typography>
             </div>
           </div>

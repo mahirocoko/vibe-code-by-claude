@@ -5,8 +5,12 @@ export default function TypographyShowcase() {
     <div className="space-y-12">
       {/* Header */}
       <header>
-        <Typography variant="h1" className="mb-4">Typography</Typography>
-        <Typography variant="lead">Typography scale and text styles for consistent design using a single component.</Typography>
+        <Typography variant="h1" className="mb-4">
+          Typography
+        </Typography>
+        <Typography variant="lead">
+          Typography scale and text styles for consistent design using a single component.
+        </Typography>
       </header>
 
       {/* Installation */}
@@ -22,27 +26,39 @@ export default function TypographyShowcase() {
         <div className="space-y-4">
           <div>
             <Typography variant="h1">Heading 1</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="h1">Heading 1</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="h1">Heading 1</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="h2">Heading 2</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="h2">Heading 2</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="h2">Heading 2</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="h3">Heading 3</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="h3">Heading 3</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="h3">Heading 3</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="h4">Heading 4</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="h4">Heading 4</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="h4">Heading 4</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="h5">Heading 5</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="h5">Heading 5</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="h5">Heading 5</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="h6">Heading 6</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="h6">Heading 6</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="h6">Heading 6</Typography>'}
+            </Typography>
           </div>
         </div>
       </section>
@@ -53,27 +69,39 @@ export default function TypographyShowcase() {
         <div className="space-y-4">
           <div>
             <Typography variant="lead">Lead text - Perfect for introductory paragraphs with emphasis</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="lead">Lead text</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="lead">Lead text</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="large">Large text - Slightly bigger than default for emphasis</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="large">Large text</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="large">Large text</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="body">Body text - Default paragraph text for main content</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="body">Body text</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="body">Body text</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="small">Small text - For secondary information and details</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="small">Small text</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="small">Small text</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="muted">Muted text - For less important information</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="muted">Muted text</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="muted">Muted text</Typography>'}
+            </Typography>
           </div>
           <div>
             <Typography variant="subtle">Subtle text - For very low-emphasis content</Typography>
-            <Typography variant="code" className="text-xs">{'<Typography variant="subtle">Subtle text</Typography>'}</Typography>
+            <Typography variant="code" className="text-xs">
+              {'<Typography variant="subtle">Subtle text</Typography>'}
+            </Typography>
           </div>
         </div>
       </section>
@@ -81,13 +109,20 @@ export default function TypographyShowcase() {
       {/* Special Components */}
       <section className="space-y-6">
         <Typography variant="h2">Special Components</Typography>
-        
+
         <div className="space-y-6">
           <div>
-            <Typography variant="h3" className="mb-3">Code & Pre</Typography>
+            <Typography variant="h3" className="mb-3">
+              Code & Pre
+            </Typography>
             <div className="space-y-3">
               <div>
-                <Typography>Inline code: <Typography variant="code" asChild><span>const example = 'hello'</span></Typography></Typography>
+                <Typography>
+                  Inline code:{' '}
+                  <Typography variant="code" asChild>
+                    <span>const example = 'hello'</span>
+                  </Typography>
+                </Typography>
               </div>
               <div>
                 <Typography className="mb-2">Code block:</Typography>
@@ -99,14 +134,18 @@ export default function TypographyShowcase() {
           </div>
 
           <div>
-            <Typography variant="h3" className="mb-3">Blockquote</Typography>
+            <Typography variant="h3" className="mb-3">
+              Blockquote
+            </Typography>
             <Typography variant="blockquote">
               "This is a blockquote component that provides visual emphasis for quoted content."
             </Typography>
           </div>
 
           <div>
-            <Typography variant="h3" className="mb-3">Lists</Typography>
+            <Typography variant="h3" className="mb-3">
+              Lists
+            </Typography>
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <Typography className="mb-2 font-medium">Unordered List:</Typography>
@@ -132,26 +171,42 @@ export default function TypographyShowcase() {
       {/* AsChild Pattern */}
       <section className="space-y-6">
         <Typography variant="h2">AsChild Pattern</Typography>
-        <Typography>Use the <Typography variant="code" asChild><span>asChild</span></Typography> prop to apply styles to your own element:</Typography>
-        
+        <Typography>
+          Use the{' '}
+          <Typography variant="code" asChild>
+            <span>asChild</span>
+          </Typography>{' '}
+          prop to apply styles to your own element:
+        </Typography>
+
         <div className="space-y-4">
           <div>
-            <Typography variant="h3" className="mb-2">Basic Usage</Typography>
+            <Typography variant="h3" className="mb-2">
+              Basic Usage
+            </Typography>
             <div className="space-y-3">
               <div>
-                <Typography variant="h4" asChild><button>Button as Heading</button></Typography>
+                <Typography variant="h4" asChild>
+                  <button>Button as Heading</button>
+                </Typography>
               </div>
               <div>
-                <Typography variant="lead" asChild><div>Div with lead styling</div></Typography>
+                <Typography variant="lead" asChild>
+                  <div>Div with lead styling</div>
+                </Typography>
               </div>
               <div>
-                <Typography variant="code" asChild><mark>Highlighted code text</mark></Typography>
+                <Typography variant="code" asChild>
+                  <mark>Highlighted code text</mark>
+                </Typography>
               </div>
             </div>
           </div>
 
           <div>
-            <Typography variant="h3" className="mb-2">With Links</Typography>
+            <Typography variant="h3" className="mb-2">
+              With Links
+            </Typography>
             <div className="space-y-2">
               <Typography variant="h5" asChild>
                 <a href="#" className="text-primary hover:underline">
@@ -219,7 +274,7 @@ export default function TypographyShowcase() {
             </tbody>
           </table>
         </div>
-        
+
         <div className="rounded-lg border">
           <table className="w-full">
             <thead>

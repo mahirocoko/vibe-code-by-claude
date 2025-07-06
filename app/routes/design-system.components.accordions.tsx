@@ -1,77 +1,93 @@
-import { Typography } from '@/components/ui/typography'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ChevronDown, HelpCircle, Settings, User, CreditCard, Bell, Shield, Globe } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Typography } from '@/components/ui/typography'
+import { Bell, CreditCard, Globe, HelpCircle, Settings, Shield, User } from 'lucide-react'
 
 export default function AccordionShowcase() {
   const faqs = [
     {
-      question: "What is this design system?",
-      answer: "This is a comprehensive design system built with shadcn/ui components, providing consistent and reusable UI elements for modern web applications."
+      question: 'What is this design system?',
+      answer:
+        'This is a comprehensive design system built with shadcn/ui components, providing consistent and reusable UI elements for modern web applications.',
     },
     {
-      question: "How do I get started?",
-      answer: "You can start by exploring the components in our design system documentation, then install the components you need using the shadcn/ui CLI."
+      question: 'How do I get started?',
+      answer:
+        'You can start by exploring the components in our design system documentation, then install the components you need using the shadcn/ui CLI.',
     },
     {
-      question: "Is it free to use?",
-      answer: "Yes, this design system is completely free and open source. You can use it in both personal and commercial projects."
+      question: 'Is it free to use?',
+      answer:
+        'Yes, this design system is completely free and open source. You can use it in both personal and commercial projects.',
     },
     {
-      question: "Can I customize the components?",
-      answer: "Absolutely! All components are built with Tailwind CSS and can be easily customized to match your brand and design requirements."
-    }
+      question: 'Can I customize the components?',
+      answer:
+        'Absolutely! All components are built with Tailwind CSS and can be easily customized to match your brand and design requirements.',
+    },
   ]
 
   const features = [
     {
-      title: "🎨 Design Tokens",
-      content: "Consistent colors, typography, spacing, and other design tokens that ensure visual harmony across your application."
+      title: '🎨 Design Tokens',
+      content:
+        'Consistent colors, typography, spacing, and other design tokens that ensure visual harmony across your application.',
     },
     {
-      title: "🧩 Component Library",
-      content: "A comprehensive set of reusable components including buttons, forms, navigation, feedback elements, and more."
+      title: '🧩 Component Library',
+      content:
+        'A comprehensive set of reusable components including buttons, forms, navigation, feedback elements, and more.',
     },
     {
-      title: "📱 Responsive Design",
-      content: "All components are built with mobile-first responsive design principles, ensuring great experiences across all devices."
+      title: '📱 Responsive Design',
+      content:
+        'All components are built with mobile-first responsive design principles, ensuring great experiences across all devices.',
     },
     {
-      title: "♿ Accessibility",
-      content: "Components follow WCAG guidelines and include proper ARIA attributes, keyboard navigation, and screen reader support."
+      title: '♿ Accessibility',
+      content:
+        'Components follow WCAG guidelines and include proper ARIA attributes, keyboard navigation, and screen reader support.',
     },
     {
-      title: "🔧 Developer Experience",
-      content: "TypeScript support, comprehensive documentation, and easy installation with the shadcn/ui CLI."
-    }
+      title: '🔧 Developer Experience',
+      content: 'TypeScript support, comprehensive documentation, and easy installation with the shadcn/ui CLI.',
+    },
   ]
 
   const troubleshooting = [
     {
-      issue: "Components not showing styles",
-      solution: "Make sure you have Tailwind CSS properly configured and all necessary dependencies installed. Check that your CSS imports are correct."
+      issue: 'Components not showing styles',
+      solution:
+        'Make sure you have Tailwind CSS properly configured and all necessary dependencies installed. Check that your CSS imports are correct.',
     },
     {
-      issue: "TypeScript errors with components",
-      solution: "Ensure you have the latest version of TypeScript and that all component prop types are properly imported."
+      issue: 'TypeScript errors with components',
+      solution:
+        'Ensure you have the latest version of TypeScript and that all component prop types are properly imported.',
     },
     {
-      issue: "Dark mode not working",
-      solution: "Verify that you have the dark mode setup correctly in your Tailwind configuration and that CSS variables are properly defined."
+      issue: 'Dark mode not working',
+      solution:
+        'Verify that you have the dark mode setup correctly in your Tailwind configuration and that CSS variables are properly defined.',
     },
     {
-      issue: "Icons not displaying",
-      solution: "Make sure you have lucide-react installed and properly imported the specific icons you're using in your components."
-    }
+      issue: 'Icons not displaying',
+      solution:
+        "Make sure you have lucide-react installed and properly imported the specific icons you're using in your components.",
+    },
   ]
 
   return (
     <div className="space-y-8">
       <div>
-        <Typography variant="h1" className="text-3xl font-bold mb-2">Accordion Components</Typography>
-        <Typography className="text-muted-foreground">Collapsible content sections for organizing information</Typography>
+        <Typography variant="h1" className="text-3xl font-bold mb-2">
+          Accordion Components
+        </Typography>
+        <Typography className="text-muted-foreground">
+          Collapsible content sections for organizing information
+        </Typography>
       </div>
 
       <div className="grid gap-8">
@@ -145,9 +161,7 @@ export default function AccordionShowcase() {
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`faq-${index}`}>
-                  <AccordionTrigger className="text-left">
-                    {faq.question}
-                  </AccordionTrigger>
+                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                   <AccordionContent>
                     <Typography variant="small">{faq.answer}</Typography>
                   </AccordionContent>
@@ -201,13 +215,19 @@ export default function AccordionShowcase() {
                 <AccordionContent className="space-y-4">
                   <div className="space-y-4">
                     <div>
-                      <Typography variant="h4" className="mb-2">Personal Information</Typography>
+                      <Typography variant="h4" className="mb-2">
+                        Personal Information
+                      </Typography>
                       <Typography variant="small" className="text-muted-foreground mb-4">
                         Update your personal details and contact information.
                       </Typography>
                       <div className="flex gap-2">
-                        <Button variant="outline" size="sm">Edit Profile</Button>
-                        <Button variant="outline" size="sm">Change Avatar</Button>
+                        <Button variant="outline" size="sm">
+                          Edit Profile
+                        </Button>
+                        <Button variant="outline" size="sm">
+                          Change Avatar
+                        </Button>
                       </div>
                     </div>
                   </div>
@@ -223,13 +243,19 @@ export default function AccordionShowcase() {
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4">
                   <div>
-                    <Typography variant="h4" className="mb-2">Payment Methods</Typography>
+                    <Typography variant="h4" className="mb-2">
+                      Payment Methods
+                    </Typography>
                     <Typography variant="small" className="text-muted-foreground mb-4">
                       Manage your payment methods and billing information.
                     </Typography>
                     <div className="flex gap-2">
-                      <Button variant="outline" size="sm">Add Payment Method</Button>
-                      <Button variant="outline" size="sm">View Invoices</Button>
+                      <Button variant="outline" size="sm">
+                        Add Payment Method
+                      </Button>
+                      <Button variant="outline" size="sm">
+                        View Invoices
+                      </Button>
                     </div>
                   </div>
                 </AccordionContent>
@@ -240,12 +266,16 @@ export default function AccordionShowcase() {
                   <div className="flex items-center gap-2">
                     <Bell className="h-4 w-4" />
                     Notifications
-                    <Badge variant="outline" className="ml-auto">3 Active</Badge>
+                    <Badge variant="outline" className="ml-auto">
+                      3 Active
+                    </Badge>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4">
                   <div>
-                    <Typography variant="h4" className="mb-2">Notification Preferences</Typography>
+                    <Typography variant="h4" className="mb-2">
+                      Notification Preferences
+                    </Typography>
                     <Typography variant="small" className="text-muted-foreground mb-4">
                       Choose how and when you want to receive notifications.
                     </Typography>
@@ -276,14 +306,22 @@ export default function AccordionShowcase() {
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4">
                   <div>
-                    <Typography variant="h4" className="mb-2">Security Settings</Typography>
+                    <Typography variant="h4" className="mb-2">
+                      Security Settings
+                    </Typography>
                     <Typography variant="small" className="text-muted-foreground mb-4">
                       Manage your account security and privacy preferences.
                     </Typography>
                     <div className="flex gap-2">
-                      <Button variant="outline" size="sm">Change Password</Button>
-                      <Button variant="outline" size="sm">Enable 2FA</Button>
-                      <Button variant="outline" size="sm">Download Data</Button>
+                      <Button variant="outline" size="sm">
+                        Change Password
+                      </Button>
+                      <Button variant="outline" size="sm">
+                        Enable 2FA
+                      </Button>
+                      <Button variant="outline" size="sm">
+                        Download Data
+                      </Button>
                     </div>
                   </div>
                 </AccordionContent>
@@ -298,7 +336,9 @@ export default function AccordionShowcase() {
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4">
                   <div>
-                    <Typography variant="h4" className="mb-2">App Preferences</Typography>
+                    <Typography variant="h4" className="mb-2">
+                      App Preferences
+                    </Typography>
                     <Typography variant="small" className="text-muted-foreground mb-4">
                       Customize your app experience and interface preferences.
                     </Typography>
@@ -368,7 +408,8 @@ export default function AccordionShowcase() {
                 </AccordionTrigger>
                 <AccordionContent className="px-4 py-4 bg-muted/30">
                   <Typography variant="small">
-                    Welcome to our design system! This section will guide you through the initial setup and basic concepts.
+                    Welcome to our design system! This section will guide you through the initial setup and basic
+                    concepts.
                   </Typography>
                 </AccordionContent>
               </AccordionItem>
@@ -384,7 +425,8 @@ export default function AccordionShowcase() {
                 </AccordionTrigger>
                 <AccordionContent className="px-4 py-4 bg-muted/30">
                   <Typography variant="small">
-                    Learn about advanced patterns, customization techniques, and best practices for using the design system.
+                    Learn about advanced patterns, customization techniques, and best practices for using the design
+                    system.
                   </Typography>
                 </AccordionContent>
               </AccordionItem>

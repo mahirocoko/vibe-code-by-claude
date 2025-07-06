@@ -11,7 +11,9 @@ export function Footer() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* Company Info */}
             <div className="space-y-4">
-              <Typography variant="h3" className="text-lg font-semibold">Vibe by Claude</Typography>
+              <Typography variant="h3" className="text-lg font-semibold">
+                Vibe by Claude
+              </Typography>
               <Typography variant="small" className="text-sm text-muted-foreground">
                 Experience the future of AI-powered collaboration with Claude's advanced capabilities.
               </Typography>
@@ -48,7 +50,9 @@ export function Footer() {
 
             {/* Product Links */}
             <div className="space-y-4">
-              <Typography variant="h3" className="text-lg font-semibold">Product</Typography>
+              <Typography variant="h3" className="text-lg font-semibold">
+                Product
+              </Typography>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link to="/features" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -75,7 +79,9 @@ export function Footer() {
 
             {/* Company Links */}
             <div className="space-y-4">
-              <Typography variant="h3" className="text-lg font-semibold">Company</Typography>
+              <Typography variant="h3" className="text-lg font-semibold">
+                Company
+              </Typography>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -102,7 +108,9 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-4">
-              <Typography variant="h3" className="text-lg font-semibold">Get in Touch</Typography>
+              <Typography variant="h3" className="text-lg font-semibold">
+                Get in Touch
+              </Typography>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-4 w-4 text-muted-foreground mt-0.5" />
@@ -133,7 +141,9 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border py-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <Typography variant="small" className="text-sm text-muted-foreground">&copy; 2025 Vibe by Claude. All rights reserved.</Typography>
+            <Typography variant="small" className="text-sm text-muted-foreground">
+              &copy; 2025 Vibe by Claude. All rights reserved.
+            </Typography>
             <div className="flex gap-6 text-sm">
               <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy

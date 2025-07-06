@@ -1,13 +1,15 @@
-import { Typography } from '@/components/ui/typography'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Sparkles, Star, AlertCircle, CheckCircle, Clock, X } from 'lucide-react'
+import { Typography } from '@/components/ui/typography'
+import { AlertCircle, CheckCircle, Clock, Sparkles, Star, X } from 'lucide-react'
 
 export default function BadgesShowcase() {
   return (
     <div className="space-y-8">
       <div>
-        <Typography variant="h1" className="text-3xl font-bold mb-2">Badges</Typography>
+        <Typography variant="h1" className="text-3xl font-bold mb-2">
+          Badges
+        </Typography>
         <Typography className="text-muted-foreground">Small status indicators for UI elements</Typography>
       </div>
 
@@ -20,7 +22,9 @@ export default function BadgesShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Default</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Default
+                </Typography>
                 <div className="flex gap-2 flex-wrap">
                   <Badge>Default</Badge>
                   <Badge variant="secondary">Secondary</Badge>
@@ -67,7 +71,9 @@ export default function BadgesShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Order Status</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Order Status
+                </Typography>
                 <div className="flex gap-2 flex-wrap">
                   <Badge variant="outline" className="gap-1">
                     <Clock className="h-3 w-3" />
@@ -93,7 +99,9 @@ export default function BadgesShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">User Status</Typography>
+                <Typography variant="h4" className="mb-2">
+                  User Status
+                </Typography>
                 <div className="flex gap-2 flex-wrap">
                   <Badge className="bg-green-500 hover:bg-green-600">Online</Badge>
                   <Badge className="bg-yellow-500 hover:bg-yellow-600">Away</Badge>
@@ -103,7 +111,9 @@ export default function BadgesShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Priority Levels</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Priority Levels
+                </Typography>
                 <div className="flex gap-2 flex-wrap">
                   <Badge variant="outline">Low</Badge>
                   <Badge className="bg-blue-500 hover:bg-blue-600">Medium</Badge>
@@ -123,7 +133,9 @@ export default function BadgesShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Notification Badges</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Notification Badges
+                </Typography>
                 <div className="flex gap-4 flex-wrap">
                   <div className="relative">
                     <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center">
@@ -133,12 +145,15 @@ export default function BadgesShowcase() {
                       3
                     </Badge>
                   </div>
-                  
+
                   <div className="relative">
                     <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center">
                       <span className="text-sm">💬</span>
                     </div>
-                    <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs">
+                    <Badge
+                      variant="destructive"
+                      className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs"
+                    >
                       12
                     </Badge>
                   </div>
@@ -155,7 +170,9 @@ export default function BadgesShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Tags and Categories</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Tags and Categories
+                </Typography>
                 <div className="flex gap-2 flex-wrap">
                   <Badge variant="outline">React</Badge>
                   <Badge variant="outline">TypeScript</Badge>
@@ -167,7 +184,9 @@ export default function BadgesShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Version Badges</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Version Badges
+                </Typography>
                 <div className="flex gap-2 flex-wrap">
                   <Badge className="bg-emerald-500 hover:bg-emerald-600">v2.1.0</Badge>
                   <Badge variant="secondary">Beta</Badge>

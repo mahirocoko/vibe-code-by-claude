@@ -84,9 +84,7 @@ export default function AlertsShowcase() {
             <tbody>
               <tr className="border-b">
                 <td className="p-4 font-mono text-sm">Alert</td>
-                <td className="p-4 text-sm text-muted-foreground">
-                  variant?: "default" | "destructive"
-                </td>
+                <td className="p-4 text-sm text-muted-foreground">variant?: "default" | "destructive"</td>
                 <td className="p-4 text-sm">The alert container</td>
               </tr>
               <tr className="border-b">

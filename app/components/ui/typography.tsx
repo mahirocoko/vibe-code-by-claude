@@ -14,7 +14,7 @@ const typographyVariants = cva('', {
       h4: 'text-xl lg:text-2xl font-bold tracking-tight',
       h5: 'text-lg lg:text-xl font-bold tracking-tight',
       h6: 'text-base lg:text-lg font-bold tracking-tight',
-      
+
       // Text variants
       lead: 'text-xl text-muted-foreground leading-relaxed',
       large: 'text-lg leading-relaxed',
@@ -22,7 +22,7 @@ const typographyVariants = cva('', {
       small: 'text-sm leading-normal',
       muted: 'text-sm text-muted-foreground leading-normal',
       subtle: 'text-sm text-muted-foreground/70 leading-normal',
-      
+
       // Special elements
       code: 'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
       pre: 'overflow-x-auto rounded-lg border bg-muted/30 p-4 font-mono text-sm',
@@ -37,15 +37,26 @@ const typographyVariants = cva('', {
   },
 })
 
-type TypographyElement = 
-  | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  | 'p' | 'span' | 'div'
-  | 'code' | 'pre' | 'blockquote'
-  | 'ul' | 'ol' | 'li'
+type TypographyElement =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'p'
+  | 'span'
+  | 'div'
+  | 'code'
+  | 'pre'
+  | 'blockquote'
+  | 'ul'
+  | 'ol'
+  | 'li'
 
 const variantElementMap: Record<string, TypographyElement> = {
   h1: 'h1',
-  h2: 'h2', 
+  h2: 'h2',
   h3: 'h3',
   h4: 'h4',
   h5: 'h5',
@@ -78,13 +89,9 @@ function Typography({
   ...props
 }: TypographyProps & Record<string, any>) {
   const Element = asChild ? Slot : variantElementMap[variant!] || 'p'
-  
+
   return (
-    <Element
-      data-slot="typography"
-      className={cn(typographyVariants({ variant }), className)}
-      {...props}
-    >
+    <Element data-slot="typography" className={cn(typographyVariants({ variant }), className)} {...props}>
       {children}
     </Element>
   )

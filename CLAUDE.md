@@ -15,6 +15,7 @@ pnpm check        # Fix code issues
 - React Router CLI for build/dev (migrated from Vite)
 - React Router fs-routes 7.6.3 for file-based routing
 - Tailwind CSS 4.1.11 (config-free), shadcn/ui components
+- Motion 12.22.0 for animations (migrated from framer-motion)
 - Radix UI: Slot, Dialog, Accordion, Avatar, Label, Select, Toggle
 - class-variance-authority 0.7.1, clsx 2.1.1, tailwind-merge 3.3.1
 - Biome 1.9.4 for linting/formatting
@@ -27,6 +28,12 @@ pnpm check        # Fix code issues
 - Update console pages to use new shadcn/ui components
 
 ## Recently Completed
+- ✅ Hero section navigation: Added React Router Links to console (/console) and design system (/design-system)
+- ✅ Code formatting workflow: Established mandatory `pnpm check` for all implementations (34 files auto-fixed)
+- ✅ Animated hero section: Motion library integration with rotating text animation in landing page
+- ✅ Motion package migration: Upgraded from framer-motion to motion@12.22.0 for better performance
+- ✅ HTML semantic improvements: Hero section uses proper Container, Typography, and Badge components
+- ✅ Component reusability: Hero section follows design system patterns with semantic HTML structure
 - ✅ Fixed HTML semantic structure: Removed duplicate `<main>` tags from landing pages for SEO compliance
 - ✅ Typography component system with comprehensive variants and asChild pattern
 - ✅ All landing pages refactored with semantic HTML and unified patterns
@@ -35,8 +42,6 @@ pnpm check        # Fix code issues
 - ✅ Comprehensive shadcn/ui integration: 14 UI components (Button, Container, Alert, Typography, Card, Badge, Input, Textarea, Label, Select, Toggle, Accordion, Avatar, Sheet)
 - ✅ Landing pages fully updated: Contact forms, feature cards, pricing cards, FAQ accordion
 - ✅ Design system documentation: 9 pages covering all components with comprehensive examples
-- ✅ Memory optimization system with automatic cleanup and size monitoring
-- ✅ Code formatting standards: Consistent import/function spacing across 42 TypeScript files
 
 ## Development Notes
 - Import alias: `@/*` → `app/*`
@@ -47,13 +52,16 @@ pnpm check        # Fix code issues
   - For sections with backgrounds: `<section><Container>content</Container></section>`
   - For sections without backgrounds: `<Container asChild><section>content</section></Container>`
 - **Typography component**: Single component with 14 variants (h1-h6, body, muted, etc.), asChild prop, automatic element mapping. Never override built-in styles, use semantic variants
-- **Code Formatting Standards**: Maintain blank lines between imports and functions, consistent spacing throughout codebase
+- **Code Formatting Standards**: MANDATORY `pnpm check` for all implementations - Biome auto-fixes imports, spacing, quotes
+- **Development Workflow**: 1) Write code → 2) `pnpm check` (mandatory) → 3) `pnpm typecheck` → 4) Optional: `pnpm build`
 - Run typecheck before commits
 - Design system at `/design-system` (fully implemented with comprehensive components)
 - Install packages with fixed versions (no ^ or ~)
 - File-based routing: `_landing.*` for landing pages, `console.*` for console
 - Use React Router v7 CLI commands (not Vite)
 - Component organization: `layouts/` (page layouts), `modules/` (feature components), `ui/` (reusable components)
+- **Motion animations**: Use `motion` package with `import { motion } from "motion/react"` for performance-optimized animations
+- **Navigation patterns**: Use Button with `asChild` + Link for consistent routing (e.g., hero section CTAs)
 - Console pages exist but need migration to design system components
 - Smooth scroll behavior enabled globally
 - Primary color system uses oklch(0.5 0.28 269.85) for better perceptual uniformity
@@ -77,7 +85,7 @@ pnpm check        # Fix code issues
 - **Component Structure**: 
   - `app/components/ui/` - Reusable UI components (Button, Container, Alert, Typography, etc.)
   - `app/components/layouts/` - Page layout components (Header, Footer)
-  - `app/components/modules/` - Feature-specific components (PricingSection, etc.)
+  - `app/components/modules/` - Feature-specific components (HeroSection, PricingSection)
 - **Container Component**: Enhanced with class-variance-authority
   - Variants: sm/md/lg/xl/full for different max-widths (default: xl)
   - asChild prop for semantic HTML rendering

@@ -1,15 +1,16 @@
-import { Typography } from '@/components/ui/typography'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Typography } from '@/components/ui/typography'
 import { Heart, MessageCircle, Share2, Star } from 'lucide-react'
 
 export default function CardsShowcase() {
   return (
     <div className="space-y-8">
       <div>
-        <Typography variant="h1" className="text-3xl font-bold mb-2">Cards</Typography>
+        <Typography variant="h1" className="text-3xl font-bold mb-2">
+          Cards
+        </Typography>
         <Typography className="text-muted-foreground">Flexible card components from shadcn/ui</Typography>
       </div>
 
@@ -80,7 +81,9 @@ export default function CardsShowcase() {
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="h-4 w-4 fill-primary text-primary" />
                   ))}
-                  <Typography variant="small" className="ml-2">4.8 (124 reviews)</Typography>
+                  <Typography variant="small" className="ml-2">
+                    4.8 (124 reviews)
+                  </Typography>
                 </div>
               </CardContent>
               <CardFooter>
@@ -102,7 +105,9 @@ export default function CardsShowcase() {
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="h-4 w-4 fill-primary text-primary" />
                   ))}
-                  <Typography variant="small" className="ml-2">5.0 (89 reviews)</Typography>
+                  <Typography variant="small" className="ml-2">
+                    5.0 (89 reviews)
+                  </Typography>
                 </div>
               </CardContent>
               <CardFooter>
@@ -127,7 +132,10 @@ export default function CardsShowcase() {
                 </div>
               </CardHeader>
               <CardContent>
-                <Typography>Just finished building an amazing new feature with React and TypeScript! The development experience is incredible. 🚀</Typography>
+                <Typography>
+                  Just finished building an amazing new feature with React and TypeScript! The development experience is
+                  incredible. 🚀
+                </Typography>
               </CardContent>
               <CardFooter className="flex justify-between">
                 <div className="flex gap-4">
@@ -136,8 +144,7 @@ export default function CardsShowcase() {
                     24
                   </Button>
                   <Button variant="ghost" size="sm" className="gap-2">
-                    <MessageCircle className="h-4 w-4" />
-                    5
+                    <MessageCircle className="h-4 w-4" />5
                   </Button>
                   <Button variant="ghost" size="sm" className="gap-2">
                     <Share2 className="h-4 w-4" />
@@ -158,7 +165,9 @@ export default function CardsShowcase() {
                 </div>
               </CardHeader>
               <CardContent>
-                <Typography className="mb-4">New design system components are now available! Check out our updated documentation.</Typography>
+                <Typography className="mb-4">
+                  New design system components are now available! Check out our updated documentation.
+                </Typography>
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 rounded-md" />
               </CardContent>
               <CardFooter className="flex justify-between">

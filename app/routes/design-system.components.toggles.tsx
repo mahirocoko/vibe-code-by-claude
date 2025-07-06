@@ -1,9 +1,25 @@
-import { Typography } from '@/components/ui/typography'
-import { Toggle } from '@/components/ui/toggle'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight, List, ListOrdered, Eye, EyeOff, Volume2, VolumeX, Heart, Star, Bookmark, Share2 } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Toggle } from '@/components/ui/toggle'
+import { Typography } from '@/components/ui/typography'
+import {
+  AlignCenter,
+  AlignLeft,
+  AlignRight,
+  Bold,
+  Bookmark,
+  Eye,
+  EyeOff,
+  Heart,
+  Italic,
+  List,
+  ListOrdered,
+  Share2,
+  Star,
+  Underline,
+  Volume2,
+  VolumeX,
+} from 'lucide-react'
 import { useState } from 'react'
 
 export default function ToggleShowcase() {
@@ -16,13 +32,15 @@ export default function ToggleShowcase() {
   const [preferences, setPreferences] = useState({
     notifications: true,
     darkMode: false,
-    autoSave: true
+    autoSave: true,
   })
 
   return (
     <div className="space-y-8">
       <div>
-        <Typography variant="h1" className="text-3xl font-bold mb-2">Toggle Components</Typography>
+        <Typography variant="h1" className="text-3xl font-bold mb-2">
+          Toggle Components
+        </Typography>
         <Typography className="text-muted-foreground">Interactive toggle buttons for binary states</Typography>
       </div>
 
@@ -37,7 +55,9 @@ export default function ToggleShowcase() {
               <Toggle>Default</Toggle>
               <Toggle pressed>Pressed</Toggle>
               <Toggle disabled>Disabled</Toggle>
-              <Toggle disabled pressed>Disabled Pressed</Toggle>
+              <Toggle disabled pressed>
+                Disabled Pressed
+              </Toggle>
             </div>
           </CardContent>
         </Card>
@@ -50,18 +70,26 @@ export default function ToggleShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Default Variant</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Default Variant
+                </Typography>
                 <div className="flex gap-2">
                   <Toggle variant="default">Default</Toggle>
-                  <Toggle variant="default" pressed>Pressed</Toggle>
+                  <Toggle variant="default" pressed>
+                    Pressed
+                  </Toggle>
                 </div>
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Outline Variant</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Outline Variant
+                </Typography>
                 <div className="flex gap-2">
                   <Toggle variant="outline">Outline</Toggle>
-                  <Toggle variant="outline" pressed>Pressed</Toggle>
+                  <Toggle variant="outline" pressed>
+                    Pressed
+                  </Toggle>
                 </div>
               </div>
             </div>
@@ -90,57 +118,46 @@ export default function ToggleShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Text Styles</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Text Styles
+                </Typography>
                 <div className="flex gap-1 p-1 border rounded-md w-fit">
-                  <Toggle 
-                    size="sm" 
-                    pressed={isBold} 
-                    onPressedChange={setIsBold}
-                    aria-label="Bold"
-                  >
+                  <Toggle size="sm" pressed={isBold} onPressedChange={setIsBold} aria-label="Bold">
                     <Bold className="h-4 w-4" />
                   </Toggle>
-                  <Toggle 
-                    size="sm" 
-                    pressed={isItalic} 
-                    onPressedChange={setIsItalic}
-                    aria-label="Italic"
-                  >
+                  <Toggle size="sm" pressed={isItalic} onPressedChange={setIsItalic} aria-label="Italic">
                     <Italic className="h-4 w-4" />
                   </Toggle>
-                  <Toggle 
-                    size="sm" 
-                    pressed={isUnderlined} 
-                    onPressedChange={setIsUnderlined}
-                    aria-label="Underline"
-                  >
+                  <Toggle size="sm" pressed={isUnderlined} onPressedChange={setIsUnderlined} aria-label="Underline">
                     <Underline className="h-4 w-4" />
                   </Toggle>
                 </div>
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Text Alignment</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Text Alignment
+                </Typography>
                 <div className="flex gap-1 p-1 border rounded-md w-fit">
-                  <Toggle 
-                    size="sm" 
-                    pressed={alignment === 'left'} 
+                  <Toggle
+                    size="sm"
+                    pressed={alignment === 'left'}
                     onPressedChange={() => setAlignment('left')}
                     aria-label="Align Left"
                   >
                     <AlignLeft className="h-4 w-4" />
                   </Toggle>
-                  <Toggle 
-                    size="sm" 
-                    pressed={alignment === 'center'} 
+                  <Toggle
+                    size="sm"
+                    pressed={alignment === 'center'}
                     onPressedChange={() => setAlignment('center')}
                     aria-label="Align Center"
                   >
                     <AlignCenter className="h-4 w-4" />
                   </Toggle>
-                  <Toggle 
-                    size="sm" 
-                    pressed={alignment === 'right'} 
+                  <Toggle
+                    size="sm"
+                    pressed={alignment === 'right'}
                     onPressedChange={() => setAlignment('right')}
                     aria-label="Align Right"
                   >
@@ -150,7 +167,9 @@ export default function ToggleShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Lists</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Lists
+                </Typography>
                 <div className="flex gap-1 p-1 border rounded-md w-fit">
                   <Toggle size="sm" aria-label="Bullet List">
                     <List className="h-4 w-4" />
@@ -162,8 +181,8 @@ export default function ToggleShowcase() {
               </div>
 
               <div className="p-4 border rounded-md">
-                <Typography 
-                  variant="body" 
+                <Typography
+                  variant="body"
                   className={`
                     ${isBold ? 'font-bold' : ''} 
                     ${isItalic ? 'italic' : ''} 
@@ -171,10 +190,8 @@ export default function ToggleShowcase() {
                     ${alignment === 'center' ? 'text-center' : alignment === 'right' ? 'text-right' : 'text-left'}
                   `}
                 >
-                  Sample text with formatting applied. Bold: {isBold ? 'ON' : 'OFF'}, 
-                  Italic: {isItalic ? 'ON' : 'OFF'}, 
-                  Underline: {isUnderlined ? 'ON' : 'OFF'}, 
-                  Alignment: {alignment}
+                  Sample text with formatting applied. Bold: {isBold ? 'ON' : 'OFF'}, Italic: {isItalic ? 'ON' : 'OFF'},
+                  Underline: {isUnderlined ? 'ON' : 'OFF'}, Alignment: {alignment}
                 </Typography>
               </div>
             </div>
@@ -189,36 +206,30 @@ export default function ToggleShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Visibility Control</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Visibility Control
+                </Typography>
                 <div className="flex items-center gap-4">
-                  <Toggle 
-                    pressed={isVisible} 
-                    onPressedChange={setIsVisible}
-                    className="gap-2"
-                  >
+                  <Toggle pressed={isVisible} onPressedChange={setIsVisible} className="gap-2">
                     {isVisible ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
                     {isVisible ? 'Visible' : 'Hidden'}
                   </Toggle>
-                  <Badge variant={isVisible ? "default" : "secondary"}>
+                  <Badge variant={isVisible ? 'default' : 'secondary'}>
                     Status: {isVisible ? 'Visible' : 'Hidden'}
                   </Badge>
                 </div>
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Audio Control</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Audio Control
+                </Typography>
                 <div className="flex items-center gap-4">
-                  <Toggle 
-                    pressed={!isMuted} 
-                    onPressedChange={(pressed) => setIsMuted(!pressed)}
-                    className="gap-2"
-                  >
+                  <Toggle pressed={!isMuted} onPressedChange={(pressed) => setIsMuted(!pressed)} className="gap-2">
                     {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
                     {isMuted ? 'Muted' : 'Unmuted'}
                   </Toggle>
-                  <Badge variant={isMuted ? "destructive" : "default"}>
-                    Audio: {isMuted ? 'Muted' : 'Playing'}
-                  </Badge>
+                  <Badge variant={isMuted ? 'destructive' : 'default'}>Audio: {isMuted ? 'Muted' : 'Playing'}</Badge>
                 </div>
               </div>
             </div>
@@ -233,7 +244,9 @@ export default function ToggleShowcase() {
           <CardContent className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Typography variant="h4" className="mb-2">Engagement Actions</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Engagement Actions
+                </Typography>
                 <div className="flex gap-2">
                   <Toggle className="gap-2" variant="outline">
                     <Heart className="h-4 w-4" />
@@ -255,7 +268,9 @@ export default function ToggleShowcase() {
               </div>
 
               <div>
-                <Typography variant="h4" className="mb-2">Pressed State</Typography>
+                <Typography variant="h4" className="mb-2">
+                  Pressed State
+                </Typography>
                 <div className="flex gap-2">
                   <Toggle className="gap-2" variant="outline" pressed>
                     <Heart className="h-4 w-4 fill-current" />
@@ -289,9 +304,9 @@ export default function ToggleShowcase() {
                     Receive email notifications for updates
                   </Typography>
                 </div>
-                <Toggle 
+                <Toggle
                   pressed={preferences.notifications}
-                  onPressedChange={(pressed) => setPreferences(prev => ({ ...prev, notifications: pressed }))}
+                  onPressedChange={(pressed) => setPreferences((prev) => ({ ...prev, notifications: pressed }))}
                 />
               </div>
 
@@ -302,9 +317,9 @@ export default function ToggleShowcase() {
                     Switch to dark theme
                   </Typography>
                 </div>
-                <Toggle 
+                <Toggle
                   pressed={preferences.darkMode}
-                  onPressedChange={(pressed) => setPreferences(prev => ({ ...prev, darkMode: pressed }))}
+                  onPressedChange={(pressed) => setPreferences((prev) => ({ ...prev, darkMode: pressed }))}
                 />
               </div>
 
@@ -315,31 +330,33 @@ export default function ToggleShowcase() {
                     Automatically save changes
                   </Typography>
                 </div>
-                <Toggle 
+                <Toggle
                   pressed={preferences.autoSave}
-                  onPressedChange={(pressed) => setPreferences(prev => ({ ...prev, autoSave: pressed }))}
+                  onPressedChange={(pressed) => setPreferences((prev) => ({ ...prev, autoSave: pressed }))}
                 />
               </div>
             </div>
 
             <div className="mt-6 p-4 bg-muted rounded-md">
-              <Typography variant="h4" className="mb-2">Current Settings:</Typography>
+              <Typography variant="h4" className="mb-2">
+                Current Settings:
+              </Typography>
               <ul className="space-y-1">
                 <li className="flex items-center gap-2">
-                  <Badge variant={preferences.notifications ? "default" : "secondary"} className="w-16 justify-center">
-                    {preferences.notifications ? "ON" : "OFF"}
+                  <Badge variant={preferences.notifications ? 'default' : 'secondary'} className="w-16 justify-center">
+                    {preferences.notifications ? 'ON' : 'OFF'}
                   </Badge>
                   <Typography variant="small">Notifications</Typography>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Badge variant={preferences.darkMode ? "default" : "secondary"} className="w-16 justify-center">
-                    {preferences.darkMode ? "ON" : "OFF"}
+                  <Badge variant={preferences.darkMode ? 'default' : 'secondary'} className="w-16 justify-center">
+                    {preferences.darkMode ? 'ON' : 'OFF'}
                   </Badge>
                   <Typography variant="small">Dark Mode</Typography>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Badge variant={preferences.autoSave ? "default" : "secondary"} className="w-16 justify-center">
-                    {preferences.autoSave ? "ON" : "OFF"}
+                  <Badge variant={preferences.autoSave ? 'default' : 'secondary'} className="w-16 justify-center">
+                    {preferences.autoSave ? 'ON' : 'OFF'}
                   </Badge>
                   <Typography variant="small">Auto Save</Typography>
                 </li>

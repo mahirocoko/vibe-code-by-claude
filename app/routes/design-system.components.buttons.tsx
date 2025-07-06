@@ -6,7 +6,9 @@ export default function ButtonsShowcase() {
     <div className="space-y-12">
       {/* Header */}
       <header>
-        <Typography variant="h1" className="text-4xl font-bold tracking-tight mb-4">Button</Typography>
+        <Typography variant="h1" className="text-4xl font-bold tracking-tight mb-4">
+          Button
+        </Typography>
         <Typography variant="lead" className="text-lg text-muted-foreground">
           A versatile button component that supports multiple variants, sizes, and states.
         </Typography>
@@ -14,7 +16,9 @@ export default function ButtonsShowcase() {
 
       {/* Installation */}
       <section className="space-y-4">
-        <Typography variant="h2" className="text-2xl font-semibold">Installation</Typography>
+        <Typography variant="h2" className="text-2xl font-semibold">
+          Installation
+        </Typography>
         <div className="rounded-lg border bg-muted/30 p-4">
           <pre className="text-sm overflow-x-auto">
             <code>{`npx shadcn@latest add button`}</code>
@@ -25,7 +29,9 @@ export default function ButtonsShowcase() {
       <div className="space-y-12">
         {/* Variants */}
         <section>
-          <Typography variant="h2" className="text-xl font-semibold mb-4">Variants</Typography>
+          <Typography variant="h2" className="text-xl font-semibold mb-4">
+            Variants
+          </Typography>
           <div className="flex flex-wrap gap-4">
             <Button variant="default">Default</Button>
             <Button variant="secondary">Secondary</Button>
@@ -38,7 +44,9 @@ export default function ButtonsShowcase() {
 
         {/* Semantic Variants */}
         <section>
-          <Typography variant="h2" className="text-xl font-semibold mb-4">Semantic Variants</Typography>
+          <Typography variant="h2" className="text-xl font-semibold mb-4">
+            Semantic Variants
+          </Typography>
           <div className="flex flex-wrap gap-4">
             <Button variant="info">Info</Button>
             <Button variant="warning">Warning</Button>
@@ -49,7 +57,9 @@ export default function ButtonsShowcase() {
 
         {/* Sizes */}
         <section>
-          <Typography variant="h2" className="text-xl font-semibold mb-4">Sizes</Typography>
+          <Typography variant="h2" className="text-xl font-semibold mb-4">
+            Sizes
+          </Typography>
           <div className="flex flex-wrap items-center gap-4">
             <Button size="sm">Small</Button>
             <Button size="default">Default</Button>
@@ -64,10 +74,14 @@ export default function ButtonsShowcase() {
 
         {/* States */}
         <section>
-          <Typography variant="h2" className="text-xl font-semibold mb-4">States</Typography>
+          <Typography variant="h2" className="text-xl font-semibold mb-4">
+            States
+          </Typography>
           <div className="space-y-4">
             <div>
-              <Typography variant="h3" className="text-sm font-medium mb-2">Disabled</Typography>
+              <Typography variant="h3" className="text-sm font-medium mb-2">
+                Disabled
+              </Typography>
               <div className="flex flex-wrap gap-4">
                 <Button disabled>Disabled Default</Button>
                 <Button variant="secondary" disabled>
@@ -83,7 +97,9 @@ export default function ButtonsShowcase() {
             </div>
 
             <div>
-              <Typography variant="h3" className="text-sm font-medium mb-2">Loading (with disabled)</Typography>
+              <Typography variant="h3" className="text-sm font-medium mb-2">
+                Loading (with disabled)
+              </Typography>
               <div className="flex flex-wrap gap-4">
                 <Button disabled>
                   <svg
@@ -115,7 +131,9 @@ export default function ButtonsShowcase() {
 
         {/* With Icons */}
         <section>
-          <Typography variant="h2" className="text-xl font-semibold mb-4">With Icons</Typography>
+          <Typography variant="h2" className="text-xl font-semibold mb-4">
+            With Icons
+          </Typography>
           <div className="flex flex-wrap gap-4">
             <Button>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -141,7 +159,9 @@ export default function ButtonsShowcase() {
 
         {/* API Reference */}
         <section className="space-y-4">
-          <Typography variant="h2" className="text-2xl font-semibold">API Reference</Typography>
+          <Typography variant="h2" className="text-2xl font-semibold">
+            API Reference
+          </Typography>
           <div className="rounded-lg border">
             <table className="w-full">
               <thead>
@@ -177,7 +197,9 @@ export default function ButtonsShowcase() {
 
         {/* Usage */}
         <section className="space-y-4">
-          <Typography variant="h2" className="text-2xl font-semibold">Usage</Typography>
+          <Typography variant="h2" className="text-2xl font-semibold">
+            Usage
+          </Typography>
           <div className="rounded-lg border p-4 bg-muted/30">
             <pre className="text-sm overflow-x-auto">
               <code>{`import { Button } from '@/components/ui/button'

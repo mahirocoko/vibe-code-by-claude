@@ -1,23 +1,85 @@
 export default function ColorsShowcase() {
   const semanticColors = [
-    { name: 'Primary', variable: 'primary', className: 'bg-primary', textClassName: 'text-primary-foreground', description: 'Main brand color' },
-    { name: 'Secondary', variable: 'secondary', className: 'bg-secondary', textClassName: 'text-secondary-foreground', description: 'Supporting actions' },
-    { name: 'Info', variable: 'info', className: 'bg-info', textClassName: 'text-info-foreground', description: 'Informational messages' },
-    { name: 'Success', variable: 'success', className: 'bg-success', textClassName: 'text-success-foreground', description: 'Success states' },
-    { name: 'Warning', variable: 'warning', className: 'bg-warning', textClassName: 'text-warning-foreground', description: 'Warning messages' },
-    { name: 'Error', variable: 'error', className: 'bg-error', textClassName: 'text-error-foreground', description: 'Error states' },
-    { name: 'Destructive', variable: 'destructive', className: 'bg-destructive', textClassName: 'text-destructive-foreground', description: 'Destructive actions' },
+    {
+      name: 'Primary',
+      variable: 'primary',
+      className: 'bg-primary',
+      textClassName: 'text-primary-foreground',
+      description: 'Main brand color',
+    },
+    {
+      name: 'Secondary',
+      variable: 'secondary',
+      className: 'bg-secondary',
+      textClassName: 'text-secondary-foreground',
+      description: 'Supporting actions',
+    },
+    {
+      name: 'Info',
+      variable: 'info',
+      className: 'bg-info',
+      textClassName: 'text-info-foreground',
+      description: 'Informational messages',
+    },
+    {
+      name: 'Success',
+      variable: 'success',
+      className: 'bg-success',
+      textClassName: 'text-success-foreground',
+      description: 'Success states',
+    },
+    {
+      name: 'Warning',
+      variable: 'warning',
+      className: 'bg-warning',
+      textClassName: 'text-warning-foreground',
+      description: 'Warning messages',
+    },
+    {
+      name: 'Error',
+      variable: 'error',
+      className: 'bg-error',
+      textClassName: 'text-error-foreground',
+      description: 'Error states',
+    },
+    {
+      name: 'Destructive',
+      variable: 'destructive',
+      className: 'bg-destructive',
+      textClassName: 'text-destructive-foreground',
+      description: 'Destructive actions',
+    },
   ]
 
   const neutralColors = [
-    { name: 'Background', variable: 'background', className: 'bg-background', preview: 'bg-background border-2 border-foreground' },
+    {
+      name: 'Background',
+      variable: 'background',
+      className: 'bg-background',
+      preview: 'bg-background border-2 border-foreground',
+    },
     { name: 'Foreground', variable: 'foreground', className: 'bg-foreground', preview: 'bg-foreground' },
     { name: 'Card', variable: 'card', className: 'bg-card', preview: 'bg-card border' },
-    { name: 'Card Foreground', variable: 'card-foreground', className: 'bg-card-foreground', preview: 'bg-card-foreground' },
+    {
+      name: 'Card Foreground',
+      variable: 'card-foreground',
+      className: 'bg-card-foreground',
+      preview: 'bg-card-foreground',
+    },
     { name: 'Muted', variable: 'muted', className: 'bg-muted', preview: 'bg-muted' },
-    { name: 'Muted Foreground', variable: 'muted-foreground', className: 'bg-muted-foreground', preview: 'bg-muted-foreground' },
+    {
+      name: 'Muted Foreground',
+      variable: 'muted-foreground',
+      className: 'bg-muted-foreground',
+      preview: 'bg-muted-foreground',
+    },
     { name: 'Accent', variable: 'accent', className: 'bg-accent', preview: 'bg-accent' },
-    { name: 'Accent Foreground', variable: 'accent-foreground', className: 'bg-accent-foreground', preview: 'bg-accent-foreground' },
+    {
+      name: 'Accent Foreground',
+      variable: 'accent-foreground',
+      className: 'bg-accent-foreground',
+      preview: 'bg-accent-foreground',
+    },
     { name: 'Border', variable: 'border', className: 'bg-border', preview: 'bg-border' },
     { name: 'Input', variable: 'input', className: 'bg-input', preview: 'bg-input' },
     { name: 'Ring', variable: 'ring', className: 'bg-ring', preview: 'bg-ring' },
@@ -39,9 +101,7 @@ export default function ColorsShowcase() {
           {semanticColors.map((color) => (
             <div key={color.variable} className="space-y-2">
               <div className={`h-24 rounded-lg border ${color.className} flex items-center justify-center`}>
-                <span className={`text-sm font-medium ${color.textClassName}`}>
-                  {color.name}
-                </span>
+                <span className={`text-sm font-medium ${color.textClassName}`}>{color.name}</span>
               </div>
               <div>
                 <h3 className="font-medium">{color.name}</h3>
@@ -110,20 +170,16 @@ border-primary, border-secondary, border-info, border-success, border-warning, b
         <h2 className="text-xl font-semibold mb-4">Examples</h2>
         <div className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-lg bg-info text-info-foreground p-4 text-center font-medium">
-              Info Message
-            </div>
+            <div className="rounded-lg bg-info text-info-foreground p-4 text-center font-medium">Info Message</div>
             <div className="rounded-lg bg-success text-success-foreground p-4 text-center font-medium">
               Success Message
             </div>
             <div className="rounded-lg bg-warning text-warning-foreground p-4 text-center font-medium">
               Warning Message
             </div>
-            <div className="rounded-lg bg-error text-error-foreground p-4 text-center font-medium">
-              Error Message
-            </div>
+            <div className="rounded-lg bg-error text-error-foreground p-4 text-center font-medium">Error Message</div>
           </div>
-          
+
           <div className="mt-6 p-4 bg-card border rounded-lg">
             <h3 className="font-medium mb-3">Color Palette Preview</h3>
             <div className="flex gap-2 flex-wrap">

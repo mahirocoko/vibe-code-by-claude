@@ -1,16 +1,18 @@
-import { Typography } from '@/components/ui/typography'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Label } from '@/components/ui/label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Textarea } from '@/components/ui/textarea'
+import { Typography } from '@/components/ui/typography'
 
 export default function FormsShowcase() {
   return (
     <div className="space-y-8">
       <div>
-        <Typography variant="h1" className="text-3xl font-bold mb-2">Forms</Typography>
+        <Typography variant="h1" className="text-3xl font-bold mb-2">
+          Forms
+        </Typography>
         <Typography className="text-muted-foreground">Form input components from shadcn/ui</Typography>
       </div>
 
@@ -25,12 +27,12 @@ export default function FormsShowcase() {
               <Label htmlFor="email">Email</Label>
               <Input type="email" id="email" placeholder="Enter your email" />
             </div>
-            
+
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <Input type="password" id="password" placeholder="Enter your password" />
             </div>
-            
+
             <div className="space-y-2">
               <Label htmlFor="disabled">Disabled Input</Label>
               <Input id="disabled" placeholder="Disabled input" disabled />
@@ -48,7 +50,7 @@ export default function FormsShowcase() {
               <Label htmlFor="message">Message</Label>
               <Textarea id="message" placeholder="Type your message here..." />
             </div>
-            
+
             <div className="space-y-2">
               <Label htmlFor="feedback">Feedback</Label>
               <Textarea id="feedback" placeholder="Share your feedback" rows={4} />
@@ -76,7 +78,7 @@ export default function FormsShowcase() {
                 </SelectContent>
               </Select>
             </div>
-            
+
             <div className="space-y-2">
               <Label>Plan type</Label>
               <Select>
@@ -110,12 +112,12 @@ export default function FormsShowcase() {
                   <Input id="lastName" placeholder="Doe" />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input type="email" id="email" placeholder="john@example.com" />
               </div>
-              
+
               <div className="space-y-2">
                 <Label>Country</Label>
                 <Select>
@@ -130,15 +132,17 @@ export default function FormsShowcase() {
                   </SelectContent>
                 </Select>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="bio">Bio</Label>
                 <Textarea id="bio" placeholder="Tell us about yourself..." rows={3} />
               </div>
-              
+
               <div className="flex gap-4">
                 <Button type="submit">Submit</Button>
-                <Button type="button" variant="outline">Cancel</Button>
+                <Button type="button" variant="outline">
+                  Cancel
+                </Button>
               </div>
             </form>
           </CardContent>

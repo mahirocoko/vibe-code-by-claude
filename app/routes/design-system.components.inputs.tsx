@@ -1,12 +1,12 @@
-import { Typography } from '@/components/ui/typography'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Label } from '@/components/ui/label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Eye, EyeOff, Search, Mail, Lock, User, CreditCard, Calendar } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Textarea } from '@/components/ui/textarea'
+import { Typography } from '@/components/ui/typography'
+import { Calendar, CreditCard, Eye, EyeOff, Lock, Mail, Search, User } from 'lucide-react'
 import { useState } from 'react'
 
 export default function InputsShowcase() {
@@ -15,7 +15,9 @@ export default function InputsShowcase() {
   return (
     <div className="space-y-8">
       <div>
-        <Typography variant="h1" className="text-3xl font-bold mb-2">Input Components</Typography>
+        <Typography variant="h1" className="text-3xl font-bold mb-2">
+          Input Components
+        </Typography>
         <Typography className="text-muted-foreground">Form input components with various states and types</Typography>
       </div>
 
@@ -31,7 +33,7 @@ export default function InputsShowcase() {
                 <Label htmlFor="text">Text Input</Label>
                 <Input type="text" id="text" placeholder="Enter your name" />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="email">Email Input</Label>
                 <Input type="email" id="email" placeholder="your@email.com" />
@@ -71,12 +73,7 @@ export default function InputsShowcase() {
                 <Label htmlFor="search">Search Input</Label>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input 
-                    type="search" 
-                    id="search" 
-                    placeholder="Search..." 
-                    className="pl-10"
-                  />
+                  <Input type="search" id="search" placeholder="Search..." className="pl-10" />
                 </div>
               </div>
 
@@ -84,12 +81,7 @@ export default function InputsShowcase() {
                 <Label htmlFor="email-icon">Email with Icon</Label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input 
-                    type="email" 
-                    id="email-icon" 
-                    placeholder="Email address" 
-                    className="pl-10"
-                  />
+                  <Input type="email" id="email-icon" placeholder="Email address" className="pl-10" />
                 </div>
               </div>
 
@@ -97,10 +89,10 @@ export default function InputsShowcase() {
                 <Label htmlFor="password-toggle">Password with Toggle</Label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input 
-                    type={showPassword ? "text" : "password"}
-                    id="password-toggle" 
-                    placeholder="Password" 
+                  <Input
+                    type={showPassword ? 'text' : 'password'}
+                    id="password-toggle"
+                    placeholder="Password"
                     className="pl-10 pr-10"
                   />
                   <button
@@ -117,12 +109,7 @@ export default function InputsShowcase() {
                 <Label htmlFor="user-icon">Username with Icon</Label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input 
-                    type="text" 
-                    id="user-icon" 
-                    placeholder="Username" 
-                    className="pl-10"
-                  />
+                  <Input type="text" id="user-icon" placeholder="Username" className="pl-10" />
                 </div>
               </div>
             </div>
@@ -159,14 +146,18 @@ export default function InputsShowcase() {
               <div className="space-y-2">
                 <Label htmlFor="error-state">
                   Error State
-                  <Badge variant="destructive" className="ml-2 text-xs">Required</Badge>
+                  <Badge variant="destructive" className="ml-2 text-xs">
+                    Required
+                  </Badge>
                 </Label>
-                <Input 
-                  id="error-state" 
-                  placeholder="Error input" 
+                <Input
+                  id="error-state"
+                  placeholder="Error input"
                   className="border-destructive focus:ring-destructive"
                 />
-                <Typography variant="small" className="text-destructive">This field is required</Typography>
+                <Typography variant="small" className="text-destructive">
+                  This field is required
+                </Typography>
               </div>
 
               <div className="space-y-2">
@@ -174,12 +165,10 @@ export default function InputsShowcase() {
                   Success State
                   <Badge className="ml-2 text-xs bg-green-500">Valid</Badge>
                 </Label>
-                <Input 
-                  id="success-state" 
-                  value="Valid input" 
-                  className="border-green-500 focus:ring-green-500"
-                />
-                <Typography variant="small" className="text-green-600">Looks good!</Typography>
+                <Input id="success-state" value="Valid input" className="border-green-500 focus:ring-green-500" />
+                <Typography variant="small" className="text-green-600">
+                  Looks good!
+                </Typography>
               </div>
             </div>
           </CardContent>
@@ -209,9 +198,9 @@ export default function InputsShowcase() {
 
               <div className="space-y-2">
                 <Label htmlFor="fixed-textarea">Fixed Size Textarea</Label>
-                <Textarea 
-                  id="fixed-textarea" 
-                  placeholder="This textarea cannot be resized" 
+                <Textarea
+                  id="fixed-textarea"
+                  placeholder="This textarea cannot be resized"
                   className="resize-none"
                   rows={4}
                 />
@@ -368,8 +357,12 @@ export default function InputsShowcase() {
               </div>
 
               <div className="flex gap-4">
-                <Button type="submit" className="flex-1">Submit Form</Button>
-                <Button type="button" variant="outline">Cancel</Button>
+                <Button type="submit" className="flex-1">
+                  Submit Form
+                </Button>
+                <Button type="button" variant="outline">
+                  Cancel
+                </Button>
               </div>
             </form>
           </CardContent>

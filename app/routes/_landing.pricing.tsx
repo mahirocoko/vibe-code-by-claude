@@ -1,10 +1,10 @@
-import { Button } from '@/components/ui/button'
-import { Container } from '@/components/ui/container'
-import { Typography } from '@/components/ui/typography'
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Toggle } from '@/components/ui/toggle'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
+import { Container } from '@/components/ui/container'
+import { Toggle } from '@/components/ui/toggle'
+import { Typography } from '@/components/ui/typography'
 import { Check, X } from 'lucide-react'
 import { Link } from 'react-router'
 
@@ -99,9 +99,7 @@ export default function PricingPage() {
       <Container asChild>
         <section className="py-16 text-center space-y-6">
           <div className="space-y-4">
-            <Typography variant="h1">
-              Simple, Transparent Pricing
-            </Typography>
+            <Typography variant="h1">Simple, Transparent Pricing</Typography>
             <Typography variant="lead" className="max-w-2xl mx-auto">
               Choose the perfect plan for your needs. Always flexible to scale up or down.
             </Typography>
@@ -124,15 +122,11 @@ export default function PricingPage() {
             {plans.map((plan) => (
               <Card
                 key={plan.name}
-                className={`relative transition-all hover:shadow-md ${
-                  plan.popular ? 'border-primary shadow-md' : ''
-                }`}
+                className={`relative transition-all hover:shadow-md ${plan.popular ? 'border-primary shadow-md' : ''}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-primary text-primary-foreground">
-                      Most Popular
-                    </Badge>
+                    <Badge className="bg-primary text-primary-foreground">Most Popular</Badge>
                   </div>
                 )}
 
@@ -140,8 +134,14 @@ export default function PricingPage() {
                   <Typography variant="h3">{plan.name}</Typography>
                   <Typography variant="muted">{plan.description}</Typography>
                   <div className="flex items-baseline">
-                    <Typography variant="h2" className="font-bold">{plan.price}</Typography>
-                    {plan.price !== 'Custom' && <Typography variant="muted" className="ml-1">/month</Typography>}
+                    <Typography variant="h2" className="font-bold">
+                      {plan.price}
+                    </Typography>
+                    {plan.price !== 'Custom' && (
+                      <Typography variant="muted" className="ml-1">
+                        /month
+                      </Typography>
+                    )}
                   </div>
                 </CardHeader>
 
@@ -200,7 +200,9 @@ export default function PricingPage() {
           </Accordion>
 
           <div className="mt-12 text-center">
-            <Typography variant="muted" className="mb-4">Still have questions?</Typography>
+            <Typography variant="muted" className="mb-4">
+              Still have questions?
+            </Typography>
             <Button asChild variant="outline">
               <Link to="/contact">Contact Support</Link>
             </Button>
