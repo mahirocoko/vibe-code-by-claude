@@ -13,11 +13,12 @@
 - **Destructive**: Red - Destructive actions
 
 ## Component Guidelines
-- Use shadcn/ui components when available (14 components implemented)
+- Use shadcn/ui components when available (15 components implemented)
 - Follow baseColor: neutral configuration with CSS variables
 - Keep components flat and clean
 - Avoid unnecessary nesting
 - **Typography**: Use semantic variants (h1-h6, body, muted) instead of custom text styling
+- **Bento Grid**: Use for modern card layouts with responsive behavior and image backgrounds
 - **Container**: Use size variants (sm/md/lg/xl/full) with asChild for semantic HTML
 - **Motion**: Use motion library for performance-optimized animations
 
@@ -45,12 +46,27 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 - `--success`, `--success-foreground`
 - `--error`, `--error-foreground`
 
+## Available Components (15)
+**Core Components:**
+- Alert, Button, Container, Typography, Sheet, BentoGrid
+
+**Form Components:** 
+- Input, Textarea, Label, Select, Toggle
+
+**Display Components:**
+- Card, Badge, Avatar, Accordion
+
 ## Usage Examples
 ```tsx
 // Tailwind classes
 <div className="bg-primary text-primary-foreground">Primary</div>
 <Button variant="info">Info Button</Button>
 <Alert variant="success">Success message</Alert>
+
+// Bento Grid Layout
+<BentoGrid className="md:grid-cols-3">
+  <BentoCard name="Feature" description="Description" Icon={Rocket} />
+</BentoGrid>
 
 // Direct CSS variable usage
 .custom {

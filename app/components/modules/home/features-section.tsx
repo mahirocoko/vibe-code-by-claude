@@ -12,7 +12,16 @@ const features = [
       'React Router v7 with optimized builds, motion animations, and instant page loads for exceptional user experience.',
     href: '#',
     cta: 'Learn more',
-    background: null,
+    background: (
+      <div className="absolute inset-x-0 top-0 h-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center"
+          alt="Performance dashboard"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+      </div>
+    ),
     className: '',
   },
   {
@@ -21,7 +30,16 @@ const features = [
     description: 'TypeScript, shadcn/ui design system, Biome formatting, and hot reload for effortless development.',
     href: '#',
     cta: 'Learn more',
-    background: null,
+    background: (
+      <div className="absolute inset-x-0 top-0 h-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop&crop=center"
+          alt="Code editor"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+      </div>
+    ),
     className: '',
   },
   {
@@ -31,7 +49,16 @@ const features = [
       'Semantic HTML, accessibility compliance, and deployment-ready configuration for scalable applications.',
     href: '#',
     cta: 'Learn more',
-    background: null,
+    background: (
+      <div className="absolute inset-x-0 top-0 h-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&crop=center"
+          alt="Server infrastructure"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+      </div>
+    ),
     className: '',
   },
   {
@@ -40,7 +67,16 @@ const features = [
     description: '14+ shadcn/ui components with animations and design system documentation.',
     href: '#',
     cta: 'Learn more',
-    background: null,
+    background: (
+      <div className="absolute inset-x-0 top-0 h-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop&crop=center"
+          alt="UI components"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+      </div>
+    ),
     className: '',
   },
   {
@@ -49,7 +85,16 @@ const features = [
     description: 'Full TypeScript support with automatic type generation and comprehensive safety checks.',
     href: '#',
     cta: 'Learn more',
-    background: null,
+    background: (
+      <div className="absolute inset-x-0 top-0 h-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&h=600&fit=crop&crop=center"
+          alt="Security lock"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+      </div>
+    ),
     className: '',
   },
   {
@@ -58,7 +103,16 @@ const features = [
     description: 'React 19, Tailwind CSS v4, Motion animations, and latest web standards for cutting-edge development.',
     href: '#',
     cta: 'Learn more',
-    background: null,
+    background: (
+      <div className="absolute inset-x-0 top-0 h-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&h=600&fit=crop&crop=center"
+          alt="Modern technology"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+      </div>
+    ),
     className: '',
   },
 ]

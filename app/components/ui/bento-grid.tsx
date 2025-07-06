@@ -35,9 +35,13 @@ const BentoCard = ({
     )}
   >
     <div>{background}</div>
+    {/* Additional gradient overlay for better content readability */}
+    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent md:from-background/90 md:via-transparent pointer-events-none" />
     <div className="relative h-full flex flex-col justify-end md:translate-y-12 md:transition-transform md:duration-300 md:ease-out md:group-hover:translate-y-0">
       <div className="flex transform-gpu flex-col gap-3 p-6">
-        <Icon className="h-10 w-10 origin-left transform-gpu text-primary transition-all duration-200 ease-in-out group-hover:scale-90" />
+        <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 backdrop-blur-sm shadow-sm border border-white/20 mb-1">
+          <Icon className="h-6 w-6 text-primary transition-all duration-200 ease-in-out group-hover:scale-90" />
+        </div>
         <h3 className="text-lg font-semibold text-foreground tracking-tight">{name}</h3>
         <p className="max-w-lg text-sm text-muted-foreground leading-relaxed">{description}</p>
       </div>
