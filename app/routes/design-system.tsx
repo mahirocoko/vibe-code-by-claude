@@ -10,9 +10,14 @@ const navigationItems: NavItem[] = [
   { to: '/design-system/foundation/typography', label: 'Typography' },
   { heading: 'Components' },
   { to: '/design-system/components/alerts', label: 'Alerts' },
+  { to: '/design-system/components/avatars', label: 'Avatars' },
+  { to: '/design-system/components/badges', label: 'Badges' },
   { to: '/design-system/components/buttons', label: 'Buttons' },
-  { to: '/design-system/components/forms', label: 'Forms' },
   { to: '/design-system/components/cards', label: 'Cards' },
+  { to: '/design-system/components/inputs', label: 'Inputs' },
+  { to: '/design-system/components/toggles', label: 'Toggles' },
+  { to: '/design-system/components/accordions', label: 'Accordions' },
+  { to: '/design-system/components/forms', label: 'Forms (Legacy)' },
 ]
 
 export default function DesignSystemLayout() {

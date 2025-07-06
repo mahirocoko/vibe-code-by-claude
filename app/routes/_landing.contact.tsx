@@ -1,6 +1,11 @@
 import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
 import { Typography } from '@/components/ui/typography'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/ui/label'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Card, CardContent } from '@/components/ui/card'
 
 export default function Contact() {
   return (
@@ -22,64 +27,52 @@ export default function Contact() {
             <div>
               <Typography variant="h2" className="mb-6">Get in Touch</Typography>
               <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Full Name
-                  </label>
-                  <input
+                <div className="space-y-2">
+                  <Label htmlFor="name">Full Name</Label>
+                  <Input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email Address
-                  </label>
-                  <input
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email Address</Label>
+                  <Input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="your@email.com"
                   />
                 </div>
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium mb-2">
-                    Company (Optional)
-                  </label>
-                  <input
+                <div className="space-y-2">
+                  <Label htmlFor="company">Company (Optional)</Label>
+                  <Input
                     type="text"
                     id="company"
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Your company name"
                   />
                 </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                    Subject
-                  </label>
-                  <select
-                    id="subject"
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="support">Technical Support</option>
-                    <option value="sales">Sales Question</option>
-                    <option value="partnership">Partnership Opportunity</option>
-                    <option value="feedback">Feedback</option>
-                  </select>
+                <div className="space-y-2">
+                  <Label htmlFor="subject">Subject</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a subject" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="general">General Inquiry</SelectItem>
+                      <SelectItem value="support">Technical Support</SelectItem>
+                      <SelectItem value="sales">Sales Question</SelectItem>
+                      <SelectItem value="partnership">Partnership Opportunity</SelectItem>
+                      <SelectItem value="feedback">Feedback</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea
                     id="message"
                     rows={6}
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
                     placeholder="Tell us how we can help you..."
+                    className="resize-none"
                   />
                 </div>
                 <Button size="lg" className="w-full">
@@ -161,16 +154,18 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-muted/30 rounded-lg p-6">
-              <Typography variant="h3" className="mb-2">Need Quick Help?</Typography>
-              <Typography variant="small" className="mb-4">
-                Check out our documentation and FAQ section for instant answers to common questions.
-              </Typography>
-              <div className="flex gap-2">
-                <Button variant="outline" size="sm">Documentation</Button>
-                <Button variant="outline" size="sm">FAQ</Button>
-              </div>
-            </div>
+            <Card>
+              <CardContent className="p-6">
+                <Typography variant="h3" className="mb-2">Need Quick Help?</Typography>
+                <Typography variant="small" className="mb-4">
+                  Check out our documentation and FAQ section for instant answers to common questions.
+                </Typography>
+                <div className="flex gap-2">
+                  <Button variant="outline" size="sm">Documentation</Button>
+                  <Button variant="outline" size="sm">FAQ</Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
           </div>
         </section>

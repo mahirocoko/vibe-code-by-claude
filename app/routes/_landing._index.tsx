@@ -2,8 +2,11 @@ import { Container } from '@/components/ui/container'
 import { Typography } from '@/components/ui/typography'
 import { PricingSection } from '@/components/modules/home/pricing-section'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 import { BarChart3, Code2, Globe, Lock, Rocket, Shield, Sparkles, Users, Zap } from 'lucide-react'
 import { Link } from 'react-router'
+
 export function meta() {
   return [{ title: 'Vibe by Claude' }, { name: 'description', content: 'Build your next big idea with Vibe by Claude' }]
 }
@@ -42,10 +45,10 @@ export default function LandingIndex() {
         <Container>
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+              <Badge variant="outline" className="gap-2">
                 <Sparkles className="h-3.5 w-3.5" />
                 Features
-              </div>
+              </Badge>
               <Typography variant="h2" className="bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Everything you need to succeed
               </Typography>
@@ -57,35 +60,41 @@ export default function LandingIndex() {
 
           {/* Main features grid */}
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-3">
-            <div className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                <Rocket className="h-6 w-6" />
-              </div>
-              <Typography variant="h3" className="mb-2">Lightning Performance</Typography>
-              <Typography variant="small">
-                Built on cutting-edge technology for blazing fast load times and optimal runtime performance
-              </Typography>
-            </div>
+            <Card className="group relative overflow-hidden transition-all hover:shadow-lg">
+              <CardContent className="p-8">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Rocket className="h-6 w-6" />
+                </div>
+                <Typography variant="h3" className="mb-2">Lightning Performance</Typography>
+                <Typography variant="small">
+                  Built on cutting-edge technology for blazing fast load times and optimal runtime performance
+                </Typography>
+              </CardContent>
+            </Card>
 
-            <div className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                <Code2 className="h-6 w-6" />
-              </div>
-              <Typography variant="h3" className="mb-2">Developer Experience</Typography>
-              <Typography variant="small">
-                Modern tooling, hot reload, and TypeScript support for a delightful development workflow
-              </Typography>
-            </div>
+            <Card className="group relative overflow-hidden transition-all hover:shadow-lg">
+              <CardContent className="p-8">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Code2 className="h-6 w-6" />
+                </div>
+                <Typography variant="h3" className="mb-2">Developer Experience</Typography>
+                <Typography variant="small">
+                  Modern tooling, hot reload, and TypeScript support for a delightful development workflow
+                </Typography>
+              </CardContent>
+            </Card>
 
-            <div className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                <Shield className="h-6 w-6" />
-              </div>
-              <Typography variant="h3" className="mb-2">Enterprise Ready</Typography>
-              <Typography variant="small">
-                Battle-tested security, scalability, and reliability for mission-critical applications
-              </Typography>
-            </div>
+            <Card className="group relative overflow-hidden transition-all hover:shadow-lg">
+              <CardContent className="p-8">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Shield className="h-6 w-6" />
+                </div>
+                <Typography variant="h3" className="mb-2">Enterprise Ready</Typography>
+                <Typography variant="small">
+                  Battle-tested security, scalability, and reliability for mission-critical applications
+                </Typography>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Additional features */}
@@ -182,10 +191,10 @@ export default function LandingIndex() {
         {/* Content */}
         <Container className="relative">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-white mb-8">
+            <Badge variant="secondary" className="gap-2 bg-white/10 backdrop-blur-sm text-white border-white/20 mb-8">
               <Sparkles className="h-3.5 w-3.5" />
               Start Building Today
-            </div>
+            </Badge>
 
             <Typography variant="h2" className="text-white">
               Ready to Start Your Project?

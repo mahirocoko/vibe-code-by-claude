@@ -1,8 +1,13 @@
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Typography } from '@/components/ui/typography'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Toggle } from '@/components/ui/toggle'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Check, X } from 'lucide-react'
 import { Link } from 'react-router'
+
 export function meta() {
   return [
     { title: 'Pricing - Vibe by Claude' },
@@ -102,12 +107,12 @@ export default function PricingPage() {
             </Typography>
           </div>
           <div className="inline-flex items-center rounded-lg bg-muted p-1 text-muted-foreground">
-            <button className="rounded-md px-3 py-1.5 text-sm font-medium transition-colors hover:text-foreground">
+            <Toggle className="rounded-md px-3 py-1.5 text-sm font-medium" pressed={false}>
               Monthly
-            </button>
-            <button className="rounded-md bg-background px-3 py-1.5 text-sm font-medium text-foreground shadow-sm">
+            </Toggle>
+            <Toggle className="rounded-md px-3 py-1.5 text-sm font-medium" pressed={true}>
               Yearly (Save 20%)
-            </button>
+            </Toggle>
           </div>
         </section>
       </Container>
@@ -117,56 +122,55 @@ export default function PricingPage() {
         <section className="py-16">
           <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
             {plans.map((plan) => (
-              <div
+              <Card
                 key={plan.name}
-                className={`relative flex flex-col rounded-lg border p-8 shadow-sm transition-all hover:shadow-md ${
-                  plan.popular ? 'border-primary shadow-md' : 'border-border'
+                className={`relative transition-all hover:shadow-md ${
+                  plan.popular ? 'border-primary shadow-md' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="rounded-full bg-primary px-4 py-1 text-sm font-semibold text-primary-foreground">
+                    <Badge className="bg-primary text-primary-foreground">
                       Most Popular
-                    </span>
+                    </Badge>
                   </div>
                 )}
 
-                <div className="space-y-6">
-                  <div>
-                    <Typography variant="h3">{plan.name}</Typography>
-                    <Typography variant="muted" className="mt-2">{plan.description}</Typography>
-                  </div>
-
+                <CardHeader>
+                  <Typography variant="h3">{plan.name}</Typography>
+                  <Typography variant="muted">{plan.description}</Typography>
                   <div className="flex items-baseline">
-                    <span className="font-bold">{plan.price}</span>
-                    {plan.price !== 'Custom' && <span className="ml-1 text-muted-foreground">/month</span>}
+                    <Typography variant="h2" className="font-bold">{plan.price}</Typography>
+                    {plan.price !== 'Custom' && <Typography variant="muted" className="ml-1">/month</Typography>}
                   </div>
+                </CardHeader>
 
+                <CardContent className="space-y-4">
+                  <Typography variant="h4">What's included:</Typography>
+                  <ul className="space-y-3">
+                    {plan.features.map((feature) => (
+                      <li key={feature.name} className="flex items-start gap-3">
+                        {feature.included ? (
+                          <Check className="h-5 w-5 shrink-0 text-primary" />
+                        ) : (
+                          <X className="h-5 w-5 shrink-0 text-muted-foreground/50" />
+                        )}
+                        <span
+                          className={`text-sm ${feature.included ? 'text-foreground' : 'text-muted-foreground/50'}`}
+                        >
+                          {feature.name}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+
+                <CardFooter>
                   <Button className="w-full" variant={plan.popular ? 'default' : 'outline'} size="lg">
                     {plan.cta}
                   </Button>
-
-                  <div className="space-y-4">
-                    <Typography variant="h4">What's included:</Typography>
-                    <ul className="space-y-3">
-                      {plan.features.map((feature) => (
-                        <li key={feature.name} className="flex items-start gap-3">
-                          {feature.included ? (
-                            <Check className="h-5 w-5 shrink-0 text-primary" />
-                          ) : (
-                            <X className="h-5 w-5 shrink-0 text-muted-foreground/50" />
-                          )}
-                          <span
-                            className={`text-sm ${feature.included ? 'text-foreground' : 'text-muted-foreground/50'}`}
-                          >
-                            {feature.name}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                </CardFooter>
+              </Card>
             ))}
           </div>
         </section>
@@ -182,14 +186,18 @@ export default function PricingPage() {
             </Typography>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <div key={index} className="space-y-2">
-                <Typography variant="h3">{faq.question}</Typography>
-                <Typography variant="small">{faq.answer}</Typography>
-              </div>
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger>
+                  <Typography variant="h4">{faq.question}</Typography>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Typography variant="small">{faq.answer}</Typography>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
 
           <div className="mt-12 text-center">
             <Typography variant="muted" className="mb-4">Still have questions?</Typography>
