@@ -93,6 +93,11 @@ function LoginForm() {
 - **Semantic HTML**: Use asChild prop for proper element rendering
 - **Consistent spacing**: Use design system spacing tokens
 - **Form validation**: Use react-hook-form with zod schemas
+- **cn Utility Function**: Use `cn()` from `@/lib/utils` for intelligent className merging:
+  - **Recommended**: When merging component props with default classes
+  - **Strongly recommended**: For conditional className logic
+  - **Not required**: For simple static className strings
+  - **Smart merging**: Prevents Tailwind class conflicts with twMerge integration
 
 ## Design System Documentation
 Available at `/design-system` route with:
@@ -157,6 +162,27 @@ All colors use CSS variables defined in `app/styles/globals.css`:
     </FormItem>
   )} />
 </Form>
+
+// cn Utility Examples
+import { cn } from '@/lib/utils'
+
+// ✅ Good: Merging component props with defaults
+<div className={cn('base-class p-4', props.className)} />
+
+// ✅ Good: Conditional className logic
+<div className={cn('base-class', isActive && 'active-class', props.className)} />
+
+// ✅ Good: Complex conditional merging
+<Button className={cn(
+  'default-styles',
+  variant === 'primary' && 'primary-styles',
+  size === 'large' && 'large-styles',
+  disabled && 'disabled-styles',
+  className
+)} />
+
+// ❌ Not needed: Simple static strings
+<div className="p-4 bg-white" /> // No need for cn() here
 
 // Direct CSS variable usage
 .custom {
