@@ -1,5 +1,70 @@
 # Design System Guide
 
+## Form Component
+
+### Overview
+Comprehensive form component with react-hook-form integration, providing:
+- FormField: Controller wrapper with context
+- FormItem: Container with unique ID generation
+- FormLabel: Accessible label with error state styling
+- FormControl: Input wrapper with ARIA attributes
+- FormDescription: Helper text with proper association
+- FormMessage: Error message display
+
+### Key Features
+- **Accessibility**: Proper ARIA attributes and associations
+- **Validation**: React Hook Form integration with field state management
+- **Error Handling**: Automatic error state propagation and styling
+- **Type Safety**: Full TypeScript support with generic field types
+- **Context API**: Efficient state sharing between form components
+
+### Usage Pattern
+```tsx
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Form, FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+
+const schema = z.object({
+  email: z.string().email('Invalid email address'),
+  password: z.string().min(8, 'Password must be at least 8 characters')
+})
+
+function LoginForm() {
+  const form = useForm<z.infer<typeof schema>>({
+    resolver: zodResolver(schema),
+    defaultValues: { email: '', password: '' }
+  })
+
+  return (
+    <Form {...form}>
+      <FormField control={form.control} name="email" render={({ field }) => (
+        <FormItem>
+          <FormLabel>Email</FormLabel>
+          <FormControl>
+            <Input type="email" placeholder="Enter your email" {...field} />
+          </FormControl>
+          <FormDescription>We'll never share your email with anyone else.</FormDescription>
+          <FormMessage />
+        </FormItem>
+      )} />
+    </Form>
+  )
+}
+```
+
+### Form Components
+- **Form**: FormProvider wrapper for react-hook-form
+- **FormField**: Generic controller with context
+- **FormItem**: Grid container with spacing and ID generation
+- **FormLabel**: Accessible label with error state styling
+- **FormControl**: Input wrapper with ARIA attributes
+- **FormDescription**: Helper text with proper ID association
+- **FormMessage**: Error message display with conditional rendering
+
+---
+
 ## Color System
 - **Color Space**: oklch for perceptually uniform colors
 - **Primary**: Blue (oklch based)
@@ -13,7 +78,7 @@
 - **Destructive**: Red - Destructive actions
 
 ## Component Guidelines
-- Use shadcn/ui components when available (15 components implemented)
+- Use shadcn/ui components when available (17 components implemented)
 - Follow baseColor: neutral configuration with CSS variables
 - Keep components flat and clean
 - Avoid unnecessary nesting
@@ -21,6 +86,7 @@
 - **Bento Grid**: Use for modern card layouts with responsive behavior and image backgrounds
 - **Container**: Use size variants (sm/md/lg/xl/full) with asChild for semantic HTML
 - **Motion**: Use motion library for performance-optimized animations
+- **Form**: Use react-hook-form integration with proper validation and accessibility
 
 ## Component Usage Patterns
 - **Avoid redundant className props**: Don't duplicate styles already in component variants
@@ -31,9 +97,9 @@
 ## Design System Documentation
 Available at `/design-system` route with:
 - **Foundation**: Colors (oklch-based), Typography (14 variants), Spacing
-- **Components**: 14 fully implemented components with interactive examples
-  - Core: Alert, Button, Container, Typography, Sheet
-  - Forms: Input, Textarea, Label, Select, Toggle
+- **Components**: 17 fully implemented components with interactive examples
+  - Core: Alert, Button, Container, Typography, Sheet, BentoGrid
+  - Forms: Input, Textarea, Label, Select, Toggle, Switch, Form
   - Display: Card, Badge, Avatar, Accordion
 - **Live examples**: Working demonstrations with multiple states and variations
 - **Code snippets**: Copy-paste ready implementation examples
@@ -46,12 +112,12 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 - `--success`, `--success-foreground`
 - `--error`, `--error-foreground`
 
-## Available Components (16)
+## Available Components (17)
 **Core Components:**
 - Alert, Button, Container, Typography, Sheet, BentoGrid
 
 **Form Components:** 
-- Input, Textarea, Label, Select, Toggle, Switch
+- Input, Textarea, Label, Select, Toggle, Switch, Form
 
 **Display Components:**
 - Card, Badge, Avatar, Accordion
@@ -67,6 +133,20 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 <BentoGrid className="md:grid-cols-3">
   <BentoCard name="Feature" description="Description" Icon={Rocket} />
 </BentoGrid>
+
+// Form with validation
+<Form {...form}>
+  <FormField control={form.control} name="email" render={({ field }) => (
+    <FormItem>
+      <FormLabel>Email</FormLabel>
+      <FormControl>
+        <Input placeholder="Enter your email" {...field} />
+      </FormControl>
+      <FormDescription>We'll never share your email.</FormDescription>
+      <FormMessage />
+    </FormItem>
+  )} />
+</Form>
 
 // Direct CSS variable usage
 .custom {

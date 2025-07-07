@@ -23,6 +23,7 @@ Project-specific commands organized in `.claude/commands/`:
 - `/project:analyze-components [pattern]` - Analyze components for design system violations
 - `/project:design-system-audit [--fix]` - Comprehensive project-wide design system audit
 - `/project:design-system-workflow [--auto-fix]` - **End-to-end design system improvement workflow**
+- `/project:design-system-sync` - **Comprehensive sync for documentation, routes, and navigation**
 
 ### **📚 Documentation Commands** (`docs/`)
 - `/project:update-memory [--optimize]` - Update Claude's memory and documentation

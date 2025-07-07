@@ -7,8 +7,8 @@ export default function DesignSystemOverview() {
       <section className="space-y-4">
         <h1 className="text-5xl font-bold tracking-tight">Vibe Design System</h1>
         <p className="text-xl text-muted-foreground max-w-3xl">
-          A comprehensive design system built with React, TypeScript, and Tailwind CSS. Features a modern color system
-          using oklch color space and fully accessible components.
+          A comprehensive design system built with React, TypeScript, and Tailwind CSS. Features 17 fully implemented
+          components with a modern color system using oklch color space and full accessibility support.
         </p>
       </section>
 
@@ -29,15 +29,32 @@ export default function DesignSystemOverview() {
         </div>
 
         <div className="group relative rounded-xl border p-6 hover:border-primary transition-colors">
-          <h3 className="text-xl font-semibold mb-2">Components</h3>
+          <h3 className="text-xl font-semibold mb-2">Components (17)</h3>
           <p className="text-muted-foreground mb-4">Pre-built UI components with multiple variants and states.</p>
-          <div className="space-y-2">
-            <Link to="/design-system/components/buttons" className="text-sm text-primary hover:underline">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
+            <Link to="/design-system/components/buttons" className="text-primary hover:underline">
               Buttons →
             </Link>
-            <br />
-            <Link to="/design-system/components/forms" className="text-sm text-primary hover:underline">
+            <Link to="/design-system/components/forms" className="text-primary hover:underline">
               Forms →
+            </Link>
+            <Link to="/design-system/components/alerts" className="text-primary hover:underline">
+              Alerts →
+            </Link>
+            <Link to="/design-system/components/cards" className="text-primary hover:underline">
+              Cards →
+            </Link>
+            <Link to="/design-system/components/toggles" className="text-primary hover:underline">
+              Toggles & Switch →
+            </Link>
+            <Link to="/design-system/components/bento-grid" className="text-primary hover:underline">
+              Bento Grid →
+            </Link>
+            <Link to="/design-system/components/badges" className="text-primary hover:underline">
+              Badges →
+            </Link>
+            <Link to="/design-system/components/avatars" className="text-primary hover:underline">
+              Avatars →
             </Link>
           </div>
         </div>

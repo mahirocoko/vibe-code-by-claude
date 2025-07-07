@@ -22,13 +22,18 @@
 - **TypeScript ESLint**: Via React Router typegen
 
 ## UI Components
-- **shadcn/ui**: Component library foundation with 14 implemented components
-- **Radix UI**: Accessible primitives (Slot, Dialog, Accordion, Avatar, Label, Select, Toggle)
+- **shadcn/ui**: Component library foundation with 17 implemented components
+- **Radix UI**: Accessible primitives (Slot, Dialog, Accordion, Avatar, Label, Select, Toggle, Switch)
 - **Lucide React**: 0.525.0 - Icon library
 - **Motion**: 12.22.0 - Animation library (migrated from framer-motion for performance)
 - **class-variance-authority**: 0.7.1 - Component variants
 - **tailwind-merge**: 3.3.1 - Class merging
 - **clsx**: 2.1.1 - Conditional classes
+
+## Form Handling
+- **React Hook Form**: 7.60.0 - Performant forms with easy validation
+- **Zod**: 3.25.74 - TypeScript-first schema validation
+- **@hookform/resolvers**: 5.1.1 - Form validation resolver integration
 
 ## Important Notes
 - React Router v7 syntax (not react-router-dom)

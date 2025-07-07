@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Switch } from '@/components/ui/switch'
 import { Toggle } from '@/components/ui/toggle'
 import { Typography } from '@/components/ui/typography'
 import {
@@ -34,14 +35,22 @@ export default function ToggleShowcase() {
     darkMode: false,
     autoSave: true,
   })
+  const [switchPreferences, setSwitchPreferences] = useState({
+    enablePush: true,
+    emailDigest: false,
+    analytics: true,
+    marketing: false,
+  })
 
   return (
     <div className="space-y-8">
       <div>
         <Typography variant="h1" className="text-3xl font-bold mb-2">
-          Toggle Components
+          Toggle & Switch Components
         </Typography>
-        <Typography className="text-muted-foreground">Interactive toggle buttons for binary states</Typography>
+        <Typography className="text-muted-foreground">
+          Interactive toggle buttons and switch components for binary states
+        </Typography>
       </div>
 
       <div className="grid gap-8">
@@ -290,10 +299,163 @@ export default function ToggleShowcase() {
           </CardContent>
         </Card>
 
-        {/* Settings Panel */}
+        {/* Switch Component */}
         <Card>
           <CardHeader>
-            <CardTitle>Settings Panel Example</CardTitle>
+            <CardTitle>Switch Component</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-4">
+              <div>
+                <Typography variant="h4" className="mb-2">
+                  Basic Switch States
+                </Typography>
+                <div className="flex items-center gap-4 flex-wrap">
+                  <div className="flex items-center gap-2">
+                    <Switch />
+                    <Typography variant="small">Default</Typography>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Switch defaultChecked />
+                    <Typography variant="small">Checked</Typography>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Switch disabled />
+                    <Typography variant="small">Disabled</Typography>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Switch disabled defaultChecked />
+                    <Typography variant="small">Disabled Checked</Typography>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <Typography variant="h4" className="mb-2">
+                  Switch with Labels
+                </Typography>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <Switch
+                      id="push-notifications"
+                      checked={switchPreferences.enablePush}
+                      onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, enablePush: checked }))}
+                    />
+                    <label
+                      htmlFor="push-notifications"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Enable push notifications
+                    </label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Switch
+                      id="email-digest"
+                      checked={switchPreferences.emailDigest}
+                      onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, emailDigest: checked }))}
+                    />
+                    <label
+                      htmlFor="email-digest"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Weekly email digest
+                    </label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Switch
+                      id="analytics"
+                      checked={switchPreferences.analytics}
+                      onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, analytics: checked }))}
+                    />
+                    <label
+                      htmlFor="analytics"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Enable analytics
+                    </label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Switch
+                      id="marketing"
+                      checked={switchPreferences.marketing}
+                      onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, marketing: checked }))}
+                    />
+                    <label
+                      htmlFor="marketing"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Marketing communications
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Toggle vs Switch Comparison */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Toggle vs Switch Comparison</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <Typography variant="h4" className="mb-3">
+                  Toggle Component
+                </Typography>
+                <Typography variant="small" className="text-muted-foreground mb-4">
+                  Best for toolbar actions, formatting controls, and button-like interactions
+                </Typography>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <Typography variant="small">Bold text</Typography>
+                    <Toggle pressed={isBold} onPressedChange={setIsBold}>
+                      <Bold className="h-4 w-4" />
+                    </Toggle>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <Typography variant="small">Show preview</Typography>
+                    <Toggle pressed={isVisible} onPressedChange={setIsVisible} className="gap-2">
+                      {isVisible ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
+                      {isVisible ? 'Show' : 'Hide'}
+                    </Toggle>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <Typography variant="h4" className="mb-3">
+                  Switch Component
+                </Typography>
+                <Typography variant="small" className="text-muted-foreground mb-4">
+                  Best for settings, preferences, and on/off states
+                </Typography>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <Typography variant="small">Notifications</Typography>
+                    <Switch
+                      checked={switchPreferences.enablePush}
+                      onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, enablePush: checked }))}
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <Typography variant="small">Analytics tracking</Typography>
+                    <Switch
+                      checked={switchPreferences.analytics}
+                      onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, analytics: checked }))}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Settings Panel with Toggles */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Settings Panel with Toggles</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-4">
@@ -359,6 +521,112 @@ export default function ToggleShowcase() {
                     {preferences.autoSave ? 'ON' : 'OFF'}
                   </Badge>
                   <Typography variant="small">Auto Save</Typography>
+                </li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Settings Panel with Switches */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Settings Panel with Switches</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <Typography variant="h4">Push Notifications</Typography>
+                  <Typography variant="small" className="text-muted-foreground">
+                    Get notified about important updates
+                  </Typography>
+                </div>
+                <Switch
+                  checked={switchPreferences.enablePush}
+                  onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, enablePush: checked }))}
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div>
+                  <Typography variant="h4">Email Digest</Typography>
+                  <Typography variant="small" className="text-muted-foreground">
+                    Weekly summary of your activity
+                  </Typography>
+                </div>
+                <Switch
+                  checked={switchPreferences.emailDigest}
+                  onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, emailDigest: checked }))}
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div>
+                  <Typography variant="h4">Analytics</Typography>
+                  <Typography variant="small" className="text-muted-foreground">
+                    Help us improve by sharing usage data
+                  </Typography>
+                </div>
+                <Switch
+                  checked={switchPreferences.analytics}
+                  onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, analytics: checked }))}
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div>
+                  <Typography variant="h4">Marketing</Typography>
+                  <Typography variant="small" className="text-muted-foreground">
+                    Receive updates about new features
+                  </Typography>
+                </div>
+                <Switch
+                  checked={switchPreferences.marketing}
+                  onCheckedChange={(checked) => setSwitchPreferences((prev) => ({ ...prev, marketing: checked }))}
+                />
+              </div>
+            </div>
+
+            <div className="mt-6 p-4 bg-muted rounded-md">
+              <Typography variant="h4" className="mb-2">
+                Switch Settings:
+              </Typography>
+              <ul className="space-y-1">
+                <li className="flex items-center gap-2">
+                  <Badge
+                    variant={switchPreferences.enablePush ? 'default' : 'secondary'}
+                    className="w-16 justify-center"
+                  >
+                    {switchPreferences.enablePush ? 'ON' : 'OFF'}
+                  </Badge>
+                  <Typography variant="small">Push Notifications</Typography>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Badge
+                    variant={switchPreferences.emailDigest ? 'default' : 'secondary'}
+                    className="w-16 justify-center"
+                  >
+                    {switchPreferences.emailDigest ? 'ON' : 'OFF'}
+                  </Badge>
+                  <Typography variant="small">Email Digest</Typography>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Badge
+                    variant={switchPreferences.analytics ? 'default' : 'secondary'}
+                    className="w-16 justify-center"
+                  >
+                    {switchPreferences.analytics ? 'ON' : 'OFF'}
+                  </Badge>
+                  <Typography variant="small">Analytics</Typography>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Badge
+                    variant={switchPreferences.marketing ? 'default' : 'secondary'}
+                    className="w-16 justify-center"
+                  >
+                    {switchPreferences.marketing ? 'ON' : 'OFF'}
+                  </Badge>
+                  <Typography variant="small">Marketing</Typography>
                 </li>
               </ul>
             </div>

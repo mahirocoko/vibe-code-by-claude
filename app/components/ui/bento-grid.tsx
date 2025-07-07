@@ -18,12 +18,12 @@ const BentoCard = ({
   cta,
 }: {
   name: string
-  className: string
-  background: ReactNode
+  className?: string
+  background?: ReactNode
   Icon: any
   description: string
-  href: string
-  cta: string
+  href?: string
+  cta?: string
 }) => (
   <div
     key={name}
@@ -46,19 +46,21 @@ const BentoCard = ({
         <p className="max-w-lg text-sm text-muted-foreground leading-relaxed">{description}</p>
       </div>
 
-      <div className="flex items-center px-6 -mt-2 pb-6">
-        <Button
-          variant="ghost"
-          asChild
-          size="sm"
-          className="pointer-events-auto text-primary hover:bg-primary/10 hover:text-primary transition-colors duration-200 -ml-2.5"
-        >
-          <a href={href}>
-            {cta}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
-      </div>
+      {href && cta && (
+        <div className="flex items-center px-6 -mt-2 pb-6">
+          <Button
+            variant="ghost"
+            asChild
+            size="sm"
+            className="pointer-events-auto text-primary hover:bg-primary/10 hover:text-primary transition-colors duration-200 -ml-2.5"
+          >
+            <a href={href}>
+              {cta}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+      )}
     </div>
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-primary/[0.02]" />
   </div>

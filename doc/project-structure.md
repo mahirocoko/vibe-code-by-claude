@@ -4,21 +4,24 @@
 ```
 app/
 ├── components/
-│   ├── ui/                    # shadcn/ui components (14 components)
+│   ├── ui/                    # shadcn/ui components (17 components)
+│   │   ├── accordion.tsx
 │   │   ├── alert.tsx
 │   │   ├── avatar.tsx
 │   │   ├── badge.tsx
+│   │   ├── bento-grid.tsx     # Modern grid with responsive design
 │   │   ├── button.tsx
 │   │   ├── card.tsx
 │   │   ├── container.tsx      # Enhanced with size variants
+│   │   ├── form.tsx           # React Hook Form integration
 │   │   ├── input.tsx
 │   │   ├── label.tsx
 │   │   ├── select.tsx
 │   │   ├── sheet.tsx
+│   │   ├── switch.tsx         # Toggle switch component
 │   │   ├── textarea.tsx
 │   │   ├── toggle.tsx
-│   │   ├── typography.tsx     # 14 variants with asChild
-│   │   └── accordion.tsx
+│   │   └── typography.tsx     # 14 variants with asChild
 │   ├── layouts/               # Page layout components
 │   │   ├── landing/
 │   │   │   ├── header.tsx
@@ -78,10 +81,12 @@ app/
 ## Component Architecture
 
 ### **UI Components** (`app/components/ui/`)
-- **shadcn/ui foundation**: 14 fully implemented components
+- **shadcn/ui foundation**: 17 fully implemented components
 - **Typography**: 14 variants (h1-h6, body, muted, etc.) with automatic element mapping
 - **Container**: Size variants (sm/md/lg/xl/full) with asChild prop for semantic HTML
-- **Form components**: Input, Textarea, Label, Select, Toggle with validation support
+- **Form components**: Input, Textarea, Label, Select, Toggle, Switch, Form with validation support
+- **BentoGrid**: Modern grid layout with responsive design and image backgrounds
+- **Form**: Comprehensive react-hook-form integration with proper validation and accessibility
 
 ### **Layout Components** (`app/components/layouts/`)
 - **Landing layout**: Header, Footer for public pages
