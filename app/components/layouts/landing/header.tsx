@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Typography } from '@/components/ui/typography'
-import { Menu } from 'lucide-react'
+import { DollarSign, Info, LogIn, Mail, Menu, Rocket, Sparkles } from 'lucide-react'
 import * as React from 'react'
 import { Link } from 'react-router'
 
@@ -25,10 +25,13 @@ export function Header() {
               Features
             </Link>
             <Link to="/#pricing" className="text-foreground/70 transition-colors hover:text-foreground">
-              Solutions
+              Pricing
             </Link>
             <Link to="/about" className="text-foreground/70 transition-colors hover:text-foreground">
               About
+            </Link>
+            <Link to="/contact" className="text-foreground/70 transition-colors hover:text-foreground">
+              Contact
             </Link>
           </nav>
         </div>
@@ -39,7 +42,7 @@ export function Header() {
               <Link to="/console">Login</Link>
             </Button>
             <Button asChild>
-              <Link to="/console">Get Started for Free</Link>
+              <Link to="/console">Get Started</Link>
             </Button>
           </div>
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
@@ -49,45 +52,75 @@ export function Header() {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left">
-              <Link to="/" onClick={closeSheet} className="flex items-center">
-                <Typography variant="h4" asChild>
-                  <span>Vibe by Claude</span>
-                </Typography>
-              </Link>
-              <div className="grid gap-2 py-6">
-                <Link
-                  to="/#features"
-                  onClick={closeSheet}
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                >
-                  Features
-                </Link>
-                <Link
-                  to="/#pricing"
-                  onClick={closeSheet}
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                >
-                  Solutions
-                </Link>
-                <Link to="/about" onClick={closeSheet} className="flex w-full items-center py-2 text-lg font-semibold">
-                  About
-                </Link>
-                <div className="border-t pt-4 mt-4">
+            <SheetContent side="left" className="w-[300px] sm:w-[320px]">
+              <div className="flex flex-col h-full">
+                {/* Header */}
+                <div className="flex items-center border-b pt-4 pb-4 mb-6 px-6">
+                  <Link to="/" onClick={closeSheet}>
+                    <Typography variant="h4" asChild>
+                      <span>Vibe by Claude</span>
+                    </Typography>
+                  </Link>
+                </div>
+
+                {/* Navigation */}
+                <nav className="flex-1 space-y-1 px-4">
                   <Link
-                    to="/console"
+                    to="/#features"
                     onClick={closeSheet}
-                    className="flex w-full items-center py-2 text-lg font-semibold text-muted-foreground"
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-accent transition-colors"
                   >
-                    Login
+                    <Sparkles className="h-4 w-4 text-muted-foreground" />
+                    <Typography variant="body" className="font-medium">
+                      Features
+                    </Typography>
                   </Link>
                   <Link
-                    to="/console"
+                    to="/#pricing"
                     onClick={closeSheet}
-                    className="flex w-full items-center py-2 text-lg font-semibold"
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-accent transition-colors"
                   >
-                    Get Started for Free
+                    <DollarSign className="h-4 w-4 text-muted-foreground" />
+                    <Typography variant="body" className="font-medium">
+                      Pricing
+                    </Typography>
                   </Link>
+                  <Link
+                    to="/about"
+                    onClick={closeSheet}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-accent transition-colors"
+                  >
+                    <Info className="h-4 w-4 text-muted-foreground" />
+                    <Typography variant="body" className="font-medium">
+                      About
+                    </Typography>
+                  </Link>
+                  <Link
+                    to="/contact"
+                    onClick={closeSheet}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-accent transition-colors"
+                  >
+                    <Mail className="h-4 w-4 text-muted-foreground" />
+                    <Typography variant="body" className="font-medium">
+                      Contact
+                    </Typography>
+                  </Link>
+                </nav>
+
+                {/* CTA Section */}
+                <div className="border-t pt-4 pb-6 space-y-2 px-4">
+                  <Button variant="ghost" className="w-full justify-center gap-2" asChild>
+                    <Link to="/console" onClick={closeSheet}>
+                      <LogIn className="h-4 w-4" />
+                      Login
+                    </Link>
+                  </Button>
+                  <Button className="w-full justify-center gap-2" asChild>
+                    <Link to="/console" onClick={closeSheet}>
+                      <Rocket className="h-4 w-4" />
+                      Get Started
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </SheetContent>
