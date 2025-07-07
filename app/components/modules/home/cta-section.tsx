@@ -23,7 +23,7 @@ export function CtaSection() {
       {/* Content */}
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
-          <Badge variant="secondary" className="gap-2 bg-white/10 backdrop-blur-sm text-white border-white/20 mb-8">
+          <Badge variant="secondary" className="gap-2 bg-white/10 backdrop-blur-sm text-white border-white/20 mb-6">
             <Sparkles className="h-3.5 w-3.5" />
             Start Building Today
           </Badge>

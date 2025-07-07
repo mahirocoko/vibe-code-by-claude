@@ -55,7 +55,7 @@ export function PricingSection() {
 
   return (
     <Container asChild>
-      <section id="pricing" className="py-12 md:py-24 lg:py-32">
+      <section id="pricing" className="py-16 md:py-24 lg:py-32">
         <div className="text-center mb-12 lg:mb-16">
           <Badge variant="secondary" className="mb-6">
             Pricing

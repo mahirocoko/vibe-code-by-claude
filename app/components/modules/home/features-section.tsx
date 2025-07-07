@@ -119,11 +119,11 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <Container asChild>
-      <section className="py-20 lg:py-32">
+    <section className="py-20 lg:py-40 bg-gradient-to-b from-transparent via-primary/15 to-transparent">
+      <Container>
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <Badge variant="secondary" className="gap-2 mb-6">
+          <Badge variant="primary-outline" className="gap-2 mb-6">
             <Sparkles className="h-3.5 w-3.5" />
             Powerful Features
           </Badge>
@@ -144,7 +144,7 @@ export function FeaturesSection() {
             <BentoCard key={feature.name} {...feature} />
           ))}
         </BentoGrid>
-      </section>
-    </Container>
+      </Container>
+    </section>
   )
 }

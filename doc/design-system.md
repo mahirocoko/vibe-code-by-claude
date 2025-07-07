@@ -112,7 +112,7 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 - `--success`, `--success-foreground`
 - `--error`, `--error-foreground`
 
-## Available Components (18)
+## Available Components (17)
 **Core Components:**
 - Alert, Button, Container, Typography, Sheet, BentoGrid
 
@@ -123,8 +123,8 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 - Card, Badge, Avatar, Accordion
 
 **Enhanced Variants:**
-- Badge.gradient - Primary gradient for popular features
-- Button.gradient - Matching gradient for call-to-action buttons
+- Badge variants: default, secondary, destructive, outline, gradient, info, success, warning, primary-outline
+- Button variants: default, destructive, outline, secondary, ghost, link, info, warning, success, error, gradient
 
 ## Usage Examples
 ```tsx
@@ -133,9 +133,11 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 <Button variant="info">Info Button</Button>
 <Alert variant="success">Success message</Alert>
 
-// Gradient variants
+// Enhanced variants
 <Badge variant="gradient">Most Popular</Badge>
+<Badge variant="primary-outline">Featured</Badge>
 <Button variant="gradient">Get Started</Button>
+<Button variant="info">Learn More</Button>
 
 // Bento Grid Layout
 <BentoGrid className="md:grid-cols-3">
