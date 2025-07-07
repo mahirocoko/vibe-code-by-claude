@@ -1,8 +1,9 @@
-import { Badge } from '@/components/ui/badge'
+import { AnimatedShinyText } from '@/components/ui/animated-shiny-text'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Typography } from '@/components/ui/typography'
-import { MoveRight, Palette } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { ArrowRight, MoveRight, Palette } from 'lucide-react'
 import { motion } from 'motion/react'
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router'
@@ -26,10 +27,30 @@ function HeroSection() {
     <Container asChild>
       <section className="py-20 lg:py-40">
         <div className="flex gap-8 items-center justify-center flex-col text-center">
-          {/* Badge */}
-          <Badge variant="secondary" className="gap-2">
-            Read our launch article <MoveRight className="w-4 h-4" />
-          </Badge>
+          {/* Animated Gradient Text Badge */}
+          <div className="group relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] hover:cursor-pointer">
+            <span
+              className={cn(
+                'absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-primary/50 via-primary/80 to-primary/50 bg-[length:300%_100%] p-[1px]',
+              )}
+              style={{
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'destination-out',
+                mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                maskComposite: 'subtract',
+                WebkitClipPath: 'padding-box',
+              }}
+            />
+            ✨ <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
+            <AnimatedShinyText 
+              className="text-sm font-medium"
+              colorFrom="oklch(var(--primary))"
+              colorTo="#1f2937"
+            >
+              Read our launch article
+            </AnimatedShinyText>
+            <ArrowRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          </div>
 
           {/* Animated Heading */}
           <div className="flex gap-4 flex-col">
