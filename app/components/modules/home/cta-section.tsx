@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
@@ -52,10 +53,9 @@ export function CtaSection() {
           <div className="mt-12 flex flex-col items-center gap-4">
             <div className="flex -space-x-2">
               {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="h-10 w-10 rounded-full border-2 border-white bg-gradient-to-br from-primary to-secondary"
-                />
+                <Avatar key={i} className="h-10 w-10 border-2 border-white">
+                  <AvatarFallback className="bg-gradient-to-br from-primary to-secondary" />
+                </Avatar>
               ))}
             </div>
             <Typography variant="small" className="text-white/80">

@@ -92,7 +92,7 @@ export function PricingSection() {
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <Badge className="bg-gradient-to-r from-primary to-primary/80 text-white px-4 py-1 shadow-lg">
+                  <Badge variant="gradient" className="px-4 py-1">
                     Most Popular
                   </Badge>
                 </div>
@@ -135,15 +135,7 @@ export function PricingSection() {
               </CardContent>
 
               <CardFooter className="pt-8">
-                <Button
-                  className={cn(
-                    'w-full',
-                    plan.popular &&
-                      'bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70',
-                  )}
-                  variant={plan.popular ? 'default' : 'outline'}
-                  size="lg"
-                >
+                <Button className="w-full" variant={plan.popular ? 'gradient' : 'outline'} size="lg">
                   {plan.monthlyPrice ? 'Get Started' : 'Contact Sales'}
                 </Button>
               </CardFooter>

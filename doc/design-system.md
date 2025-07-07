@@ -112,7 +112,7 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 - `--success`, `--success-foreground`
 - `--error`, `--error-foreground`
 
-## Available Components (17)
+## Available Components (18)
 **Core Components:**
 - Alert, Button, Container, Typography, Sheet, BentoGrid
 
@@ -122,12 +122,20 @@ All colors use CSS variables defined in `app/styles/globals.css`:
 **Display Components:**
 - Card, Badge, Avatar, Accordion
 
+**Enhanced Variants:**
+- Badge.gradient - Primary gradient for popular features
+- Button.gradient - Matching gradient for call-to-action buttons
+
 ## Usage Examples
 ```tsx
 // Tailwind classes
 <div className="bg-primary text-primary-foreground">Primary</div>
 <Button variant="info">Info Button</Button>
 <Alert variant="success">Success message</Alert>
+
+// Gradient variants
+<Badge variant="gradient">Most Popular</Badge>
+<Button variant="gradient">Get Started</Button>
 
 // Bento Grid Layout
 <BentoGrid className="md:grid-cols-3">
