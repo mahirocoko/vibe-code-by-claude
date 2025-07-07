@@ -92,7 +92,7 @@ const faqs = [
   },
 ]
 
-export default function PricingPage() {
+export default function Route() {
   return (
     <>
       {/* Hero Section */}

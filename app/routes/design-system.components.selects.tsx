@@ -3,7 +3,7 @@ import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Typography } from '@/components/ui/typography'
 
-export default function SelectShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

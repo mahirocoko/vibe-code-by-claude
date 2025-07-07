@@ -12,7 +12,7 @@ export function loader() {
   return { message: 'Welcome to Vibe by Claude' }
 }
 
-export default function LandingIndex() {
+export default function Route() {
   return (
     <>
       {/* Animated Hero Section */}

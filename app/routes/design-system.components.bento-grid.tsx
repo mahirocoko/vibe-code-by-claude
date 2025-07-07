@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/ui/typography'
 import { BarChart3, Calendar, Globe, Mail, Shield, Sparkles, Users, Zap } from 'lucide-react'
 
-export default function BentoGridShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

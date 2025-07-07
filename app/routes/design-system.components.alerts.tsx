@@ -1,6 +1,6 @@
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 
-export default function AlertsShowcase() {
+export default function Route() {
   return (
     <div className="space-y-12">
       {/* Header */}

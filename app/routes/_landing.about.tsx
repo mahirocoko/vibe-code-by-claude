@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Typography } from '@/components/ui/typography'
 
-export default function About() {
+export default function Route() {
   return (
     <>
       {/* Hero Section */}

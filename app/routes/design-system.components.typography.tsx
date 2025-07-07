@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/ui/typography'
 
-export default function TypographyShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

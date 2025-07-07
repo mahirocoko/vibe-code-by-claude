@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Typography } from '@/components/ui/typography'
 import { Heart, MessageCircle, Share2, Star } from 'lucide-react'
 
-export default function CardsShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

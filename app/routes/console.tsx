@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router'
 
-export default function ConsoleLayout() {
+export default function Route() {
   const location = useLocation()
 
   const navItems = [

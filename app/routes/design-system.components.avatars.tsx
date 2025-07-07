@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/ui/typography'
 import { Camera, Crown, Settings, Shield, Star, User } from 'lucide-react'
 
-export default function AvatarsShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

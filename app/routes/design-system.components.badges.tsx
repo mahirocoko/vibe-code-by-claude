@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/ui/typography'
 import { AlertCircle, CheckCircle, Clock, Sparkles, Star, X } from 'lucide-react'
 
-export default function BadgesShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

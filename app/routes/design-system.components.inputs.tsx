@@ -9,7 +9,7 @@ import { Typography } from '@/components/ui/typography'
 import { Calendar, CreditCard, Eye, EyeOff, Lock, Mail, Search, User } from 'lucide-react'
 import { useState } from 'react'
 
-export default function InputsShowcase() {
+export default function Route() {
   const [showPassword, setShowPassword] = useState(false)
 
   return (

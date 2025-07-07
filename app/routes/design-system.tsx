@@ -28,7 +28,7 @@ const navigationItems: NavItem[] = [
   { to: '/design-system/components/typography', label: 'Typography' },
 ]
 
-export default function DesignSystemLayout() {
+export default function Route() {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar Navigation */}

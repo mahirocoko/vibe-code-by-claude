@@ -104,6 +104,7 @@ app/
 - `_landing.*` - Public landing pages with shared layout
 - `console.*` - Protected dashboard pages with console layout
 - `design-system.*` - Component documentation and examples
+- **Route Functions**: ALL route files MUST use `export default function Route()` instead of descriptive names
 
 ### **Layout Structure**
 - **Pathless layouts**: Use `_layout` prefix for nested layouts
@@ -138,6 +139,7 @@ import { cn } from '@/lib/utils'
 - **Mandatory formatting**: Run `pnpm check` for all implementations
 - **TypeScript**: Full type safety with automatic route typing
 - **Component cleanup**: Remove redundant className props that duplicate variant styles
+- **Route Functions**: Use `Route` naming convention for all route files
 
 ### **Architecture Principles**
 - **Modular sections**: Extract complex components to separate modules

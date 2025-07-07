@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-export default function DesignSystemOverview() {
+export default function Route() {
   return (
     <div className="space-y-12">
       {/* Hero Section */}

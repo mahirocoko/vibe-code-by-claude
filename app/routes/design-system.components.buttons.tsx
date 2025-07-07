@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Typography } from '@/components/ui/typography'
 
-export default function ButtonsShowcase() {
+export default function Route() {
   return (
     <div className="space-y-12">
       {/* Header */}

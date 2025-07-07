@@ -23,7 +23,7 @@ import {
 } from 'lucide-react'
 import { useState } from 'react'
 
-export default function ToggleShowcase() {
+export default function Route() {
   const [isBold, setIsBold] = useState(false)
   const [isItalic, setIsItalic] = useState(false)
   const [isUnderlined, setIsUnderlined] = useState(false)

@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { Typography } from '@/components/ui/typography'
 import { Menu } from 'lucide-react'
 
-export default function SheetShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

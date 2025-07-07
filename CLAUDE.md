@@ -29,6 +29,7 @@ pnpm check        # Fix code issues
 - Optimize testimonials section performance for large datasets
 
 ## Recently Completed
+- ✅ **Route Function Naming**: Standardized all route functions to use `Route` instead of descriptive names (30 files updated)
 - ✅ **Testimonials Section Enhancement**: Animated columns design with infinite scroll using motion
 - ✅ **TestimonialsColumn Component**: Reusable UI component with configurable animation durations
 - ✅ **cn Utility Guidelines**: Comprehensive documentation for className merging best practices
@@ -56,6 +57,7 @@ pnpm check        # Fix code issues
 - Design system at `/design-system` (fully implemented with 18 components including gradient variants)
 - Install packages with fixed versions (no ^ or ~)
 - File-based routing: `_landing.*` for landing pages, `console.*` for console
+- **Route Function Naming**: ALL route functions MUST use `export default function Route()` (not descriptive names)
 - Use React Router v7 CLI commands (not Vite)
 - Component organization: `layouts/` (page layouts), `modules/` (feature components), `ui/` (reusable components)
 - **Motion**: Use `motion/react` for animations with Button + Link patterns

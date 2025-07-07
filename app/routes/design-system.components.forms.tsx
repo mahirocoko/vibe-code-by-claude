@@ -19,7 +19,7 @@ const formSchema = z.object({
   bio: z.string().min(10, 'Bio must be at least 10 characters'),
 })
 
-export default function FormsShowcase() {
+export default function Route() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {

@@ -1,6 +1,6 @@
 import { Typography } from '@/components/ui/typography'
 
-export default function TypographyShowcase() {
+export default function Route() {
   return (
     <div className="space-y-12">
       {/* Header */}

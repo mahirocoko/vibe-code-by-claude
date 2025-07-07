@@ -3,7 +3,7 @@ import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Typography } from '@/components/ui/typography'
 
-export default function TextareaShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

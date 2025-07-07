@@ -3,7 +3,7 @@ import { Label } from '@/components/ui/label'
 import { Switch } from '@/components/ui/switch'
 import { Typography } from '@/components/ui/typography'
 
-export default function SwitchShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>

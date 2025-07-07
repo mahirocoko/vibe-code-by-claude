@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/ui/typography'
 import { Bell, CreditCard, Globe, HelpCircle, Settings, Shield, User } from 'lucide-react'
 
-export default function AccordionShowcase() {
+export default function Route() {
   const faqs = [
     {
       question: 'What is this design system?',

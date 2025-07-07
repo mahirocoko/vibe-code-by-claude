@@ -1,6 +1,6 @@
 import { Typography } from '@/components/ui/typography'
 
-export default function ConsoleIndex() {
+export default function Route() {
   return (
     <div>
       <Typography variant="h1" className="mb-6">

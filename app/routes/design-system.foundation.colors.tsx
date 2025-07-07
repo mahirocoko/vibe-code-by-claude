@@ -1,4 +1,4 @@
-export default function ColorsShowcase() {
+export default function Route() {
   const semanticColors = [
     {
       name: 'Primary',

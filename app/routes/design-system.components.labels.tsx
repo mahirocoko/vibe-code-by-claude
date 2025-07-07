@@ -5,7 +5,7 @@ import { Switch } from '@/components/ui/switch'
 import { Textarea } from '@/components/ui/textarea'
 import { Typography } from '@/components/ui/typography'
 
-export default function LabelShowcase() {
+export default function Route() {
   return (
     <div className="space-y-8">
       <div>
